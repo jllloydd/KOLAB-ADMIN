@@ -1,4 +1,4 @@
-<?php include 'layouts/session.php'; ?>
+<?php include 'connect/session_check.php'; ?>
 <?php include 'layouts/head-main.php'; ?>
 
     <head>
@@ -255,7 +255,7 @@
         </div>
         <!-- END layout-wrapper -->
 
-        <?php include 'layouts/customizer.php'; ?>
+        <?php include 'layouts/ '; ?>
 
         <?php include 'layouts/vendor-scripts.php'; ?>
 

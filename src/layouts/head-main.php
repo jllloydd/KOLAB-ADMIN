@@ -35,18 +35,29 @@ if ($isScssconverted) {
 <head>
 
     <title>Kolabspace Admin</title>
-    <?php include 'layouts/title-meta.php'; ?>
 
-    <!-- jsvectormap css -->
-    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
-
-    <!--Swiper slider css-->
-    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="./assets/img/logo/favicon.ico">
-
-    <?php include 'layouts/head-css.php'; ?>
-
+    <?php if ($in_concat === true) { ?>
+        <?php include 'layouts/title-meta.php'; ?>
+        <!-- jsvectormap css -->
+        <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+        <!--Swiper slider css-->
+        <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="./assets/img/logo/favicon.ico">
+        <?php include 'layouts/head-css.php'; ?>
+    <?php } else { ?>
+        <?php include '../layouts/title-meta.php'; ?>
+        <!-- jsvectormap css -->
+        <link href="../assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+        <!--Swiper slider css-->
+        <link href="../assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+        <!-- App favicon -->
+        <link rel="../shortcut icon" href="./assets/img/logo/favicon.ico">
+        <?php include '../layouts/head-css.php'; ?>
+    <?php } ?>
 </head>
-
-<?php include 'layouts/body.php'; ?>
+<?php if ($in_concat === true) { ?>
+    <?php include 'layouts/body.php'; ?>
+<?php } else { ?>
+    <?php include '../layouts/body.php'; ?>
+<?php } ?>
