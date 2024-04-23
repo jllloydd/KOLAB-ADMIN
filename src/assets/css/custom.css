@@ -1,3 +1,14 @@
 .navbar-menu {
     background-color: white;
 }
+
+.navbar-menu .navbar-nav .nav-link.active {
+    color: #0683D7;
+}
+.navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+    color: #0683D7;
+}
+
+.item-active {
+    font-weight: bold;
+}
