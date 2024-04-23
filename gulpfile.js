@@ -5,7 +5,6 @@ const htmlmin = require("gulp-htmlmin");
 const through2 = require('through2');
 const imageavif = require("gulp-avif");
 const rename = require("gulp-rename");
-const strip = require("gulp-strip-comments");
 
 let gulpsass = require("gulp-sass");
 let sass = require("sass");
@@ -13,8 +12,6 @@ let autoprefixer = require("gulp-autoprefixer");
 let sourcemaps = require("gulp-sourcemaps");
 let cleanCSS = require("gulp-clean-css");
 
-let sass$ = gulpsass(sass);
-const isSourceMap = true;
 
 function compilecss() {
     return src('src/assets/css/*.css')
@@ -46,11 +43,6 @@ function copyfile_php() {
             })
         )
         .pipe(dest("dist"));
-}
-function remove_comments_php() {
-    return src(["dist/**/*.php"]) // Target PHP files in the "dist" directory
-        .pipe(strip())
-        .pipe(dest("dist")); // Save modified files back to the same "dist" directory
 }
 function jsmin() {
     return (
