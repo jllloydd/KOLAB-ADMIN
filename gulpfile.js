@@ -83,14 +83,14 @@ function watchTask() {
     watch(["src/assets/iconfonts/**/*"], copyfile);
     watch(["src/assets/js/**/*.js"], jsmin);
     watch(['src/assets/css/*.css'], compilecss);
-    // watch(
-    //     [
-    //         "src/assets/img/*.{jpg,png}",
-    //         "src/assets/img/*/*.{jpg,png}",
-    //         "src/assets/img/**/**/*.{jpg,png}",
-    //     ],
-    //     avifImage
-    // );
+    watch(
+        [
+            "src/assets/img/*.{jpg,png}",
+            "src/assets/img/*/*.{jpg,png}",
+            "src/assets/img/**/**/*.{jpg,png}",
+        ],
+        avifImage
+    );
     watch(["src/assets/img/**/*.svg", "src/assets/img/**/*.ico"], svgImage);
 }
 
@@ -99,7 +99,7 @@ exports.default = series(
     copyfile_php,
     // remove_comments_php,
     jsmin,
-    // avifImage,
+    avifImage,
     svgImage,
     copyfile,
     compilecss,
