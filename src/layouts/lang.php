@@ -10,5 +10,10 @@ if( isset( $_SESSION['lang'] ) ) {
 }else {
     $lng = "en";
 }
-require_once ("./assets/lang/" . $lng . ".php");
+if ($in_concat === true) { 
+    require_once ("./assets/lang/" . $lng . ".php");
+} else {
+    require_once ("../assets/lang/" . $lng . ".php");
+}
+
 ?>

@@ -1,9 +1,16 @@
 <?php
-require_once("lang.php");
-
+if ($in_concat === true) {
+    require_once("lang.php");
+} else {
+    require_once("lang.php");
+}
 $isScssconverted = false;
 
-require_once("scssphp/scss.inc.php");
+if ($in_concat === true) {
+    require_once("scssphp/scss.inc.php");
+} else {
+    require_once("../scssphp/scss.inc.php");
+}
 
 use ScssPhp\ScssPhp\Compiler;
 
@@ -12,13 +19,20 @@ if ($isScssconverted) {
     global $compiler;
     $compiler = new Compiler();
 
-    $compine_css = "assets/css/app.min.css";
-
-    $source_scss = "assets/scss/config/default/app.scss";
-
+    if ($in_concat === true) {
+        $compine_css = "assets/css/app.min.css";
+        $source_scss = "assets/scss/config/default/app.scss";
+    } else {
+        $compine_css = "../assets/css/app.min.css";
+        $source_scss = "../assets/scss/config/default/app.scss";
+    }
     $scssContents = file_get_contents($source_scss);
 
-    $import_path = "assets/scss/config/default";
+    if ($in_concat === true) {
+        $import_path = "assets/scss/config/default";
+    } else {
+        $import_path = "assets/scss/config/default";
+    }
     $compiler->addImportPath($import_path);
     $target_css = $compine_css;
 
