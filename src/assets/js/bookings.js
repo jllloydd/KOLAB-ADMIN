@@ -47,7 +47,7 @@ function displayBookings(bookings) {
             <td>${booking.voucher}</td>
             <td>${booking.date_created || ''}</td>
             <td>
-                <button class="btn btn-sm btn-success edit-item-btn" onclick="openUpdateModal('${booking.bookingid}', '${booking.booking_date}')">Update</button>
+                <button class="btn btn-sm btn-success edit-item-btn" onclick="openUpdateModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
             </td>
         </tr>`;
     });
