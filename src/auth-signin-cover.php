@@ -29,13 +29,15 @@
                     <d class="sub-container" style="background-color: #FAFAFA;">
                         <h2 class="pt-5 ps-5 fw-bold" style="color: #0683D7;">ADMIN</h2>
                         <div class="ps-5 pe-5 pt-3">
+                        <form id="loginForm">
                             <div class="mb-3">
                                 <label class="chromaphobic fw-medium">Username</label><br>
-                                <input type="username" name="username" class="form-control bg-white" style="color: #8D97B0">
+                                <input type="username" name="usernameLogin" class="form-control bg-white" style="color: #8D97B0">
                             </div>
                             <div class="mb-2">
                                 <label class="chromaphobic fw-medium">Password</label><br>
-                                <input type="password" name="password" class="form-control bg-white" style="color: #8D97B0">
+                                <input type="password" name="passwordLogin" class="form-control bg-white" style="color: #8D97B0">
+                                <div class="small text-danger" id="loginMessage"></div>
                             </div>
                             <div>
                                 <p class="mt-3">Please contact admin to change your credentials.</p>
@@ -46,9 +48,10 @@
                             <div class="row p-0 mt-5">
                                 <label class="chromaphobic"></label>
                                 <span>
-                                    <button id="checkBookingStatus" class="next-button-position mb-5 p-1" type="button">
-                                        <span class="btn next-button" id="checkBookingStatus">PROCEED</span>
-                                    </button>
+                                <input type="hidden" name="action" id="admin_login" value="admin_login">
+                                <button id="submit" class="next-button-position mb-5 p-1" type="submit">
+                                    <span class="btn next-button">LOG IN</span>
+                                </button>
                                 </span>
                             </div>
                         </div>
@@ -58,8 +61,7 @@
             </div>
         </div>
         <?php include 'layouts/vendor-scripts.php'; ?>
-
-        <script src="assets/js/pages/password-addon.init.js"></script>
+        <script src="assets/js/pages/passwordLogin-addon.init.js"></script>
+        <script src="assets/js/signin.js"></script>
     </body>
-
 </html>
