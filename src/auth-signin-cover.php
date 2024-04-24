@@ -46,8 +46,8 @@
                                 <label class="chromaphobic"></label>
                                 <span>
                                 <input type="hidden" name="action" id="admin_login" value="admin_login">
-                                <button id="submit" class="next-button-position mb-5 p-1" type="submit">
-                                    <span class="btn next-button">LOG IN</span>
+                                <button id="submit" class="login-button-position mb-5 p-1" type="submit">
+                                    <span class="btn login-button">LOG IN</span>
                                 </button>
                                 </span>
                             </div>

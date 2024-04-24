@@ -19,6 +19,7 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: white;
+    overflow: hidden;
 
 }
 .img {
@@ -40,12 +41,12 @@ body, html {
     justify-content: center;
 }
 
-.next-button-position {
+.login-button-position {
     border: none;
     background-color: #0683D7;
 }
 
-.btn {
+.login-button {
     color: white;
     width: 170px;
 }
