@@ -62,7 +62,7 @@
                                 <div class="card">
                                     <div class="card-body card-margin">
                                         <div class="table-responsive table-card">
-                                            <table class="table align-middle table-nowrap" id="customerTable">
+                                            <table class="table align-middle table-nowrap" id="bookingManagementData">
                                                 <thead class="table-light">
                                                     <tr>
                                                         <th class="sort" data-sort="reference_num">Reference No.</th>
@@ -240,7 +240,8 @@
         <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="../assets/js/bookings.js"></script>
     </body>
 
 </html>
