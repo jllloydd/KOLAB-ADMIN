@@ -31,7 +31,7 @@ if ($isScssconverted) {
     if ($in_concat === true) {
         $import_path = "assets/scss/config/default";
     } else {
-        $import_path = "assets/scss/config/default";
+        $import_path = "../assets/scss/config/default";
     }
     $compiler->addImportPath($import_path);
     $target_css = $compine_css;
