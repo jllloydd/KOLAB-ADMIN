@@ -8,15 +8,12 @@
     </head>
 
     <?php include 'layouts/body.php'; ?>
-        <!-- <div>
-            <img src="assets/img/login/logo.png" width="half" class="img">
-        </div> -->
-        <div class="login_page p-0 g-0">
-            <div class="row bg-white">
+        <div class="login_page p-0 g-0 ">
+            <div class="row">
                 <div class="col container-one">
                     <div class="">
                         <div class="main-container">
-                            <div class="logo-container">
+                            <div class="logo-container ms-2">
                                 <img src="assets/img/login/logo.png" class="img2" alt="Logo">
                             </div>                            
                             <img src="assets/img/login/left.png" width="half" class="img" alt="Left Image">
@@ -25,8 +22,8 @@
                 </div>
                 <!-- end col -->
 
-                <div class="col main-container container d-flex justify-content-center align-items-center">
-                    <d class="sub-container" style="background-color: #FAFAFA;">
+                <div class="col container-two container d-flex justify-content-center align-items-center">
+                    <div class="sub-container" style="background-color: #FAFAFA;">
                         <h2 class="pt-5 ps-5 fw-bold" style="color: #0683D7;">ADMIN</h2>
                         <div class="ps-5 pe-5 pt-3">
                         <form id="loginForm">
