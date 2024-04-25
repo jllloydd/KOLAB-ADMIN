@@ -1,6 +1,5 @@
 <?php
 include_once("../connect/session_check.php");
-
 function jsonResponse($status, $message, $additionalData = []) {
     header('Content-Type: application/json');
     echo json_encode(array_merge([
@@ -10,97 +9,84 @@ function jsonResponse($status, $message, $additionalData = []) {
     exit;
 }
 
-function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc') {
-    // Sorting logic based on criteria
-    $orderByClause = "ORDER BY CONCAT(firstname, ' ', lastname) $direction";
+function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction = 'asc', $limit = 11) {
+    $offset = ($page - 1) * $limit;
 
     switch ($criteria) {
         case 'fullname':
-            $orderByClause = "ORDER BY CONCAT(firstname, ' ', lastname) " . ($direction == 'asc' ? 'ASC' : 'DESC');
+            $orderByClause = "CONCAT(firstname, ' ', lastname) " . ($direction == 'asc' ? 'ASC' : 'DESC');
             break;
         case 'booking_date':
-            $orderByClause = "ORDER BY booking_date " . ($direction == 'asc' ? 'ASC' : 'DESC');
+            $orderByClause = "booking_date " . ($direction == 'asc' ? 'ASC' : 'DESC');
             break;
         case 'status':
-            $orderByClause = "ORDER BY status " . ($direction == 'asc' ? 'ASC' : 'DESC');
+            $orderByClause = "status " . ($direction == 'asc' ? 'ASC' : 'DESC');
             break;
-        // Additional sorting criteria can be added here
         default:
+            $orderByClause = "bookingid DESC"; // Default ordering
             break;
     }
 
     $query = "SELECT 
-                bookingid,
+                reference_number,
                 CONCAT(firstname, ' ', lastname) AS fullname,
                 email,
-                number,
+                term_rate,
                 booking_date,
                 status,
-                reference_number,
-                term_rate,
-                dob,
-                address,
-                pax,
-                start_time,
-                end_time,
                 payment_method,
-                voucher,
-                date_created
+                bookingid
               FROM bookings
-              $orderByClause";
-
+              ORDER BY $orderByClause
+              LIMIT $limit OFFSET $offset";
+    
     $result = $conn->query($query);
     $bookings = [];
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $bookings[] = $row;
         }
-        jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings]);
-    } else {
-        jsonResponse(false, "No bookings found.");
     }
+    $totalRecords = $conn->query("SELECT COUNT(*) as total FROM bookings")->fetch_assoc()['total'];
+    $totalPages = ceil($totalRecords / $limit);
+    
+    jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords, 'totalPages' => $totalPages]);
 }
 
 function searchBookings($conn, $keyword) {
     $keyword = "%" . $keyword . "%";
     $query = "SELECT 
-                bookingid,
+                reference_number,
                 CONCAT(firstname, ' ', lastname) AS fullname,
                 email,
-                number,
+                term_rate,
                 booking_date,
                 status,
-                reference_number,
-                term_rate,
-                dob,
-                address,
-                pax,
-                start_time,
-                end_time,
                 payment_method,
-                voucher,
-                date_created
+                bookingid
               FROM bookings
-              WHERE firstname LIKE ? OR lastname LIKE ? OR email LIKE ? OR address LIKE ? OR number LIKE ?
-              ORDER BY booking_date DESC, firstname ASC";
+              WHERE CONCAT(firstname, ' ', lastname) LIKE ? OR email LIKE ?
+              ORDER BY booking_date DESC";
 
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("sssss", $keyword, $keyword, $keyword, $keyword, $keyword);
+    $stmt->bind_param("ss", $keyword, $keyword);
     $stmt->execute();
     $result = $stmt->get_result();
 
     $bookings = [];
-    while ($row = $result->fetch_assoc()) {
-        $bookings[] = $row;
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $bookings[] = $row;
+        }
+        jsonResponse(true, "Search results fetched successfully.", ['bookings' => $bookings]);
+    } else {
+        jsonResponse(false, "No bookings found for your search criteria.");
     }
-
-    jsonResponse(true, "Search results fetched successfully.", ['bookings' => $bookings]);
 }
 
-function updateBookingDetails($conn, $bookingid, $booking_date, $status, $address, $number) {
-    // Prepare an update statement to modify booking details
-    $stmt = $conn->prepare("UPDATE bookings SET booking_date = ?, status = ?, address = ?, number = ? WHERE bookingid = ?");
-    $stmt->bind_param("ssssi", $booking_date, $status, $address, $number, $bookingid);
+function updateBookingDetails($conn, $bookingid, $booking_date, $status) {
+    $stmt = $conn->prepare("UPDATE bookings SET booking_date = ?, status = ? WHERE bookingid = ?");
+    $stmt->bind_param("ssi", $booking_date, $status, $bookingid);
     if ($stmt->execute()) {
         jsonResponse(true, "Booking updated successfully.");
     } else {
@@ -108,34 +94,32 @@ function updateBookingDetails($conn, $bookingid, $booking_date, $status, $addres
     }
 }
 
+// Handling POST requests
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['action'])) {
-        switch ($_POST['action']) {
-            case 'fetchAllBookings':
-                $criteria = $_POST['criteria'] ?? 'fullname';
-                $direction = $_POST['direction'] ?? 'asc';
-                fetchAllBookings($conn, $criteria, $direction);
-                break;
-            case 'searchBookings':
-                $keyword = $_POST['query'] ?? '';
-                searchBookings($conn, $keyword);
-                break;
-            case 'updateBookingDetails':
-                $bookingid = $_POST['bookingid'] ?? null;
-                $booking_date = $_POST['booking_date'] ?? null;
-                $status = $_POST['status'] ?? null;
-                $address = $_POST['address'] ?? null;
-                $number = $_POST['number'] ?? null;
-                if ($bookingid && $booking_date && $status && $address && $number) {
-                    updateBookingDetails($conn, $bookingid, $booking_date, $status, $address, $number);
-                } else {
-                    jsonResponse(false, "Missing data for booking update.");
-                }
-                break;
-            default:
-                jsonResponse(false, "Invalid action.");
-                break;
-        }
+    switch ($_POST['action']) {
+        case 'fetchAllBookings':
+            $page = $_POST['page'] ?? 1;
+            $criteria = $_POST['criteria'] ?? 'fullname';
+            $direction = $_POST['direction'] ?? 'asc';
+            fetchAllBookings($conn, $page, $criteria, $direction);
+            break;
+        case 'searchBookings':
+            $keyword = $_POST['query'] ?? '';
+            searchBookings($conn, $keyword);
+            break;
+        case 'updateBookingDetails':
+            $bookingid = $_POST['bookingid'] ?? null;
+            $booking_date = $_POST['booking_date'] ?? null;
+            $status = $_POST['status'] ?? null;
+            if ($bookingid && $booking_date && $status) {
+                updateBookingDetails($conn, $bookingid, $booking_date, $status);
+            } else {
+                jsonResponse(false, "Missing data for booking update.");
+            }
+            break;
+        default:
+            jsonResponse(false, "Invalid action.");
+            break;
     }
 }
 ?>

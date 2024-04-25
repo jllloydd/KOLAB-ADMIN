@@ -1,4 +1,5 @@
 let currentBookingIdToUpdate = null;
+
 document.addEventListener("DOMContentLoaded", function() {
     fetchAllBookings();
 });
@@ -9,51 +10,110 @@ function sortBookings() {
     fetchAllBookings(criteria, direction);
 }
 
-function fetchAllBookings(criteria = 'fullname', direction = 'asc') {
+function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
     fetch('../data/load.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: `action=fetchAllBookings&criteria=${encodeURIComponent(criteria)}&direction=${encodeURIComponent(direction)}`
+        body: `action=fetchAllBookings&page=${page}&criteria=${encodeURIComponent(criteria)}&direction=${encodeURIComponent(direction)}`
     })
     .then(response => response.json())
     .then(data => {
         if (data.status) {
             displayBookings(data.bookings);
+            updateBookingCount(data.bookings.length, data.totalRecords);
+            setupPagination(data.totalPages, page);
         } else {
             console.error('Failed to fetch bookings');
+            displayNoResults();
         }
     })
-    .catch(error => console.error('Error fetching bookings:', error));
+    .catch(error => {
+        console.error('Error fetching bookings:', error);
+        displayNoResults();
+    });
 }
 
 function displayBookings(bookings) {
-    const bookingManagement = document.getElementById('bookingManagementData');
-    let tableHTML = `<div class="table-responsive"><table class="table align-middle table-nowrap" id="bookingManagementTable"><thead class="table-light"><tr><th>Reference No.</th><th>Guest</th><th>Email</th><th>Number</th><th>Booking Date</th><th>Status</th><th>DOB</th><th>Address</th><th>Pax</th><th>Start Time</th><th>End Time</th><th>Payment Method</th><th>Voucher</th><th>Date Created</th><th>Action</th></tr></thead><tbody class="list">`;
+    const bookingList = document.getElementById('bookingList');
+    bookingList.innerHTML = '';  // Clear existing entries
 
     bookings.forEach(booking => {
-        tableHTML += `<tr>
-            <td>${booking.reference_number || ''}</td>
-            <td>${booking.fullname}</td>
-            <td>${booking.email}</td>
-            <td>${booking.number}</td>
-            <td>${booking.booking_date}</td>
-            <td><span class="badge ${getBadgeClass(booking.status)}">${booking.status}</span></td>
-            <td>${booking.dob || ''}</td>
-            <td>${booking.address || ''}</td>
-            <td>${booking.pax || ''}</td>
-            <td>${booking.start_time || ''}</td>
-            <td>${booking.end_time || ''}</td>
-            <td>${getPaymentMethod(booking.payment_method)}</td>
-            <td>${booking.voucher}</td>
-            <td>${booking.date_created || ''}</td>
-            <td>
-                <button class="btn btn-sm btn-success edit-item-btn" onclick="openUpdateModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
-            </td>
-        </tr>`;
+        const row = `
+            <tr>
+                <td class="reference_num">${booking.reference_number}</td>
+                <td class="customer_name">${booking.fullname}</td>
+                <td class="email">${booking.email}</td>
+                <td class="term">${booking.term_rate}</td>
+                <td class="date">${booking.booking_date}</td>
+                <td class="booking_status"><span class="badge ${getBadgeClass(booking.status)}">${booking.status}</span></td>
+                <td class="payment_status"><span class="badge ${getPaymentMethodBadge(booking.payment_method)}">${getPaymentMethod(booking.payment_method)}</span></td>
+                <td>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-sm btn-success edit-item-btn" onclick="openUpdateModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
+                    </div>
+                </td>
+            </tr>`;
+        bookingList.insertAdjacentHTML('beforeend', row);
     });
 
-    tableHTML += `</tbody></table></div>`;
-    bookingManagement.innerHTML = tableHTML;
+    if (bookings.length === 0) {
+        displayNoResults();
+    }
+}
+
+function updateBookingCount(displayCount, totalCount) {
+    const countElement = document.getElementById('bookingCount');
+    if (countElement) {
+        countElement.innerHTML = `Showing <strong>${displayCount}</strong> from <strong>${totalCount}</strong> data`;
+    }
+}
+
+function displayNoResults() {
+    const bookingList = document.getElementById('bookingList');
+    bookingList.innerHTML = `
+        <tr>
+            <td colspan="8" class="text-center">No bookings found.</td>
+        </tr>`;
+    updateBookingCount(0);
+}
+
+function setupPagination(totalPages, currentPage) {
+    const paginationContainer = document.querySelector('.pagination');
+    paginationContainer.innerHTML = ''; // Clear existing pagination links
+    for(let i = 1; i <= totalPages; i++) {
+        const pageItem = document.createElement('li');
+        pageItem.className = 'page-item ' + (i === currentPage ? 'active' : '');
+        const pageLink = document.createElement('a');
+        pageLink.className = 'page-link';
+        pageLink.href = '#';
+        pageLink.innerText = i;
+        pageLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            fetchAllBookings(i);
+        });
+        pageItem.appendChild(pageLink);
+        paginationContainer.appendChild(pageItem);
+    }
+}
+
+function searchBookings() {
+    const query = document.getElementById('searchInput').value.trim();
+    fetch('../data/load.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `action=searchBookings&query=${encodeURIComponent(query)}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status) {
+            displayBookings(data.bookings);
+            updateBookingCount(data.bookings.length);
+        } else {
+            console.error('Search failed:', data.message);
+            displayNoResults();
+        }
+    })
+    .catch(error => console.error('Error searching bookings:', error));
 }
 
 function getBadgeClass(status) {
@@ -86,35 +146,25 @@ function getPaymentMethod(methodId) {
     }
 }
 
-function searchBookings() {
-    const query = document.getElementById('searchInput').value.trim();
-    if (query) {
-        fetch('../data/load.php', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: `action=searchBookings&query=${encodeURIComponent(query)}`
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status) {
-                displayBookings(data.bookings);
-            } else {
-                console.error('Search failed:', data.message);
-                // Optionally, show a "no results found" message
-            }
-        })
-        .catch(error => console.error('Error searching bookings:', error));
+function getPaymentMethodBadge(methodId) {
+    switch (methodId) {
+        case 1:
+            return 'badge-credit-card';
+        case 2:
+            return 'badge-paypal';
+        case 3:
+            return 'badge-cash';
+        default:
+            return 'badge-not-specified';
     }
 }
 
 function openUpdateModal(bookingid, booking_date) {
     currentBookingIdToUpdate = bookingid;
-    // Setup the booking date input
     var bookingDateInput = document.getElementById('bookingRegDateUpdate');
     if (bookingDateInput) {
         bookingDateInput.value = booking_date;
     }
-
     var modal = document.getElementById('updateModal');
     if (modal) {
         modal.style.display = 'block';
@@ -128,24 +178,4 @@ function closeModal() {
     if (modal) {
         modal.style.display = 'none';
     }
-}
-
-function submitUpdate() {
-    const booking_date = document.getElementById('bookingRegDateUpdate').value;
-    fetch('../data/load.php', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: `action=updateBookingDetails&bookingid=${currentBookingIdToUpdate}&booking_date=${booking_date}`
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status) {
-            alert('Booking updated successfully.');
-            fetchAllBookings();
-            closeModal();
-        } else {
-            alert('Failed to update booking: ' + data.message);
-        }
-    })
-    .catch(error => console.error('Error updating booking:', error));
 }
