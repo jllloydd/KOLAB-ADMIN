@@ -20,7 +20,9 @@ function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
     .then(data => {
         if (data.status) {
             displayBookings(data.bookings);
-            updateBookingCount(data.bookings.length, data.totalRecords);
+            // Calculate the cumulative number of records displayed
+            const cumulativeCount = (page - 1) * 10 + data.bookings.length;
+            updateBookingCount(cumulativeCount, data.totalRecords);
             setupPagination(data.totalPages, page);
         } else {
             console.error('Failed to fetch bookings');
