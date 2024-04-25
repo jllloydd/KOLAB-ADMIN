@@ -88,7 +88,7 @@ function searchBookings($conn, $keyword) {
             FROM bookings
             WHERE CONCAT(firstname, ' ', lastname) LIKE ? OR email LIKE ?
             ORDER BY booking_date DESC";
-  
+
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ss", $keyword, $keyword);
     $stmt->execute();
