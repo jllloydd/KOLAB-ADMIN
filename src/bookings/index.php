@@ -266,7 +266,7 @@
                                                 <th class="sort" data-sort="term">Term</th>
                                                 <th class="sort" data-sort="date">Booking Date</th>
                                                 <th class="sort" data-sort="booking_status">Booking Status</th>
-                                                <th class="sort" data-sort="payment_status">Payment Status</th>
+                                                <th class="sort" data-sort="payment_method">Payment Status</th>
                                                 <th data-sort="action">Action</th>
                                             </tr>
                                         </thead>

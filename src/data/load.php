@@ -30,6 +30,17 @@ function format_booking_date($date_string) {
     return $date->format('F j, Y');
 }
 
+function get_payment_method_description($methodId) {
+    switch ($methodId) {
+        case "0":
+            return "Online";
+        case "1":
+            return "On-site";
+        default:
+            return "Unknown Method";
+    }
+}
+
 function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction = 'asc', $limit = 10) {
     $offset = ($page - 1) * $limit;
     $orderByClause = $criteria . ' ' . $direction;
@@ -43,9 +54,9 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
                 status,
                 payment_method,
                 bookingid
-              FROM bookings
-              ORDER BY $orderByClause
-              LIMIT $limit OFFSET $offset";
+            FROM bookings
+            ORDER BY $orderByClause
+            LIMIT $limit OFFSET $offset";
 
     $result = $conn->query($query);
     $bookings = [];
@@ -53,6 +64,7 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
         while ($row = $result->fetch_assoc()) {
             $row['term_rate'] = get_term_description($row['term_rate']);
             $row['booking_date'] = format_booking_date($row['booking_date']);
+            $row['payment_method'] = get_payment_method_description($row['payment_method']);
             $bookings[] = $row;
         }
     }
@@ -73,9 +85,9 @@ function searchBookings($conn, $keyword) {
                 status,
                 payment_method,
                 bookingid
-              FROM bookings
-              WHERE CONCAT(firstname, ' ', lastname) LIKE ? OR email LIKE ?
-              ORDER BY booking_date DESC";
+            FROM bookings
+            WHERE CONCAT(firstname, ' ', lastname) LIKE ? OR email LIKE ?
+            ORDER BY booking_date DESC";
 
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ss", $keyword, $keyword);
@@ -85,6 +97,7 @@ function searchBookings($conn, $keyword) {
     $bookings = [];
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+            $row['payment_method'] = get_payment_method_description($row['payment_method']);
             $bookings[] = $row;
         }
         jsonResponse(true, "Search results fetched successfully.", ['bookings' => $bookings]);

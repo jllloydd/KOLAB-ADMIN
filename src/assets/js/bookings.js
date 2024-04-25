@@ -20,7 +20,6 @@ function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
     .then(data => {
         if (data.status) {
             displayBookings(data.bookings);
-            // Calculate the cumulative number of records displayed
             const cumulativeCount = (page - 1) * 10 + data.bookings.length;
             updateBookingCount(cumulativeCount, data.totalRecords);
             setupPagination(data.totalPages, page);
@@ -48,7 +47,7 @@ function displayBookings(bookings) {
                 <td class="term">${booking.term_rate}</td>
                 <td class="date">${booking.booking_date}</td>
                 <td class="booking_status"><span class="badge ${getBadgeClass(booking.status)}">${booking.status}</span></td>
-                <td class="payment_status"><span class="badge ${getPaymentMethodBadge(booking.payment_method)}">${getPaymentMethod(booking.payment_method)}</span></td>
+                <td class="payment_method"><span class="badge ${getBadgeClass(booking.payment_method)}">${booking.payment_method}</span></td>
                 <td>
                     <div class="d-flex gap-2">
                         <button class="btn btn-sm btn-success edit-item-btn" onclick="openUpdateModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
@@ -130,34 +129,10 @@ function getBadgeClass(status) {
             return 'badge-checked-out';
         case 'on-site':
             return 'badge-onsite';
+        case 'online':
+            return 'badge-online';
         default:
             return 'badge-secondary'; // Default badge for unrecognized status
-    }
-}
-
-function getPaymentMethod(methodId) {
-    switch (methodId) {
-        case 1:
-            return 'Credit Card';
-        case 2:
-            return 'PayPal';
-        case 3:
-            return 'Cash';
-        default:
-            return 'Not Specified';
-    }
-}
-
-function getPaymentMethodBadge(methodId) {
-    switch (methodId) {
-        case 1:
-            return 'badge-credit-card';
-        case 2:
-            return 'badge-paypal';
-        case 3:
-            return 'badge-cash';
-        default:
-            return 'badge-not-specified';
     }
 }
 
