@@ -1,5 +1,6 @@
 <?php
 include_once("../connect/session_check.php");
+
 function jsonResponse($status, $message, $additionalData = []) {
     header('Content-Type: application/json');
     echo json_encode(array_merge([
@@ -9,24 +10,30 @@ function jsonResponse($status, $message, $additionalData = []) {
     exit;
 }
 
+function get_term_description($target) {
+    switch ($target) {
+        case "0":
+            return "Hourly";
+        case "1":
+            return "Daily";
+        case "2":
+            return "Weekly";
+        case "3":
+            return "Monthly";
+        default:
+            return "Unknown Rate";
+    }
+}
+
+function format_booking_date($date_string) {
+    $date = new DateTime($date_string);
+    return $date->format('F j, Y');
+}
+
 function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction = 'asc', $limit = 10) {
     $offset = ($page - 1) * $limit;
-
-    switch ($criteria) {
-        case 'fullname':
-            $orderByClause = "CONCAT(firstname, ' ', lastname) " . ($direction == 'asc' ? 'ASC' : 'DESC');
-            break;
-        case 'booking_date':
-            $orderByClause = "booking_date " . ($direction == 'asc' ? 'ASC' : 'DESC');
-            break;
-        case 'status':
-            $orderByClause = "status " . ($direction == 'asc' ? 'ASC' : 'DESC');
-            break;
-        default:
-            $orderByClause = "bookingid DESC"; // Default ordering
-            break;
-    }
-
+    $orderByClause = $criteria . ' ' . $direction;
+    
     $query = "SELECT 
                 reference_number,
                 CONCAT(firstname, ' ', lastname) AS fullname,
@@ -39,17 +46,19 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
               FROM bookings
               ORDER BY $orderByClause
               LIMIT $limit OFFSET $offset";
-    
+
     $result = $conn->query($query);
     $bookings = [];
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+            $row['term_rate'] = get_term_description($row['term_rate']);
+            $row['booking_date'] = format_booking_date($row['booking_date']);
             $bookings[] = $row;
         }
     }
     $totalRecords = $conn->query("SELECT COUNT(*) as total FROM bookings")->fetch_assoc()['total'];
     $totalPages = ceil($totalRecords / $limit);
-    
+
     jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords, 'totalPages' => $totalPages]);
 }
 
