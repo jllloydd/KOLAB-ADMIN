@@ -9,7 +9,7 @@ function jsonResponse($status, $message, $additionalData = []) {
     exit;
 }
 
-function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction = 'asc', $limit = 11) {
+function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction = 'asc', $limit = 10) {
     $offset = ($page - 1) * $limit;
 
     switch ($criteria) {
