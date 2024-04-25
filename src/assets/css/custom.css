@@ -1,5 +1,57 @@
+.image-hover {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/dashboard.svg');
+    background-size: cover;
+}
+
+.image-hover:hover {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg'); /* Change on hover */
+}
+    
+.navbar-menu {
+    background-color: white;
+}
+.navbar-nav:hover {
+    color: #005690;
+}
+
+.navbar-menu .navbar-nav .nav-link {
+    color: #717998;
+}
+
+.navbar-menu .navbar-nav .nav-link:hover {
+    color: #005690;
+}
+
+.navbar-menu .navbar-nav .nav-link.active {
+    color: #0683D7;
+}
+.navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+    color: #0683D7;
+}
+
+.navbar-menu .navbar-nav .nav-sm .nav-link.active {
+    color: #0683D7;
+}
+
+.navbar-menu .navbar-nav .nav-link.active {
+    color: #0683D7;
+}
+
+.item-active {
+    font-weight: bold;
+}
+
+.ri-layout-masonry-line {
+    height: 20px;
+    width: 20px;
+}
+
 .admin_booking_section {
+    overflow: scroll!important;
     font-family: "Barlow", sans-serif !important;
+    overflow: auto;
 
     .main-bg {
         background-color: #FAFAFA;
@@ -9,28 +61,7 @@
         margin-bottom: -18px;
     }
     
-    .navbar-menu {
-        background-color: white;
-    }
     
-    .navbar-menu .navbar-nav .nav-link.active {
-        color: #0683D7;
-    }
-    .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
-        color: #0683D7;
-    }
-    
-    .navbar-menu .navbar-nav .nav-sm .nav-link.active {
-        color: #0683D7;
-    }
-    
-    .navbar-menu .navbar-nav .nav-link.active {
-        color: #0683D7;
-    }
-    
-    .item-active {
-        font-weight: bold;
-    }
     
     .search-box {
         width: 100%;
@@ -90,6 +121,7 @@
         font-size: unset;
         font-weight: unset;
         width: 100px;
+        border-radius: 0;
     }
     
     .badge-pending {
@@ -101,6 +133,7 @@
         font-size: unset;
         font-weight: unset;
         width: 100px;
+        border-radius: 0;
     }
     
     .badge-cancelled {
@@ -112,6 +145,7 @@
         font-size: unset;
         font-weight: unset;
         width: 100px;
+        border-radius: 0;
     }
     
     .badge-checked-out {
@@ -123,6 +157,7 @@
         font-size: unset;
         font-weight: unset;
         width: 100px;
+        border-radius: 0;
     }
     
     .badge-onsite {
@@ -134,6 +169,7 @@
         font-size: unset;
         font-weight: unset;
         width: 100px;
+        border-radius: 0;
     }
     
     .badge-online {
@@ -145,6 +181,7 @@
         font-size: unset;
         font-weight: unset;
         width: 100px;
+        border-radius: 0;
     }
     
     .edit-item-btn {
@@ -158,7 +195,6 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: white;
-    overflow: hidden;
     font-family: "Barlow", sans-serif !important;
 }
 

@@ -23,7 +23,7 @@
                     </a>
                 </div>
 
-                <h4 class="mb-sm-0 ms-3 fw-bold">Bookings</h4>
+                <h5 class="mb-sm-0 ms-3 fw-bold">Bookings</h5>
 
                 
             </div>
