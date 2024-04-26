@@ -435,6 +435,21 @@
     
 }
 
+.admins_section {
+    .margin-remove {
+        margin-top: 0px;
+    }
+    .margin-remove {
+        margin-top: 0px;
+    }
+    .card-design {
+        border-radius: 0px;
+    }
+    .wordbreak {
+        overflow-wrap: break-word;
+    }
+}
+
 body, html {
     margin: 0;
     padding: 0;

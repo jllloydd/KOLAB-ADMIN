@@ -47,13 +47,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link d-flex flex-column" href="../bookings/">
+                            <a class="nav-link menu-link d-flex flex-column" href="../admins/">
                                 <img class="" src="../assets/img/sidebar/key.svg" alt="Admins Icon">
                                 <span><?=$lang['t-admins']?></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link d-flex flex-column" href="../bookings/">
+                            <a class="nav-link menu-link d-flex flex-column" href="../users/">
                                 <img class="" src="../assets/img/sidebar/person-admin.svg" alt="Users Icon">
                                 <span><?=$lang['t-users']?></span>
                             </a>
