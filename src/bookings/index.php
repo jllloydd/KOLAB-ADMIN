@@ -342,8 +342,8 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body card-margin">
-                            <div class="table-responsive table-card">
-                                <table class="table align-middle table-nowrap" id="bookingManagementData">
+                            <div id="bookingManagementData" class="table-responsive table-card">
+                                <table class="table align-middle table-nowrap">
                                     <thead class="table-light">
                                         <tr>
                                             <th class="sort" data-sort="reference_num">Reference No.</th>
@@ -353,51 +353,52 @@
                                             <th class="sort" data-sort="date">Booking Date</th>
                                             <th class="sort" data-sort="booking_status">Booking Status</th>
                                             <th class="sort" data-sort="payment_method">Payment Status</th>
-                                            <th data-sort="action">Action</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="bookingList" class="list form-check-all">
+                                    <tbody id="bookingList" class="list">
                                         <!-- Dynamic content will be loaded here -->
                                     </tbody>
                                 </table>
-                                <div class="noresult" style="display: none">
-                                    <div class="text-center">
-                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
-                                        </lord-icon>
-                                        <h5 class="mt-2">Sorry! No Result Found</h5>
-                                        <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any
-                                            orders for you search.</p>
-                                    </div>
+                            </div>
+                            <div class="noresult" style="display: none">
+                                <div class="text-center">
+                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
+                                    </lord-icon>
+                                    <h5 class="mt-2">Sorry! No Result Found</h5>
+                                    <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any
+                                        orders for you search.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <p id="bookingCount">Showing 0 from 0 data</p>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                                <!-- Pagination links will be dynamically inserted here -->
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p id="bookingCount">Showing 0 from 0 data</p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <!-- Pagination links will be dynamically inserted here -->
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <!-- end col -->
         </div>
-        <!-- end row -->
+        <!-- end col -->
     </div>
+    <!-- end row -->
+</div>
 </div>
 
 <!-- Sweet Alerts js -->
