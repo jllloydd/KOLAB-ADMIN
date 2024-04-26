@@ -1,89 +1,97 @@
 :root {
     --vz-vertical-menu-width:200px;
 }
-
+.image-hover {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/dashboard.svg');
+    background-size: cover;
+}
+.image-hover:hover {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg'); /* Change on hover */
+} 
 .navbar-menu {
     background-color: white;
     width: 200px;
+}
+.navbar-nav:hover {
+    color: #005690;
+}
+.navbar-menu .navbar-nav .nav-link {
+    color: #717998;
+}
+.navbar-menu .navbar-nav .nav-link:hover {
+    color: #005690;
+}
+.navbar-menu .navbar-nav .nav-link.active {
+    color: #0683D7;
+}
+.navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+    color: #0683D7;
+}
+.navbar-menu .navbar-nav .nav-sm .nav-link.active {
+    color: #0683D7;
+}
+.navbar-menu .navbar-nav .nav-link.active {
+    color: #0683D7;
+}
+.item-active {
+    font-weight: bold;
+}
+.ri-layout-masonry-line {
+    height: 20px;
+    width: 20px;
+}
+.fc .fc-toolbar-title {
+    font-family: "Barlow", sans-serif !important;
+    font-weight: bold;
+    color: #292929;
+}
+.fc .fc-toolbar h2 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #292929;
+}
+.btn-primary {
+    background-color: #e2eef600;
+    color: #e2eef600;
+    border-color: #e2eef600;
+    --vz-btn-active-bg: #e2eef600;
+}
+.btn-primary:hover {
+    background-color: unset;
+    color: unset;
+    border-color: #e2eef600;
+}
+
+.fc-prev-button {
+    background-image: url('../../assets/img/booking/prev-btn.svg');
+    height: 17px;
+}
+
+.fc-next-button {
+    background-image: url('../../assets/img/booking/next-btn.svg');
 }
 
 .notif-color {
     background-color: #0683D7;
 }
 
+.fc-today-button, .fc-dayGridMonth-button,  .fc-timeGridWeek-button, .fc-timeGridDay-button, .fc-listMonth-button{
+    display: none;
+}
+
 /* .fc-toolbar-chunk {
     display: none;
 } */
 
+.fc-scrollgrid-sync-inner {
+    background-color: white;
+}
 
-.sidebar_section {
-    .image-hover {
-        width: 25px;
-        height: 25px;
-        background-image: url('../../assets/img/sidebar/dashboard.svg');
-        background-size: cover;
-    }
-    .image-hover:hover {
-        background-image: url('../../assets/img/sidebar/dashboard-active.svg'); /* Change on hover */
-    } 
-    .navbar-nav:hover {
-        color: #005690;
-    }
-    .navbar-menu .navbar-nav .nav-link {
-        color: #717998;
-    }
-    .navbar-menu .navbar-nav .nav-link:hover {
-        color: #005690;
-    }
-    .navbar-menu .navbar-nav .nav-link.active {
-        color: #0683D7;
-    }
-    .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
-        color: #0683D7;
-    }
-    .navbar-menu .navbar-nav .nav-sm .nav-link.active {
-        color: #0683D7;
-    }
-    .navbar-menu .navbar-nav .nav-link.active {
-        color: #0683D7;
-    }
-    .item-active {
-        font-weight: bold;
-    }
-    .ri-layout-masonry-line {
-        height: 20px;
-        width: 20px;
-    }
-    .fc .fc-toolbar-title {
-        font-family: "Barlow", sans-serif !important;
-        font-weight: bold;
-        color: #292929;
-    }
-    .fc .fc-toolbar h2 {
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        color: #292929;
-    }
-    .btn-primary {
-        background-color: #e2eef600;
-        color: #e2eef600;
-        border-color: #e2eef600;
-        --vz-btn-active-bg: #e2eef600;
-    }
-    .btn-primary:hover {
-        background-color: unset;
-        color: unset;
-        border-color: #e2eef600;
-    }
-    
-    .fc-prev-button {
-        background-image: url('../../assets/img/booking/prev-btn.svg');
-        height: 17px;
-    }
-    
-    .fc-next-button {
-        background-image: url('../../assets/img/booking/next-btn.svg');
-    }
+.fc-theme-bootstrap a:not([href]) {
+    color: #717998;
+    font-weight: normal;
 }
 
 .admin_booking_section {
@@ -96,7 +104,7 @@
     }
 
     .calendar-height {
-        height: 550px;
+        height: 570px;
     }
 
     .page-padding {
@@ -108,25 +116,12 @@
         padding-bottom: 10px;
     }
 
-    .fc-today-button, .fc-dayGridMonth-button,  .fc-timeGridWeek-button, .fc-timeGridDay-button, .fc-listMonth-button{
-        display: none;
-    }
-
     .fc td, .fc th {
         border: unset;
     }
 
     .fc-scrollgrid-sync-inner {
         background-color: unset;
-    }
-
-    .fc-scrollgrid-sync-inner {
-        background-color: white;
-    }
-    
-    .fc-theme-bootstrap a:not([href]) {
-        color: #717998;
-        font-weight: normal;
     }
 
     .fc-day-other {
@@ -169,7 +164,7 @@
 
     .third-col {
         padding-left: 0px;
-        padding-right: 17px;  
+        padding-right: 22px;  
     }
 
     .guest-style {
@@ -218,10 +213,6 @@
     .btn-icons {
         width: 70px;
     }
-
-    .term-icon {
-        margin-bottom: 3px;
-    }
     
     .search-box .search-icon {
         left: 13px;
@@ -265,7 +256,6 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
-        text-align: center;
     }
     
     .badge-cancelled {
@@ -319,120 +309,6 @@
     .edit-item-btn {
         width: 70px;
     }
-
-    .view-btn {
-        background-color: #0683D7;
-        color: white;
-        border-radius: 0px;
-    }
-
-    .view-btn:hover {
-        background-color: #005690;
-        color: white;
-    }
-
-    .modal-content {
-        font-family: "Barlow", sans-serif !important;
-        background-color: #FAFAFA;
-
-        .card-body {
-            padding: 0;
-        }
-
-        .card-padding {
-            padding: 0;
-        }
-
-        .membership-card {
-            background: #FCD116;
-        }
-        .guest-name {
-            color: #292929;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0px;
-        }
-        .membership-style {
-            color: #292929;
-            font-weight: bold;
-            margin-bottom: 0px;
-            font-size: 1.25rem;
-        }
-        .info-style {
-            color: #292929;
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
-        .icon-col {
-            padding-left: 37px;
-        }
-        .modal-heading {
-            font-size: 1.25rem;
-            color: #292929;
-        }
-        .modal-info {
-            font-size: 1rem;
-            color: #292929;
-        }
-        .modal-blue {
-            color: #0683D7;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        .subheading {
-            color:#717998;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 0;
-            margin-left: 10px;
-        }
-        .subheading-icon {
-            padding-right: 0;
-        }
-        .heading-align {
-            margin-left: 32px;
-        }
-        .remove-padding {
-            padding-right: 30px;
-        }
-        .remove-margin {
-            margin-left: 2px;
-        }
-        .from-style {
-            font-size: 14px;
-            color: #717998;
-            margin-bottom: 0px;
-        }
-        .to-style {
-            font-size: 14px;
-            color: #717998;
-            margin-bottom: 0px;
-            margin-left: 30px;
-        }
-        .visibility {
-            visibility: hidden;
-        }
-        .proof-style {
-            font-size: 14px;
-            color: #0683D7;
-            text-decoration: underline;
-            text-decoration-color: #0683D7;
-        }
-        .btn-confirm {
-            color: white;
-            background-color: #0683D7;
-            width: 200px;
-            border-radius: 0;
-        }
-        .btn-confirm:hover {
-            color: white;
-            background-color: #005690;
-        }
-        .modal-footer {
-            padding-bottom: 0px;
-        }
-    }
-    
 }
 
 .admins_section {
