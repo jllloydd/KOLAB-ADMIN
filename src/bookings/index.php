@@ -327,7 +327,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-sm-3">
                                         <div>
                                             <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
@@ -423,4 +422,5 @@
 <!-- END layout-wrapper -->
 
 </body>
+
 </html>
