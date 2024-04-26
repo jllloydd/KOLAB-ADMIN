@@ -66,41 +66,6 @@
             <div class="sidebar-background"></div>
         </div>
 
-        <div id="scrollbar">
-            <div class="container-fluid">
-
-                <div id="two-column-menu">
-                </div>
-                <ul class="navbar-nav" id="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link menu-link d-flex flex-column" href="../dashboard/">
-                            <div class="image-hover"></div>
-                            <span><?=$lang['t-dashboard']?></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link menu-link d-flex flex-column" href="../bookings/">
-                            <img class="" src="../assets/img/sidebar/admin-calendar.svg" alt="Calendar Icon">
-                            <span><?=$lang['t-bookings']?></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link menu-link d-flex flex-column" href="../bookings/">
-                            <img class="" src="../assets/img/sidebar/key.svg" alt="Admins Icon">
-                            <span><?=$lang['t-admins']?></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link menu-link d-flex flex-column" href="../bookings/">
-                            <img class="" src="../assets/img/sidebar/person-admin.svg" alt="Users Icon">
-                            <span><?=$lang['t-users']?></span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- Sidebar -->
-        </div>
         <div class="sidebar-background"></div>
     </div>
 </div>
