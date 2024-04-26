@@ -13,29 +13,22 @@
 <!-- Calendar -->
 <!-- ============================================================== -->
 
-    <!-- ============================================================== -->
-    <!-- Calendar -->
-    <!-- ============================================================== -->
-    <div class="main-content">
-
-        <div class="page-content page-padding">
-            <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row d-flex flex-row">
-                            <div class="col-xl-9">
-                                <div class="card calendar-height">
-                                    <div class="card-body">
-                                        <div id="calendar"></div>
-                                    </div>
+<div class="main-content">
+    <div class="page-content page-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-xl-9">
+                            <div class="card calendar-height">
+                                <div class="card-body">
+                                    <div id="calendar"></div>
                                 </div>
-                            </div><!-- end col -->
-
-                            <div class="col-xl-3">
-                                <div class="card ">
-                                    <div class="card-body">
-
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-xl-3">
+                            <div class="card ">
+                                <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
                                     <div class="row approved-item d-flex align-items-center justify-content-between">
                                         <div class="col-7 d-flex flex-column">
@@ -278,54 +271,28 @@
                                                     <div>
                                                         <input type="text" class="form-control d-none" name="event-location" id="event-location" placeholder="Event location">
                                                     </div>
-                                                </div><!--end col-->
-                                            </div><!--end row-->
-                                            <div class="hstack gap-2 justify-content-end">
-                                                <button type="button" class="btn btn-soft-danger" id="btn-delete-event"><i class="ri-close-line align-bottom"></i> Delete</button>
-                                                <button type="submit" class="btn btn-success" id="btn-save-event">Add Event</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div> <!-- end modal-content-->
-                            </div> <!-- end modal dialog-->
-                        </div> <!-- end modal-->
-                        <!-- end modal-->
-                    </div>
-                    <!-- end col -->
+                                                </div>
+                                            </div><!--end col-->
+                                            <input type="hidden" id="eventid" name="eventid" value="" />
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Description</label>
+                                                    <textarea class="form-control d-none" id="event-description" placeholder="Enter a description" rows="3" spellcheck="false"></textarea>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                        <div class="hstack gap-2 justify-content-end">
+                                            <button type="button" class="btn btn-soft-danger" id="btn-delete-event"><i class="ri-close-line align-bottom"></i> Delete</button>
+                                            <button type="submit" class="btn btn-success" id="btn-save-event">Add Event</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> <!-- end modal-content-->
+                        </div> <!-- end modal dialog-->
+                    </div> <!-- end modal-->
+                    <!-- end modal-->
                 </div>
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body card-margin">
-                            <div id="bookingManagementData" class="table-responsive table-card">
-                                <table class="table align-middle table-nowrap">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th class="sort" data-sort="reference_num">Reference No.</th>
-                                            <th class="sort" data-sort="customer_name">Guest</th>
-                                            <th class="sort" data-sort="email">Email</th>
-                                            <th class="sort" data-sort="term">Term</th>
-                                            <th class="sort" data-sort="date">Booking Date</th>
-                                            <th class="sort" data-sort="booking_status">Booking Status</th>
-                                            <th class="sort" data-sort="payment_method">Payment Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="bookingList" class="list">
-                                        <!-- Dynamic content will be loaded here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="noresult" style="display: none">
-                                <div class="text-center">
-                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
-                                    </lord-icon>
-                                    <h5 class="mt-2">Sorry! No Result Found</h5>
-                                    <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any
-                                        orders for you search.</p>
-                </div> <!-- end row-->
-                
-            </div>
-            <!-- container-fluid -->
+            </div> <!-- end row-->
         </div>
         <!-- container-fluid -->
     </div>
