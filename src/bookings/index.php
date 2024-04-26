@@ -461,7 +461,7 @@
         <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
         <!-- App js -->
-        <script src="assets/js/app.js"></script>
+        <script src="../assets/js/app.js"></script>
         <script src="../assets/js/bookings.js"></script>
 
 </div>
