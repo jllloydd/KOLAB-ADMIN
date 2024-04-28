@@ -1,56 +1,55 @@
 :root {
     --vz-vertical-menu-width:200px;
 }
-.image-hover {
-    width: 25px;
-    height: 25px;
-    background-image: url('../../assets/img/sidebar/dashboard.svg');
-    background-size: cover;
+.sidebar_section {
+    .image-hover {
+        width: 25px;
+        height: 25px;
+        background-image: url('../../assets/img/sidebar/dashboard.svg');
+        background-size: cover;
+    }
+    .image-hover {
+        width: 25px;
+        height: 25px;
+        background-image: url('../../assets/img/sidebar/dashboard.svg');
+        background-size: cover;
+    }
+    .image-hover:hover {
+        background-image: url('../../assets/img/sidebar/dashboard-active.svg'); /* Change on hover */
+    } 
+    .navbar-menu {
+        background-color: white;
+        width: 200px;
+    }
+    .navbar-nav:hover {
+        color: #005690;
+    }
+    .navbar-menu .navbar-nav .nav-link {
+        color: #717998;
+    }
+    .navbar-menu .navbar-nav .nav-link:hover {
+        color: #005690;
+    }
+    .navbar-menu .navbar-nav .nav-link.active {
+        color: #0683D7;
+    }
+    .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+        color: #0683D7;
+    }
+    .navbar-menu .navbar-nav .nav-sm .nav-link.active {
+        color: #0683D7;
+    }
+    .navbar-menu .navbar-nav .nav-link.active {
+        color: #0683D7;
+    }
+    .item-active {
+        font-weight: bold;
+    }
 }
-.image-hover:hover {
-    background-image: url('../../assets/img/sidebar/dashboard-active.svg'); /* Change on hover */
-} 
-.navbar-menu {
-    background-color: white;
-    width: 200px;
-}
-.navbar-nav:hover {
-    color: #005690;
-}
-.navbar-menu .navbar-nav .nav-link {
-    color: #717998;
-}
-.navbar-menu .navbar-nav .nav-link:hover {
-    color: #005690;
-}
-.navbar-menu .navbar-nav .nav-link.active {
-    color: #0683D7;
-}
-.navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
-    color: #0683D7;
-}
-.navbar-menu .navbar-nav .nav-sm .nav-link.active {
-    color: #0683D7;
-}
-.navbar-menu .navbar-nav .nav-link.active {
-    color: #0683D7;
-}
-.item-active {
-    font-weight: bold;
-}
+
 .ri-layout-masonry-line {
     height: 20px;
     width: 20px;
-}
-.fc .fc-toolbar-title {
-    font-family: "Barlow", sans-serif !important;
-    font-weight: bold;
-    color: #292929;
-}
-.fc .fc-toolbar h2 {
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    color: #292929;
 }
 .btn-primary {
     background-color: #e2eef600;
@@ -62,36 +61,6 @@
     background-color: unset;
     color: unset;
     border-color: #e2eef600;
-}
-
-.fc-prev-button {
-    background-image: url('../../assets/img/booking/prev-btn.svg');
-    height: 17px;
-}
-
-.fc-next-button {
-    background-image: url('../../assets/img/booking/next-btn.svg');
-}
-
-.notif-color {
-    background-color: #0683D7;
-}
-
-.fc-today-button, .fc-dayGridMonth-button,  .fc-timeGridWeek-button, .fc-timeGridDay-button, .fc-listMonth-button{
-    display: none;
-}
-
-/* .fc-toolbar-chunk {
-    display: none;
-} */
-
-.fc-scrollgrid-sync-inner {
-    background-color: white;
-}
-
-.fc-theme-bootstrap a:not([href]) {
-    color: #717998;
-    font-weight: normal;
 }
 
 .admin_booking_section {
@@ -115,6 +84,32 @@
         padding-top: 0;
         padding-bottom: 10px;
     }
+    .fc .fc-toolbar-title {
+        font-family: "Barlow", sans-serif !important;
+        font-weight: bold;
+        color: #292929;
+    }
+    .fc .fc-toolbar h2 {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        color: #292929;
+    }
+    .fc-prev-button {
+        background-image: url('../../assets/img/booking/prev-btn.svg');
+        height: 17px;
+    }
+    
+    .fc-next-button {
+        background-image: url('../../assets/img/booking/next-btn.svg');
+    }
+    
+    .notif-color {
+        background-color: #0683D7;
+    }
+    
+    .fc-today-button, .fc-dayGridMonth-button,  .fc-timeGridWeek-button, .fc-timeGridDay-button, .fc-listMonth-button{
+        display: none;
+    }
 
     .fc td, .fc th {
         border: unset;
@@ -126,6 +121,15 @@
 
     .fc-day-other {
         background-color: #FAFAFA;
+    }
+
+    .fc-scrollgrid-sync-inner {
+        background-color: white;
+    }
+    
+    .fc-theme-bootstrap a:not([href]) {
+        color: #717998;
+        font-weight: normal;
     }
 
     .fc .fc-col-header-cell {
@@ -164,7 +168,7 @@
 
     .third-col {
         padding-left: 0px;
-        padding-right: 22px;  
+        padding-right: 16px;  
     }
 
     .guest-style {
@@ -317,13 +321,61 @@
     }
     .margin-remove {
         margin-top: 0px;
+        margin-bottom: 0px;
     }
     .card-design {
         border-radius: 0px;
+        height: 100px;
+        /* background-color: #E2EEF6; */
+        background: linear-gradient(
+            to right, 
+            #0683D7,
+            #0683D7 3%,
+            #E2EEF6 3%,
+            #E2EEF6
+        );
+    }
+    .card-design-red {
+        border-radius: 0px;
+        height: 100px;
+        /* background-color: #E2EEF6; */
+        background: linear-gradient(
+            to right, 
+            #FE0600,
+            #FE0600 3%,
+            #FAE2E1 3%,
+            #FAE2E1
+        );
     }
     .wordbreak {
         overflow-wrap: break-word;
     }
+    .role-style {
+        color: #717998;
+
+    }
+    .toggle-position {
+        right: 0;
+        bottom: 0;
+        font-family: "Barlow", sans-serif !important;
+        font-weight: normal;
+    }
+    .form-check-input {
+        background-color: #D8DDE4;
+        border: 0px;
+        height: 17px;    
+    }
+    .form-check-input:checked {
+        background-color: #FE0600;
+        border-color: #FE0600;
+    }
+    .form-switch .form-check-input {
+        --vz-form-switch-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255'/%3e%3c/svg%3e);
+        width: 35px;
+    }
+    
+
+
 }
 
 body, html {
