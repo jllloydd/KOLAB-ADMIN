@@ -53,7 +53,7 @@ function displayBookings(bookings) {
                 <td class="payment_method"><span class="badge ${getBadgeClass(booking.payment_method)}">${booking.payment_method}</span></td>
                 <td>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-sm btn-success edit-item-btn" onclick="openUpdateModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
+                        <button class="btn btn-sm btn-success edit-item-btn" onclick="openModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
                     </div>
                 </td>
             </tr>`;
@@ -159,23 +159,48 @@ function getBadgeClass(status) {
     }
 }
 
-function openUpdateModal(bookingid, booking_date) {
-    currentBookingIdToUpdate = bookingid;
-    var bookingDateInput = document.getElementById('bookingRegDateUpdate');
-    if (bookingDateInput) {
-        bookingDateInput.value = booking_date;
-    }
-    var modal = document.getElementById('updateModal');
-    if (modal) {
-        modal.style.display = 'block';
-    } else {
-        console.error('The update modal was not found in the DOM.');
-    }
+function openModal(bookingId) {
+    console.log("openModal called with bookingId:", bookingId);
+    $.ajax({
+        url: '../data/load.php',  // Adjust if necessary to point to the correct path
+        type: 'POST',
+        data: {
+            action: 'viewModal',
+            bookingId: bookingId
+        },
+        dataType: 'json',
+        beforeSend: function () {
+            // Display a loading text or spinner before the request completes
+            $('#myModal').find('.modal-body').html('<div class="loader">Loading...</div>');
+        },
+        success: function (response) {
+            if (response.success) {
+                // Populate the modal fields with the fetched data
+                var data = response.data;
+                $('#myModal').find('.guest-name').text(data.fullname);
+                $('#myModal').find('.info-style').first().text(data.number);
+                $('#myModal').find('.info-style').last().text(data.email);
+                $('#myModal').find('.modal-blue').first().text('#' + data.reference_number);
+                $('#myModal').find('.badge-pending').text(data.status);
+                $('#myModal').find('.modal-info').eq(0).text(data.term_rate);
+                $('#myModal').find('.modal-info').eq(1).text(data.pax + ' Pax');
+                $('#myModal').find('.modal-info').eq(2).text(data.booking_date);
+
+                // Show the modal
+                $('#myModal').modal('show');
+            } else {
+                // Handle no data or errors
+                $('#myModal').find('.modal-body').html('<p class="text-warning">' + response.message + '</p>');
+            }
+        },
+        error: function (xhr, status, error) {
+            // Handle any AJAX errors
+            $('#myModal').find('.modal-body').html('<p class="text-danger">Error loading data. Please try again.</p>');
+            console.error('AJAX Error:', status, error);
+        }
+    });
 }
 
 function closeModal() {
-    var modal = document.getElementById('updateModal');
-    if (modal) {
-        modal.style.display = 'none';
-    }
+    $('#myModal').modal('hide');
 }

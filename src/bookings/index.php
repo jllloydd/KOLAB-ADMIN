@@ -399,6 +399,76 @@
     </div>
     <!-- end row -->
 </div>
+<!-- Modal for Booking Details -->
+<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Booking Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- First Column for user and contact details -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="guest-name"></h5> <!-- Full name will be populated here -->
+                                <p class="membership-style"></p> <!-- Membership type if any -->
+                                <div>
+                                    <img src="../assets/img/booking/phone.svg" alt="Phone" height="22" width="22" class="me-2">
+                                    <span class="info-style"></span> <!-- Phone number -->
+                                </div>
+                                <div class="mt-2">
+                                    <img src="../assets/img/booking/email.svg" alt="Email" height="22" width="22" class="me-2">
+                                    <span class="info-style"></span> <!-- Email -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Column for booking details -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="modal-heading">Booking Details</h6>
+                                <div>
+                                    <strong>Reference Number:</strong> <span class="modal-blue"></span>
+                                    <strong>Status:</strong> <span class="badge-pending"></span>
+                                </div>
+                                <div>
+                                    <strong>Term:</strong> <span class="modal-info"></span>
+                                    <strong>Pax:</strong> <span class="modal-info"></span>
+                                    <strong>Booking Date:</strong> <span class="modal-info"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Column for payment details -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="modal-heading">Payment Details</h6>
+                                <div>
+                                    <strong>Payment Method:</strong> <span class="modal-info"></span>
+                                    <strong>Amount:</strong> <span class="modal-info"></span>
+                                    <strong>Total Hours:</strong> <span class="modal-info"></span>
+                                    <strong>Voucher:</strong> <span class="modal-info"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 <!-- Sweet Alerts js -->
@@ -420,6 +490,7 @@
 <!-- App js -->
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/bookings.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- END layout-wrapper -->
 
 </body>

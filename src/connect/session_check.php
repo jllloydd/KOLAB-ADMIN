@@ -40,4 +40,3 @@ if ($localhost_status == true && $localhost_status_index == true) {
     $in_concat = false;
 }
 ?>
-
