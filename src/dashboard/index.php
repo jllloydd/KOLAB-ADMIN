@@ -12,89 +12,57 @@
                         <div class="h-100">
                             <div class="row">
 
-                                <div class="col-xl-3 col-md-6 ">
-                                    <div class="card card-animate bg-primary">
-                                        <div class="card-body ">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Total Bookings</p>
-                                                </div>
+                                <div class="col">
+                                    <div class="total-booking card card-animate ">
+                                        <div class="total-container card-body ms-4 mt-3 mb-3">
+                                            <div class="me-5">
+                                                <div><h5>Total Booking</h5></div>
+                                                <div><h1 class="fw-bold">872</h1></div>
                                             </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">872</span>
-                                                    </h4>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0 m-">
-                                                    <img src="../assets/img/dashboard/total-booking.svg" width="40px">
-                                                </div>
+                                            <div class="ms-5">
+                                                <img src="../assets/img/dashboard/total-booking.svg" width="70px" >
                                             </div>
                                         </div>
                                     </div>
                                 </div><!-- end col -->
 
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Total Bookings</p>
-                                                </div>
+                                <div class="col">
+                                    <div class="current-booking card card-animate ">
+                                        <div class="current-container card-body ms-4 mt-3 mb-3">
+                                            <div class="me-5">
+                                                <div><h5>Current Booking</h5></div>
+                                                <div><h1 class="fw-bold">872</h1></div>
                                             </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">872</span>
-                                                    </h4>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0 m-">
-                                                    <img src="../assets/img/dashboard/current-booking.svg" width="40px">
-                                                </div>
+                                            <div class="ms-5">
+                                                <img src="../assets/img/dashboard/current-booking.svg" width="70px" >
                                             </div>
                                         </div>
                                     </div>
                                 </div><!-- end col -->
 
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Pending Bookings</p>
-                                                </div>
+                                <div class="col">
+                                    <div class="pending-booking card card-animate ">
+                                        <div class="pending-container card-body ms-4 mt-3 mb-3">
+                                            <div class="me-5">
+                                                <div><h5>Pending Booking</h5></div>
+                                                <div><h1 class="fw-bold">872</h1></div>
                                             </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">872</span>
-                                                    </h4>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0 m-">
-                                                    <img src="../assets/img/dashboard/pending-booking.svg" width="40px">
-                                                </div>
+                                            <div class="ms-5">
+                                                <img src="../assets/img/dashboard/pending-booking.svg" width="70px" >
                                             </div>
                                         </div>
                                     </div>
                                 </div><!-- end col -->
 
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Cancelled Bookings</p>
-                                                </div>
+                                <div class="col">
+                                    <div class="cancelled-booking card card-animate ">
+                                        <div class="cancelled-container card-body ms-4 mt-3 mb-3">
+                                            <div class="me-5">
+                                                <div><h5>Cancelled Booking</h5></div>
+                                                <div><h1 class="fw-bold">872</h1></div>
                                             </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">872</span>
-                                                    </h4>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0 m-">
-                                                    <img src="../assets/img/dashboard/cancelled-booking.svg" width="40px">
-                                                </div>
+                                            <div class="ms-5 end-0">
+                                                <img src="../assets/img/dashboard/cancelled-booking.svg" width="70px" >
                                             </div>
                                         </div>
                                     </div>
@@ -105,24 +73,25 @@
 
 
                             <div class="row">
-                                <!--Total Revenue-->
+                                <!-- Total Revenue-->
                                 <div class="col">
                                     <div class="col">
                                         <div class="row d-flex gap-3">
                                             <div class="">
                                                 <div class="card">
-                                                    <div class="card-header border-0 align-items-center d-flex">
-                                                        <h1 class="card-title mb-0 flex-grow-1">Revenue</h1>
-                                                    </div>
-                                                    <div class="card-header border-0 align-items-center d-flex">
-                                                        <h4 class="card-title mb-0 flex-grow-1"><span>&#8369;</span> 87,561</h4>
-                                                        <div>
-                                                            <h5><span>&#8369;</span>87,561</h5>
-                                                            <h5>Last Month</h5>
+                                                    <div class="card-header border-0 align-items-center d-flex p-5">
+                                                        <div class="row">
+                                                            <div><h4 class="card-title mb-0">Total Revenue</h4></div>
+                                                            <div class="flex-grow-1"><h1><span>&#8369;</span> 87,561</h1></div>
+                                                        </div>
+                                                        <div class="ml-auto d-flex align-items-center justify-content-end">
+                                                            <h5 style="margin-right: 10px;"><span>&#8369;</span>87,561</h5>
+                                                            <h5 style="margin-right: 10px;">Last Month</h5>
+                                                            <img src="../assets/img/dashboard/up-arrow.svg" style="margin-left: 10px;">
                                                         </div>
                                                     </div>
-                                                </div><!-- end card -->
-                                            </div><!-- end col -->
+                                                </div>
+                                            </div>
                                             <div class="">
                                                 <div class="card">
                                                 <div class="card-header border-0 align-items-center d-flex">
@@ -135,8 +104,8 @@
                                                             <h5>Last Month</h5>
                                                         </div>
                                                     </div>
-                                                </div><!-- end card -->
-                                            </div><!-- end col -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -242,11 +211,11 @@
 
                                 <!--Calendar-->
                                 <div class="col ">
-                                    <div class="card card-animate p-3">
+                                    <div class="card p-3">
                                     <div class="row mt-3 justify-content-center">
-                                        <div class="col"><button onclick="prevMonth()">&lt;</button></div>
+                                        <div class="col"><button onclick="prevMonth()" style="border: none; background-color: white;">&lt;</button></div>
                                         <div class="col"><h2 id="monthYear"></h2></div>
-                                        <div class="col"><button onclick="nextMonth()">&gt;</button></div>
+                                        <div class="col"><button onclick="nextMonth()" style="border: none; background-color: white;">&gt;</button></div>
                                     </div>
                                     <table id="calendar">
                                         <tr>
