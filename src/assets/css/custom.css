@@ -494,6 +494,10 @@ body, html {
     font-family: "Barlow", sans-serif !important;
 }
 
+.login_page {
+    overflow: hidden;
+}
+
 .img {
     height: 100vh;
     width: 100vh;
@@ -582,20 +586,26 @@ body, html {
 }
 
 
-/* Deashboard Page */
+/* Dashboard Page */
 .total-booking {
     background-color: rgba(6, 131, 215, 0.1);
     border-left: 8px solid #0683D7;
+    display: flex;
+    flex-direction: row;
 }
 
 .current-booking {
     background-color: rgba(252, 209, 22, 0.1);
     border-left: 8px solid #FCD116;
+    display: flex;
+    flex-direction: row;
 }
 
 .pending-booking {
     background-color: rgba(249, 112, 29, 0.1);
     border-left: 8px solid #F9701D;
+    display: flex;
+    flex-direction: row;
 }
 
 .cancelled-booking {
@@ -611,4 +621,21 @@ body, html {
 .cancelled-container {
     display: flex;
     flex-direction: row;
+}
+
+.total-revenue {
+    display: flex;
+    flex-direction: row;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.checkin {
+    color: #5BB752;
+    background-color: #EFF8EE;
 }

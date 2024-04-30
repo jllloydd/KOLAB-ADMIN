@@ -8,62 +8,59 @@
         <div class="page-content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
-                        <div class="h-100">
                             <div class="row">
-
                                 <div class="col">
-                                    <div class="total-booking card card-animate ">
-                                        <div class="total-container card-body ms-4 mt-3 mb-3">
-                                            <div class="me-5">
-                                                <div><h5>Total Booking</h5></div>
-                                                <div><h1 class="fw-bold">872</h1></div>
+                                    <div class="total-booking card">
+                                        <div class="total-container card-body ms-4 mt-3 mb-3" >
+                                            <div>
+                                                <h6>Total Booking</h6>
+                                                <h2 class="fw-bold">872</h2>
                                             </div>
-                                            <div class="ms-5">
-                                                <img src="../assets/img/dashboard/total-booking.svg" width="70px" >
-                                            </div>
+                                        </div>
+                                        <div class=" align-content-center justify-content-center pe-3">
+                                            <img src="../assets/img/dashboard/total-booking.svg" width="50px" >
                                         </div>
                                     </div>
                                 </div><!-- end col -->
 
                                 <div class="col">
-                                    <div class="current-booking card card-animate ">
-                                        <div class="current-container card-body ms-4 mt-3 mb-3">
-                                            <div class="me-5">
-                                                <div><h5>Current Booking</h5></div>
-                                                <div><h1 class="fw-bold">872</h1></div>
+                                    <div class="current-booking card">
+                                        <div class="current-container card-body ms-4 mt-3 mb-3" >
+                                            <div>
+                                                <h6>Current Booking</h6>
+                                                <h2 class="fw-bold">872</h2>
                                             </div>
-                                            <div class="ms-5">
-                                                <img src="../assets/img/dashboard/current-booking.svg" width="70px" >
-                                            </div>
+                                        </div>
+                                        <div class="align-content-center justify-content-center me-3">
+                                            <img src="../assets/img/dashboard/current-booking.svg" width="50px" >
                                         </div>
                                     </div>
                                 </div><!-- end col -->
 
                                 <div class="col">
-                                    <div class="pending-booking card card-animate ">
-                                        <div class="pending-container card-body ms-4 mt-3 mb-3">
-                                            <div class="me-5">
-                                                <div><h5>Pending Booking</h5></div>
-                                                <div><h1 class="fw-bold">872</h1></div>
+                                    <div class="pending-booking card">
+                                        <div class="pending-container card-body ms-4 mt-3 mb-3" >
+                                            <div>
+                                                <h6>Pending Booking</h6>
+                                                <h2 class="fw-bold">872</h2>
                                             </div>
-                                            <div class="ms-5">
-                                                <img src="../assets/img/dashboard/pending-booking.svg" width="70px" >
-                                            </div>
+                                        </div>
+                                        <div class="align-content-center justify-content-center me-3">
+                                            <img src="../assets/img/dashboard/pending-booking.svg" width="50px" >
                                         </div>
                                     </div>
                                 </div><!-- end col -->
 
                                 <div class="col">
-                                    <div class="cancelled-booking card card-animate ">
-                                        <div class="cancelled-container card-body ms-4 mt-3 mb-3">
-                                            <div class="me-5">
-                                                <div><h5>Cancelled Booking</h5></div>
-                                                <div><h1 class="fw-bold">872</h1></div>
+                                    <div class="cancelled-booking card">
+                                        <div class="cancelled-container card-body ms-4 mt-3 mb-3" >
+                                            <div>
+                                                <h6>Cancelled Booking</h6>
+                                                <h2 class="fw-bold">872</h2>
                                             </div>
-                                            <div class="ms-5 end-0">
-                                                <img src="../assets/img/dashboard/cancelled-booking.svg" width="70px" >
-                                            </div>
+                                        </div>
+                                        <div class="align-content-center justify-content-center me-3">
+                                            <img src="../assets/img/dashboard/cancelled-booking.svg" width="50px" >
                                         </div>
                                     </div>
                                 </div><!-- end col -->
@@ -71,146 +68,143 @@
                             </div> 
 
 
-
                             <div class="row">
-                                <!-- Total Revenue-->
                                 <div class="col">
-                                    <div class="col">
-                                        <div class="row d-flex gap-3">
-                                            <div class="">
-                                                <div class="card">
-                                                    <div class="card-header border-0 align-items-center d-flex p-5">
-                                                        <div class="row">
-                                                            <div><h4 class="card-title mb-0">Total Revenue</h4></div>
-                                                            <div class="flex-grow-1"><h1><span>&#8369;</span> 87,561</h1></div>
-                                                        </div>
-                                                        <div class="ml-auto d-flex align-items-center justify-content-end">
-                                                            <h5 style="margin-right: 10px;"><span>&#8369;</span>87,561</h5>
-                                                            <h5 style="margin-right: 10px;">Last Month</h5>
-                                                            <img src="../assets/img/dashboard/up-arrow.svg" style="margin-left: 10px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="">
-                                                <div class="card">
-                                                <div class="card-header border-0 align-items-center d-flex">
-                                                        <h1 class="card-title mb-0 flex-grow-1">Revenue</h1>
-                                                    </div>
-                                                    <div class="card-header border-0 align-items-center d-flex">
-                                                        <h4 class="card-title mb-0 flex-grow-1"><span>&#8369;</span> 87,561</h4>
-                                                        <div>
-                                                            <h5><span>&#8369;</span>87,561</h5>
-                                                            <h5>Last Month</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="total-revenue card ps-5 pt-4 pb-4">
+                                        <div class="align-items-center pe-3">
+                                            <div><h5 class="fw-light pb-3">Total Revenue</h5></div>
+                                            <div><h2 class="fw-bolder"><span>&#8369;</span> 87,561 </h2></div>
+                                        </div>
+                                        <div class="total" width="200px">
+                                            <div class="pb-2"><img src="../assets/img/dashboard/up-arrow.svg"></div>
+                                            <div><h6 class="fw-light text-end"><span>&#8369;</span>87,561</h6></div>
+                                            <div><h6 class="fw-light text-end">Last Month</h6></div>
                                         </div>
                                     </div>
-                                </div>
+
+                                    <div class="total-revenue card ps-5 pt-4 pb-4">
+                                        <div class="align-items-center pe-3">
+                                            <div><h5 class="fw-light pb-3">Revenue Today</h5></div>
+                                            <div><h2 class="fw-bolder"><span>&#8369;</span> 1,340</h2></div>
+                                        </div>
+                                        <div class="total" width="200px">
+                                            <div class="pb-2"><img src="../assets/img/dashboard/down-arrow.svg"></div>
+                                            <div><h6 class="fw-light text-end"><span>&#8369;</span>2,485</h6></div>
+                                            <div><h6 class="fw-light text-end">Yesterday</h6></div>
+                                        </div>
+                                    </div>
+                                </div><!-- end col -->
+
+                                        <div class="col">
+                                            <div class=" card">
+                                                
+                                            <div class="card-body">
+                                            <p class="heading">Guest List Today</p>
+                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="col d-flex flex-column">
+                                                        <p class="me-auto ref-num">#0010</p>
+                                                        <p class="me-auto guest-style">Julienne Galvez</p>
+                                                    </div>
+                                                    <div class="col second-col d-flex flex-column align-items-center">
+                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="col d-flex flex-column">
+                                                        <p class="me-auto ref-num">#0010</p>
+                                                        <p class="me-auto guest-style">Julienne Galvez</p>
+                                                    </div>
+                                                    <div class="col second-col d-flex flex-column align-items-center">
+                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="col d-flex flex-column">
+                                                        <p class="me-auto ref-num">#0010</p>
+                                                        <p class="me-auto guest-style">Julienne Galvez</p>
+                                                    </div>
+                                                    <div class="col second-col d-flex flex-column align-items-center">
+                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="col d-flex flex-column">
+                                                        <p class="me-auto ref-num">#0010</p>
+                                                        <p class="me-auto guest-style">Julienne Galvez</p>
+                                                    </div>
+                                                    <div class="col second-col d-flex flex-column align-items-center">
+                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="col d-flex flex-column">
+                                                        <p class="me-auto ref-num">#0010</p>
+                                                        <p class="me-auto guest-style">Julienne Galvez</p>
+                                                    </div>
+                                                    <div class="col second-col d-flex flex-column align-items-center">
+                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="col d-flex flex-column">
+                                                        <p class="me-auto ref-num">#0010</p>
+                                                        <p class="me-auto guest-style">Julienne Galvez</p>
+                                                    </div>
+                                                    <div class="col second-col d-flex flex-column align-items-center">
+                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            <div id="external-events">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col">
+                                    <div class="pending-booking card">
+                                        <div class="pending-container card-body ms-4 mt-3 mb-3" >
+                                            <div>
+                                                <h6>Pending Booking</h6>
+                                                <h2 class="fw-bold">872</h2>
+                                            </div>
+                                        </div>
+                                        <div class="align-content-center justify-content-center me-3">
+                                            <img src="../assets/img/dashboard/pending-booking.svg" width="50px" >
+                                        </div>
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col">
+                                    <div class="cancelled-booking card">
+                                        <div class="cancelled-container card-body ms-4 mt-3 mb-3" >
+                                            <div>
+                                                <h6>Cancelled Booking</h6>
+                                                <h2 class="fw-bold">872</h2>
+                                            </div>
+                                        </div>
+                                        <div class="align-content-center justify-content-center me-3">
+                                            <img src="../assets/img/dashboard/cancelled-booking.svg" width="50px" >
+                                        </div>
+                                    </div>
+                                </div><!-- end col -->
+
+                            </div> 
+
+
+                            <div class="row">
 
                                 <!--Guest List-->
-                                <div class="col">
-                                    <div class="card card-height-100">
-                                        <div class="card-header align-items-center d-flex">
-                                            <h4 class="card-title mb-0 flex-grow-1">Top Sellers</h4>
-                                        </div><!-- end card header -->
-
-                                        <div class="card-body">
-                                            <div class="table-responsive table-card">
-                                                <table class="table table-centered table-hover align-middle table-nowrap mb-0">
-                                                    <tbody>
-
-                                                        <tr>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <h4 class="text-muted">Oliver Tyler</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="text-muted">Bags and Wallets</span>
-                                                            </td>
-                                                        </tr><!-- end -->
-
-                                                         <tr>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <h4 class="text-muted">Oliver Tyler</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="text-muted">Bags and Wallets</span>
-                                                            </td>
-                                                        </tr><!-- end -->
-
-                                                         <tr>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <h4 class="text-muted">Oliver Tyler</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="text-muted">Bags and Wallets</span>
-                                                            </td>
-                                                        </tr><!-- end -->
-
-                                                         <tr>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <h4 class="text-muted">Oliver Tyler</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="text-muted">Bags and Wallets</span>
-                                                            </td>
-                                                        </tr><!-- end -->
-
-                                                         <tr>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <h4 class="text-muted">Oliver Tyler</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="text-muted">Bags and Wallets</span>
-                                                            </td>
-                                                        </tr><!-- end -->
-                                                        
-                                                    </tbody>
-                                                </table><!-- end table -->
-                                            </div>
-                                        </div> <!-- .card-body-->
-                                    </div> <!-- .card-->
-                                </div> <!-- .col-->
+        
 
                                 <!--Calendar-->
-                                <div class="col ">
+                                <!-- <div class="col ">
                                     <div class="card p-3">
                                     <div class="row mt-3 justify-content-center">
                                         <div class="col"><button onclick="prevMonth()" style="border: none; background-color: white;">&lt;</button></div>
@@ -263,30 +257,27 @@
                                             }
                                         }
 
-                                        // Function to display the previous month
                                         function prevMonth() {
                                             currentDate.setMonth(currentDate.getMonth() - 1);
                                             displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
                                         }
 
-                                        // Function to display the next month
                                         function nextMonth() {
                                             currentDate.setMonth(currentDate.getMonth() + 1);
                                             displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
                                         }
 
-                                        // Display initial calendar
                                         displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
                                     </script>
                                     </div>
-                                </div> <!-- .col-->
+                                </div> -->
 
                                 <!--Latest Approved-->
-                                <div class="col">
+                                <!-- <div class="col">
                                     <div class="card card-height-100">
                                         <div class="card-header align-items-center d-flex">
                                             <h4 class="card-title mb-0 flex-grow-1">Top Sellers</h4>
-                                        </div><!-- end card header -->
+                                        </div>
 
                                         <div class="card-body">
                                             <div class="table-responsive table-card">
@@ -296,8 +287,8 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-3" />
                                                                     </div>
                                                                     <div>
                                                                         <h4 class="text-muted">Oliver Tyler</h4>
@@ -307,13 +298,13 @@
                                                             <td>
                                                                 <span class="text-muted">Bags and Wallets</span>
                                                             </td>
-                                                        </tr><!-- end -->
+                                                        </tr>
 
                                                          <tr>
                                                             <td>
                                                                 <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-3" />
                                                                     </div>
                                                                     <div>
                                                                         <h4 class="text-muted">Oliver Tyler</h4>
@@ -323,13 +314,13 @@
                                                             <td>
                                                                 <span class="text-muted">Bags and Wallets</span>
                                                             </td>
-                                                        </tr><!-- end -->
+                                                        </tr>
 
                                                          <tr>
                                                             <td>
                                                                 <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-3" />
                                                                     </div>
                                                                     <div>
                                                                         <h4 class="text-muted">Oliver Tyler</h4>
@@ -339,13 +330,13 @@
                                                             <td>
                                                                 <span class="text-muted">Bags and Wallets</span>
                                                             </td>
-                                                        </tr><!-- end -->
+                                                        </tr>
 
                                                          <tr>
                                                             <td>
                                                                 <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-3" />
                                                                     </div>
                                                                     <div>
                                                                         <h4 class="text-muted">Oliver Tyler</h4>
@@ -355,13 +346,13 @@
                                                             <td>
                                                                 <span class="text-muted">Bags and Wallets</span>
                                                             </td>
-                                                        </tr><!-- end -->
+                                                        </tr>
 
                                                          <tr>
                                                             <td>
                                                                 <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0 me-2">
-                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-3" />
                                                                     </div>
                                                                     <div>
                                                                         <h4 class="text-muted">Oliver Tyler</h4>
@@ -371,16 +362,16 @@
                                                             <td>
                                                                 <span class="text-muted">Bags and Wallets</span>
                                                             </td>
-                                                        </tr><!-- end -->
+                                                        </tr>
                                                         
                                                     </tbody>
-                                                </table><!-- end table -->
+                                                </table>
                                             </div>
 
 
-                                        </div> <!-- .card-body-->
-                                    </div> <!-- .card-->
-                                </div> <!-- .col-->
+                                        </div> 
+                                    </div> 
+                                </div>  -->
 
                                 
                             </div> <!-- end row-->
@@ -398,10 +389,6 @@
 
 
 
-    <?php include '../layouts/ '; ?>
-
-    <?php include '../layouts/vendor-scripts.php'; ?>
-
     <!-- apexcharts -->
     <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
 
@@ -417,19 +404,6 @@
 
     <!-- App js -->
     <script src="../assets/js/app.js"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-    <script type="text/javascript" src="assets/libs/flatpickr/flatpickr.min.js"></script>
-    <!-- calendar min js -->
-    <script src="assets/libs/fullcalendar/index.global.min.js"></script>
-
-    <!-- Calendar init -->
-    <script src="assets/js/pages/calendar-month-grid.init.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
     </body>
 
     </html>
