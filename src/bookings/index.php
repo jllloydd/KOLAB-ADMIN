@@ -649,7 +649,7 @@
     <!-- end row -->
 </div>
 <!-- Modal for Booking Details -->
-<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -659,27 +659,27 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row">
+                <div class="row">  -->
+
                     <!-- First Column for user and contact details -->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="card">
                             <div class="card-body text-center">
-                                <h5 class="guest-name"></h5> <!-- Full name will be populated here -->
-                                <p class="membership-style"></p> <!-- Membership type if any -->
+                                <h5 class="guest-name"></h5> 
+                                <p class="membership-style"></p>
                                 <div>
                                     <img src="../assets/img/booking/phone.svg" alt="Phone" height="22" width="22" class="me-2">
-                                    <span class="info-style"></span> <!-- Phone number -->
+                                    <span class="info-style"></span> 
                                 </div>
                                 <div class="mt-2">
                                     <img src="../assets/img/booking/email.svg" alt="Email" height="22" width="22" class="me-2">
-                                    <span class="info-style"></span> <!-- Email -->
-                                </div>
+                                    <span class="info-style"></span> 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Second Column for booking details -->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="modal-heading">Booking Details</h6>
@@ -694,10 +694,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Third Column for payment details -->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="modal-heading">Payment Details</h6>
@@ -709,8 +709,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -718,7 +718,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
 
 <!-- Sweet Alerts js -->
 <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
@@ -740,6 +740,7 @@
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/bookings.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/pages/modal.init.js"></script>
 <!-- END layout-wrapper -->
 
 </body>
