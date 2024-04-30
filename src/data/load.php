@@ -33,6 +33,12 @@ function format_booking_date($date_string)
     return $date->format('F j, Y');
 }
 
+function format_booking_time($time_string)
+{
+    $time = new DateTime($time_string);
+    return $time->format('g:i A'); // Formats time in 12-hour format with AM/PM
+}
+
 function get_payment_method_description($methodId)
 {
     switch ($methodId) {
@@ -161,6 +167,8 @@ function viewModal($conn, $bookingId)
         $bookingDetails['term_rate'] = get_term_description($bookingDetails['term_rate']);
         $bookingDetails['booking_date'] = format_booking_date($bookingDetails['booking_date']);
         $bookingDetails['payment_method'] = get_payment_method_description($bookingDetails['payment_method']);
+        $bookingDetails['start_time'] = format_booking_time($bookingDetails['start_time']);
+        $bookingDetails['end_time'] = format_booking_time($bookingDetails['end_time']);
 
         jsonResponse(true, "Booking details fetched successfully.", $bookingDetails);
     } else {

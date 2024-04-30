@@ -160,20 +160,20 @@ function getBadgeClass(status) {
 }
 
 function openModal(bookingId) {
-    console.log("openModal called with bookingId:", bookingId);  // Debug: Confirm bookingId is being passed
+    console.log("openModal called with bookingId:", bookingId);
 
     // Use jQuery to show the modal
     $('#myModal').modal('show');
 
     // AJAX call to fetch booking details
     $.ajax({
-        url: '../data/load.php',  // URL to the PHP script, ensure this is the correct path
-        type: 'POST',  // Using POST method to include data in the request body
+        url: '../data/load.php',
+        type: 'POST',
         data: {
-            action: 'viewModal',  // Action parameter to trigger the right function on the server
-            bookingId: bookingId  // Pass the bookingId to the server
+            action: 'viewModal',
+            bookingId: bookingId
         },
-        dataType: 'json',  // Expect JSON response from the server
+        dataType: 'json',
         success: function(response) {
             console.log("Received response:", response);
             if (response.message === "Booking details fetched successfully.") {
@@ -190,10 +190,18 @@ function openModal(bookingId) {
                 $('#timeFrom').text(response.start_time || "No Start Time");
                 $('#timeTo').text(response.end_time || "No End Time");
                 $('#pax').text(response.pax || "No Pax Info");
+
+                // Update status color using badge class
+                var statusBadgeClass = getBadgeClass(response.status);
+                $('#bookingStatus').removeClass().addClass(statusBadgeClass); // Apply new class and remove previous classes
+
+                // Update payment method color using badge class
+                var paymentBadgeClass = getBadgeClass(response.payment_method);
+                $('#paymentMethod').removeClass().addClass(paymentBadgeClass); // Apply new class and remove previous classes
             } else {
                 console.error("Failed to fetch data: " + response.message);
             }
-        }                     
+        }
     });
 }
 
