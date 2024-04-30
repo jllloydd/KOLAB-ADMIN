@@ -547,10 +547,10 @@
                             <div class="row d-flex flex-row align-items-center justify-content-between mt-3">
                                 <div class="col-8 subheading-icon d-flex flex-row align-items-center">
                                     <img src="../assets/img/sidebar/person-admin.svg" alt="" height="22" width="22">
-                                    <p class="subheading" id="pax"># of Pax</p>
+                                    <p class="subheading"># of Pax</p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="modal-info text-align-end">1</div>
+                                    <div class="modal-info text-align-end" id="pax">1</div>
                                 </div>
                             </div>
                             <div class="row d-flex flex-row align-items-center justify-content-between mt-3">

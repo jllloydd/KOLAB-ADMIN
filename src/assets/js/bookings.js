@@ -204,7 +204,11 @@ function openModal(bookingId) {
                 $('#paymentMethod').text(response.payment_method || "No Payment Method");
                 $('#timeFrom').text(response.start_time || "No Start Time");
                 $('#timeTo').text(response.end_time || "No End Time");
-                $('#pax').text(response.pax || "No Pax Info");
+                
+                // Update pax related divs
+                var paxText = response.pax || "No Pax Info";
+                $('#pax').text(paxText); // Update the first div
+                $('#paxValue').text(paxText); // Update the second div
 
                 // Update status and payment method colors using badge class
                 var statusBadgeClass = getBadgeClass(response.status);
