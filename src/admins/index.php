@@ -6,7 +6,6 @@
 <?php include '../layouts/head-css.php'; ?>
 <?php include '../layouts/menu.php'; ?>
 <?php include '../layouts/vendor-scripts.php'; ?>
-
    
 
 <div class="admins_section">
@@ -15,7 +14,7 @@
             <div class="container-fluid">
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalgrid" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
+                <div class="modal fade" id="addAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -98,7 +97,7 @@
 
                                 <div class="col-sm-3">
                                     <div>
-                                        <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" data-bs-target="#exampleModalGrid"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
+                                        <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" data-bs-target="#addAdminModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
                                     </div>
                                 </div>
                         
