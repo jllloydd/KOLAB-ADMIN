@@ -4,6 +4,7 @@
 <?php include '../layouts/body.php'; ?>
 <?php include '../layouts/head-css.php'; ?>
 <?php include '../layouts/menu.php'; ?>
+<?php include '../layouts/vendor-scripts.php'; ?>
 
 <div class="admins_section">
     <div class="main-content">
@@ -256,9 +257,19 @@
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
+
             </div>
     </div>
 </div>
+
+<!-- prismjs plugin -->
+<script src="assets/libs/prismjs/prism.js"></script>
+
+<!-- Modal Js -->
+<script src="assets/js/pages/modal.init.js"></script>
+
+<!-- App js -->
+<script src="assets/js/app.js"></script>
 
 </body>
 

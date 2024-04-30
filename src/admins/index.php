@@ -5,6 +5,7 @@
 
 <?php include '../layouts/head-css.php'; ?>
 <?php include '../layouts/menu.php'; ?>
+<?php include '../layouts/vendor-scripts.php'; ?>
 
    
 
