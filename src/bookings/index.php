@@ -264,6 +264,10 @@
                 </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
 
+            <div>
+                <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" data-bs-target="#myModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
+            </div>
+
 
             <div class="row">
                 <div class="col-12">
