@@ -191,19 +191,44 @@ function openModal(bookingId) {
                 $('#timeTo').text(response.end_time || "No End Time");
                 $('#pax').text(response.pax || "No Pax Info");
 
-                // Update status color using badge class
+                // Update status and payment method colors using badge class
                 var statusBadgeClass = getBadgeClass(response.status);
-                $('#bookingStatus').removeClass().addClass(statusBadgeClass); // Apply new class and remove previous classes
-
-                // Update payment method color using badge class
+                $('#bookingStatus').removeClass().addClass(statusBadgeClass);
                 var paymentBadgeClass = getBadgeClass(response.payment_method);
-                $('#paymentMethod').removeClass().addClass(paymentBadgeClass); // Apply new class and remove previous classes
+                $('#paymentMethod').removeClass().addClass(paymentBadgeClass);
+
+                // Calculate total hours and minutes between start time and end time
+                var startTime = new Date('1970/01/01 ' + response.start_time);
+                var endTime = new Date('1970/01/01 ' + response.end_time);
+                if (endTime < startTime) {
+                    // Adjust for end time being on the next day
+                    endTime.setDate(endTime.getDate() + 1);
+                }
+                var diffMs = endTime - startTime; // milliseconds between start and end time
+                var totalHours = Math.floor(diffMs / 3600000); // hours
+                var totalMinutes = Math.floor((diffMs % 3600000) / 60000); // minutes
+
+                // Construct time text string
+                var totalHoursText = "";
+                if (totalHours > 0) {
+                    totalHoursText += totalHours + " hour" + (totalHours > 1 ? "s" : "");
+                }
+                if (totalMinutes > 0 && totalHours > 0) {
+                    totalHoursText += " and ";
+                }
+                if (totalMinutes > 0) {
+                    totalHoursText += totalMinutes + " minute" + (totalMinutes > 1 ? "s" : "");
+                }
+
+                // Display total hours and minutes in modal
+                $('#totalHours').text(totalHoursText || "0 hours"); // Fallback to "0 hours" if no difference
             } else {
                 console.error("Failed to fetch data: " + response.message);
             }
         }
     });
 }
+
 
 // Function to close the modal
 function closeModal() {

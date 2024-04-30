@@ -559,7 +559,7 @@
                                     <p class="subheading">Total Hours</p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="modal-info text-align-end">4</div>
+                                    <div class="modal-info text-align-end" id="totalHours">4</div>
                                 </div>
                             </div>
                             <div class="row d-flex flex-row justify-content-between align-items-center mt-3">
