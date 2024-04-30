@@ -16,259 +16,6 @@
 <div class="main-content">
     <div class="page-content page-padding">
         <div class="container-fluid">
-
-            <!-- Bookings Modal -->
-            <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                <div class="modal-dialog modal-dialog-centered modal-xl">
-                    <div class="modal-content p-3">
-                        <div class="modal-body ">
-                            <div class="row d-flex flex-row gap-3">
-
-                                <!-- First Column -->
-                                <div class="col card card-padding">
-                                    <div class="card-body card-padding">
-                                        <div class="membership-card p-5 d-flex flex-column justify-content-center align-items-center">
-                                            <p class="guest-name">Julienne Galvez</p>
-                                            <div class="d-flex flex-row justify-content-center align-items-center">
-                                                <img src="../assets/img/booking/diamond.svg" alt="" height="20" width="20" class="me-1">
-                                                <p class="membership-style">Maharlika</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row justify-content-center align-items-end mt-4">
-                                            <div class="row w-100">
-                                                <div class="col-2 icon-col">
-                                                    <img src="../assets/img/booking/phone.svg" alt="" height="22" width="22" class="me-1">
-                                                </div>
-                                                <div class="col-auto">
-                                                    <p class="info-style">+63 9876543210</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-center align-items-end mt-2">
-                                            <div class="row w-100">
-                                                <div class="col-2 icon-col">
-                                                    <img src="../assets/img/booking/email.svg" alt="" height="22" width="22" class="me-3">
-                                                </div>
-                                                <div class="col-auto">
-                                                    <p class="info-style">juliennegalvez@gmail.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Second Column -->
-                                <div class="col card">
-                                    <div class="card-body">
-                                    <p class="modal-heading mt-3">Booking Details</p>
-                                        <div class="d-flex flex-row justify-content-between align-items-center">
-                                            <p class="modal-blue mt-3">#0001</p>
-                                            <p class="badge-pending mt-3">Pending</p>
-                                        </div>
-
-                                        <div class="row d-flex flex-row align-items-center justify-content-between">
-                                            <div class="col d-flex flex-row justify-content-start align-items-center">
-
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col">
-                                                        <div class="row d-flex flex-row align-items-center">
-                                                            <div class="col-2 subheading-icon">
-                                                                <img src="../assets/img/booking/star.svg" alt="" height="22" width="22">
-                                                            </div>
-                                                            <div class="col-auto col-subheading">
-                                                                <p class="subheading">Term</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="modal-info heading-align">Hourly</div> 
-                                                    </div>
-                                                </div>
-
-                                                                
-                                            </div>
-                                            <div class="col d-flex flex-row justify-content-end align-items-center">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col remove-padding">
-                                                        <div class="row d-flex flex-row align-items-center">
-                                                            <div class="col-2 subheading-icon">
-                                                                <img src="../assets/img/sidebar/person-admin.svg" alt="" height="25" width="25">
-                                                            </div>
-                                                            <div class="col-auto col-subheading">
-                                                                <p class="subheading">Pax</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="modal-info heading-align">1</div> 
-                                                    </div>
-                                                </div>              
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row d-flex flex-row align-items-center justify-content-between mt-3">
-                                            <div class="col d-flex flex-row justify-content-start align-items-center">
-
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col">
-                                                        <div class="row d-flex flex-row align-items-center">
-                                                            <div class="col-2 subheading-icon">
-                                                                <img src="../assets/img/sidebar/admin-calendar.svg" alt="" height="22" width="22">
-                                                            </div>
-                                                            <div class="col-auto col-subheading">
-                                                                <p class="subheading remove-margin">Booking Date</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex flex-column align-items-start">
-                                                        <p class="from-style heading-align mt-2">From</p>
-                                                        <div class="modal-info heading-align">April 29, 2024</div> 
-                                                    </div>
-                                                </div>                
-                                            </div>
-
-                                            <div class="col d-flex flex-row justify-content-end align-items-center">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col remove-padding">
-                                                        <div class="row d-flex flex-row align-items-center">
-                                                            <div class="col-2 subheading-icon">
-                                                                <img src="../assets/img/sidebar/admin-calendar.svg" alt="" height="22" width="22" class="visibility">
-                                                            </div>
-                                                            <div class="col-auto col-subheading">
-                                                                <p class="subheading visibility">Pax</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex flex-column align-items-start">
-                                                        <p class="to-style heading-align mt-2">To</p>
-                                                        <div class="modal-info heading-align">-</div> 
-                                                    </div>
-                                                </div>              
-                                            </div>
-                                            
-                                        </div>
-
-                                        <div class="row d-flex flex-row align-items-center justify-content-between mt-3 mb-3">
-                                            <div class="col d-flex flex-row justify-content-start align-items-center">
-
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col">
-                                                        <div class="row d-flex flex-row align-items-center">
-                                                            <div class="col-2 subheading-icon">
-                                                                <img src="../assets/img/booking/clock-icon.svg" alt="" height="22" width="22">
-                                                            </div>
-                                                            <div class="col-auto col-subheading">
-                                                                <p class="subheading remove-margin">Booking Time</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex flex-column align-items-start">
-                                                        <p class="from-style heading-align mt-2">From</p>
-                                                        <div class="modal-info heading-align">1:00 PM</div> 
-                                                    </div>
-                                                </div>                
-                                            </div>
-
-                                            <div class="col d-flex flex-row justify-content-end align-items-center">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col remove-padding">
-                                                        <div class="row d-flex flex-row align-items-center">
-                                                            <div class="col-2 subheading-icon">
-                                                                <img src="../assets/img/sidebar/admin-calendar.svg" alt="" height="22" width="22" class="visibility">
-                                                            </div>
-                                                            <div class="col-auto col-subheading">
-                                                                <p class="subheading visibility">Pax</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex flex-column align-items-start">
-                                                        <p class="to-style heading-align mt-2">To</p>
-                                                        <div class="modal-info heading-align">5:00PM</div> 
-                                                    </div>
-                                                </div>              
-                                            </div>
-                                            
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- third Column -->
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <p class="modal-heading mt-3">Payment Details</p>
-                                        <div class="d-flex flex-row justify-content-between align-items-center">
-                                            <p class="modal-blue mt-3">On-site</p>
-                                            <p class="badge-pending mt-3">Pending</p>
-                                        </div>
-
-                                        <div class="row d-flex flex-row align-items-center justify-content-between">
-                                            <div class="col-8 subheading-icon d-flex flex-row align-items-center">
-                                                <img src="../assets/img/booking/star.svg" alt="" height="22" width="22">
-                                                <p class="subheading">Term</p>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="modal-info text-align-end">Hourly ₱75</div> 
-                                            </div>
-                                        </div>
-
-                                        <div class="row d-flex flex-row align-items-center justify-content-between mt-3">
-                                            <div class="col-8 subheading-icon d-flex flex-row align-items-center">
-                                                <img src="../assets/img/sidebar/person-admin.svg" alt="" height="22" width="22">
-                                                <p class="subheading"># of Pax</p>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="modal-info text-align-end">1</div> 
-                                            </div>
-                                        </div>
-
-                                        <div class="row d-flex flex-row align-items-center justify-content-between mt-3">
-                                            <div class="col-8 subheading-icon d-flex flex-row align-items-center">
-                                                <img src="../assets/img/booking/clock-icon.svg" alt="" height="22" width="22">
-                                                <p class="subheading">Total Hours</p>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="modal-info text-align-end">4</div> 
-                                            </div>
-                                        </div>
-
-                                        <div class="row d-flex flex-row justify-content-between align-items-center mt-3">
-                                            <div class="col-8 subheading-icon d-flex flex-row align-items-center">
-                                                <img src="../assets/img/booking/voucher.svg" alt="" height="22" width="22">
-                                                <p class="subheading">Voucher</p>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="modal-info">1</div> 
-                                            </div>
-                                        </div>
-
-                                        
-                                        <div class="d-flex flex-row justify-content-between align-items-center mt-4">
-                                            <p class="modal-blue">Total Amount</p>
-                                            <p class="modal-blue">₱300</p>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button type="button" class="btn btn-confirm" data-bs-dismiss="modal">Confirm Booking</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-
-            <div>
-                <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" data-bs-target="#myModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
-            </div>
-
-
             <div class="row">
                 <div class="col-12">
                     <div class="row">
@@ -652,77 +399,192 @@
     </div>
     <!-- end row -->
 </div>
-<!-- Modal for Booking Details -->
-<!-- <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- ============================================================== -->
+<!-- Booking Modal -->
+<!-- ============================================================== -->
+<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">Booking Details</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+        <div class="modal-content p-3">
             <div class="modal-body">
-                <div class="row">  -->
-
-                    <!-- First Column for user and contact details -->
-                    <!-- <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="guest-name"></h5> 
-                                <p class="membership-style"></p>
-                                <div>
-                                    <img src="../assets/img/booking/phone.svg" alt="Phone" height="22" width="22" class="me-2">
-                                    <span class="info-style"></span> 
+                <div class="row d-flex flex-row gap-3">
+                    <!-- First Column -->
+                    <div class="col card card-padding" id="guestInfo">
+                        <div class="card-body card-padding">
+                            <div class="membership-card p-5 d-flex flex-column justify-content-center align-items-center" id="guestCard">
+                                <p class="guest-name" id="guestName">Julienne Galvez</p>
+                                <div class="d-flex flex-row justify-content-center align-items-center" id="guestMembership">
+                                    <img src="../assets/img/booking/diamond.svg" alt="" height="20" width="20" class="me-1">
+                                    <p class="membership-style" id="membershipType">Maharlika</p>
                                 </div>
-                                <div class="mt-2">
-                                    <img src="../assets/img/booking/email.svg" alt="Email" height="22" width="22" class="me-2">
-                                    <span class="info-style"></span> 
                             </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Second Column for booking details -->
-                    <!-- <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="modal-heading">Booking Details</h6>
-                                <div>
-                                    <strong>Reference Number:</strong> <span class="modal-blue"></span>
-                                    <strong>Status:</strong> <span class="badge-pending"></span>
+                            <div class="d-flex flex-row justify-content-center align-items-end mt-4" id="guestContactPhone">
+                                <div class="row w-100">
+                                    <div class="col-2 icon-col" id="phoneIconCol">
+                                        <img src="../assets/img/booking/phone.svg" alt="" height="22" width="22" class="me-1">
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="info-style" id="phoneNumber">+63 9876543210</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <strong>Term:</strong> <span class="modal-info"></span>
-                                    <strong>Pax:</strong> <span class="modal-info"></span>
-                                    <strong>Booking Date:</strong> <span class="modal-info"></span>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center align-items-end mt-2" id="guestContactEmail">
+                                <div class="row w-100">
+                                    <div class="col-2 icon-col" id="emailIconCol">
+                                        <img src="../assets/img/booking/email.svg" alt="" height="22" width="22" class="me-3">
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="info-style" id="emailAddress">juliennegalvez@gmail.com</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <!-- Third Column for payment details -->
-                    <!-- <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="modal-heading">Payment Details</h6>
-                                <div>
-                                    <strong>Payment Method:</strong> <span class="modal-info"></span>
-                                    <strong>Amount:</strong> <span class="modal-info"></span>
-                                    <strong>Total Hours:</strong> <span class="modal-info"></span>
-                                    <strong>Voucher:</strong> <span class="modal-info"></span>
+                    <!-- Second Column -->
+                    <div class="col card" id="bookingDetails">
+                        <div class="card-body">
+                            <p class="modal-heading mt-3" id="detailsHeading">Booking Details</p>
+                            <div class="d-flex flex-row justify-content-between align-items-center" id="bookingStatusRow">
+                                <p class="modal-blue mt-3" id="bookingNumber">#0001</p>
+                                <p class="badge-pending mt-3" id="bookingStatus">Pending</p>
+                            </div>
+                            <div class="row d-flex flex-row align-items-center justify-content-between" id="termPaxRow">
+                                <div class="col d-flex flex-row justify-content-start align-items-center" id="termColumn">
+                                    <div class="row d-flex flex-column">
+                                        <div class="col">
+                                            <div class="row d-flex flex-row align-items-center">
+                                                <div class="col-2 subheading-icon">
+                                                    <img src="../assets/img/booking/star.svg" alt="" height="22" width="22">
+                                                </div>
+                                                <div class="col-auto col-subheading">
+                                                    <p class="subheading">Term</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="modal-info heading-align" id="termValue">Hourly</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-row justify-content-end align-items-center" id="paxColumn">
+                                    <div class="row d-flex flex-column">
+                                        <div class="col remove-padding">
+                                            <div class="row d-flex flex-row align-items-center">
+                                                <div class="col-2 subheading-icon">
+                                                    <img src="../assets/img/sidebar/person-admin.svg" alt="" height="25" width="25">
+                                                </div>
+                                                <div class="col-auto col-subheading">
+                                                    <p class="subheading">Pax</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="modal-info heading-align" id="paxValue">1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row align-items-center justify-content-between mt-3" id="dateRow">
+                                <div class="col d-flex flex-row justify-content-start align-items-center" id="dateColumn">
+                                    <div class="row d-flex flex-column">
+                                        <div class="col">
+                                            <div class="row d-flex flex-row align-items-center">
+                                                <div class="col-2 subheading-icon">
+                                                    <img src="../assets/img/sidebar/admin-calendar.svg" alt="" height="22" width="22">
+                                                </div>
+                                                <div class="col-auto col-subheading">
+                                                    <p class="subheading remove-margin">Booking Date</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex flex-column align-items-start">
+                                            <p class="from-style heading-align mt-2">From</p>
+                                            <div class="modal-info heading-align" id="dateFrom">April 29, 2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-row justify-content-end align-items-center" id="timeColumn">
+                                    <div class="row d-flex flex-column">
+                                        <div class="col remove-padding">
+                                            <div class="row d-flex flex-row align-items-center">
+                                                <div class="col-2 subheading-icon">
+                                                    <img src="../assets/img/booking/clock-icon.svg" alt="" height="22" width="22">
+                                                </div>
+                                                <div class="col-auto col-subheading">
+                                                    <p class="subheading remove-margin">Booking Time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex flex-column align-items-start">
+                                            <p class="from-style heading-align mt-2">From</p>
+                                            <div class="modal-info heading-align" id="timeFrom">1:00 PM</div>
+                                            <p class="to-style heading-align mt-2">To</p>
+                                            <div class="modal-info heading-align" id="timeTo">5:00 PM</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                <!-- </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+
+                    <!-- Third Column -->
+                    <div class="col card" id="paymentDetails">
+                        <div class="card-body">
+                            <p class="modal-heading mt-3" id="paymentHeading">Payment Details</p>
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <p class="modal-blue mt-3" id="paymentMethod">On-site</p>
+                                <p class="badge-pending mt-3" id="paymentStatus">Pending</p>
+                            </div>
+                            <div class="row d-flex flex-row align-items-center justify-content-between">
+                                <div class="col-8 subheading-icon d-flex flex-row align-items-center">
+                                    <img src="../assets/img/booking/star.svg" alt="" height="22" width="22">
+                                    <p class="subheading">Term</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="modal-info text-align-end">Hourly ₱75</div>
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row align-items-center justify-content-between mt-3">
+                                <div class="col-8 subheading-icon d-flex flex-row align-items-center">
+                                    <img src="../assets/img/sidebar/person-admin.svg" alt="" height="22" width="22">
+                                    <p class="subheading"># of Pax</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="modal-info text-align-end">1</div>
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row align-items-center justify-content-between mt-3">
+                                <div class="col-8 subheading-icon d-flex flex-row align-items-center">
+                                    <img src="../assets/img/booking/clock-icon.svg" alt="" height="22" width="22">
+                                    <p class="subheading">Total Hours</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="modal-info text-align-end">4</div>
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row justify-content-between align-items-center mt-3">
+                                <div class="col-8 subheading-icon d-flex flex-row align-items-center">
+                                    <img src="../assets/img/booking/voucher.svg" alt="" height="22" width="22">
+                                    <p class="subheading">Voucher</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="modal-info">1</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <p class="modal-blue">Total Amount</p>
+                                <p class="modal-blue">₱300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-confirm" data-bs-dismiss="modal">Confirm Booking</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div> -->
+</div><!-- /.modal -->
 
 <!-- Sweet Alerts js -->
 <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
@@ -743,8 +605,11 @@
 <!-- App js -->
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/bookings.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="assets/js/pages/modal.init.js"></script>
+<script src="../assets/js/pages/modal.init.js"></script>
+
+<!-- Include jQuery first -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <!-- END layout-wrapper -->
 
 </body>
