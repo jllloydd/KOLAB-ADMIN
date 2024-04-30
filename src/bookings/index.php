@@ -541,7 +541,7 @@
                                     <p class="subheading">Term</p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="modal-info text-align-end">Hourly ₱75</div>
+                                    <div class="modal-info text-align-end" id="termAmount">Hourly ₱75</div>
                                 </div>
                             </div>
                             <div class="row d-flex flex-row align-items-center justify-content-between mt-3">

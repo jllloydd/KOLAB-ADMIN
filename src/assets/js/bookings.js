@@ -159,6 +159,21 @@ function getBadgeClass(status) {
     }
 }
 
+function getTermDescriptionAmount(termDescription) {
+    switch (termDescription) {
+        case "hourly":
+            return "₱75";
+        case "daily":
+            return "₱249";
+        case "weekly":
+            return "₱995";
+        case "monthly":
+            return "₱3600";
+        default:
+            return "Unknown Rate";
+    }
+}
+
 function openModal(bookingId) {
     console.log("openModal called with bookingId:", bookingId);
 
@@ -196,6 +211,11 @@ function openModal(bookingId) {
                 $('#bookingStatus').removeClass().addClass(statusBadgeClass);
                 var paymentBadgeClass = getBadgeClass(response.payment_method);
                 $('#paymentMethod').removeClass().addClass(paymentBadgeClass);
+
+                // Get term description and corresponding amount
+                var termDescription = response.term_rate; // This should be a descriptive term like "Hourly"
+                var termAmount = getTermDescriptionAmount(termDescription.toLowerCase()); // Get corresponding amount based on the term
+                $('#termAmount').text(termDescription.charAt(0).toUpperCase() + termDescription.slice(1) + " " + termAmount); // Capitalize the first letter and display
 
                 // Calculate total hours and minutes between start time and end time
                 var startTime = new Date('1970/01/01 ' + response.start_time);
