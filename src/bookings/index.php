@@ -568,7 +568,7 @@
                                     <p class="subheading">Voucher</p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="modal-info">1</div>
+                                    <div class="modal-info" id="voucher">1</div>
                                 </div>
                             </div>
                             <div class="d-flex flex-row justify-content-between align-items-center mt-4">

@@ -204,6 +204,7 @@ function openModal(bookingId) {
                 $('#paymentMethod').text(response.payment_method || "No Payment Method");
                 $('#timeFrom').text(response.start_time || "No Start Time");
                 $('#timeTo').text(response.end_time || "No End Time");
+                $('#voucher').text(response.voucher|| "No Voucher Used");
                 
                 // Update pax related divs
                 var paxText = response.pax || "No Pax Info";

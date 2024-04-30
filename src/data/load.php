@@ -148,7 +148,8 @@ function viewModal($conn, $bookingId)
                 bookingid,
                 start_time,
                 end_time,
-                pax
+                pax,
+                voucher
             FROM bookings
             WHERE bookingid = ?";
 
