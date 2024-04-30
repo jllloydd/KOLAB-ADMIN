@@ -14,9 +14,8 @@
                     <div class="">
                         <div class="main-container">
                             <div class="logo-container ms-2">
-                                <img src="assets/img/login/logo.png" class="img2" alt="Logo">
+                                <img src="assets/img/Left.avif" class="img2" alt="Logo">
                             </div>                            
-                            <img src="assets/img/login/left.png" width="half" class="img" alt="Left Image">
                         </div>
                     </div>
                 </div>
