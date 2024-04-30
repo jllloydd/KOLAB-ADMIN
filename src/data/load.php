@@ -125,29 +125,53 @@ function updateBookingDetails($conn, $bookingid, $booking_date, $status)
 
 function viewModal($conn, $bookingId)
 {
-    try {
-        $stmt = $conn->prepare("SELECT bookingid, reference_number, CONCAT(firstname, ' ', lastname) AS fullname, email, number, term_rate, booking_date, status, payment_method FROM bookings WHERE bookingid = ?");
-        if (!$stmt) {
-            throw new Exception("Prepare statement failed: " . $conn->error);
-        }
-        $stmt->bind_param("i", $bookingId);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    // Ensure the booking ID is provided.
+    if (!$bookingId) {
+        jsonResponse(false, "Booking ID is required.");
+        return;
+    }
 
-        if ($result->num_rows == 0) {
-            throw new Exception("No booking found with the specified ID.");
-        }
+    // SQL query to select booking details from the 'bookings' table
+    $query = "SELECT
+                reference_number,
+                CONCAT(firstname, ' ', lastname) AS fullname,
+                email,
+                number,
+                term_rate,
+                booking_date,
+                status,
+                payment_method,
+                bookingid,
+                start_time,
+                end_time,
+                pax
+            FROM bookings
+            WHERE bookingid = ?";
 
+    $stmt = $conn->prepare($query);
+    if (!$stmt) {
+        jsonResponse(false, "SQL error: " . $conn->error);
+        return;
+    }
+
+    $stmt->bind_param("i", $bookingId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
         $bookingDetails = $result->fetch_assoc();
+
+        // Enhancing data with descriptions and formatting
         $bookingDetails['term_rate'] = get_term_description($bookingDetails['term_rate']);
         $bookingDetails['booking_date'] = format_booking_date($bookingDetails['booking_date']);
+        $bookingDetails['payment_method'] = get_payment_method_description($bookingDetails['payment_method']);
 
         jsonResponse(true, "Booking details fetched successfully.", $bookingDetails);
-    } catch (Exception $e) {
-        jsonResponse(false, $e->getMessage());
-    } finally {
-        $stmt->close();
+    } else {
+        jsonResponse(false, "No booking found with the specified ID.");
     }
+
+    $stmt->close();
 }
 
 // Handling POST requests
