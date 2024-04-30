@@ -573,7 +573,7 @@
                             </div>
                             <div class="d-flex flex-row justify-content-between align-items-center mt-4">
                                 <p class="modal-blue">Total Amount</p>
-                                <p class="modal-blue">₱300</p>
+                                <p class="modal-blue" id="totalAmount">₱300</p>
                             </div>
                         </div>
                     </div>

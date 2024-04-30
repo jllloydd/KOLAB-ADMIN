@@ -174,6 +174,14 @@ function getTermDescriptionAmount(termDescription) {
     }
 }
 
+function calculateTotalAmount(termRate, termRateAmount, totalHoursDecimal) {
+    if (termRate === "hourly") {
+        return "₱" + (Number(termRateAmount) * totalHoursDecimal).toFixed(2);
+    } else {
+        return "₱" + Number(termRateAmount).toFixed(2);
+    }
+}
+
 function openModal(bookingId) {
     console.log("openModal called with bookingId:", bookingId);
 
@@ -226,12 +234,12 @@ function openModal(bookingId) {
                 var startTime = new Date('1970/01/01 ' + response.start_time);
                 var endTime = new Date('1970/01/01 ' + response.end_time);
                 if (endTime < startTime) {
-                    // Adjust for end time being on the next day
                     endTime.setDate(endTime.getDate() + 1);
                 }
-                var diffMs = endTime - startTime; // milliseconds between start and end time
-                var totalHours = Math.floor(diffMs / 3600000); // hours
-                var totalMinutes = Math.floor((diffMs % 3600000) / 60000); // minutes
+                var diffMs = endTime - startTime;
+                var totalHours = Math.floor(diffMs / 3600000);
+                var totalMinutes = Math.floor((diffMs % 3600000) / 60000);
+                var totalHoursDecimal = totalHours + (totalMinutes / 60); // Decimal total hours
 
                 // Construct time text string
                 var totalHoursText = "";
@@ -247,6 +255,11 @@ function openModal(bookingId) {
 
                 // Display total hours and minutes in modal
                 $('#totalHours').text(totalHoursText || "0 hours"); // Fallback to "0 hours" if no difference
+
+                // Calculate and display total amount
+                var totalAmount = calculateTotalAmount(termDescription.toLowerCase(), termAmount.replace(/[^\d.-]/g, ''), totalHoursDecimal);
+                $('#totalAmount').text("Total Amount: " + totalAmount);
+
             } else {
                 console.error("Failed to fetch data: " + response.message);
             }
