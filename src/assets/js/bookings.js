@@ -258,7 +258,7 @@ function openModal(bookingId) {
 
                 // Calculate and display total amount
                 var totalAmount = calculateTotalAmount(termDescription.toLowerCase(), termAmount.replace(/[^\d.-]/g, ''), totalHoursDecimal);
-                $('#totalAmount').text("Total Amount: " + totalAmount);
+                $('#totalAmount').text(totalAmount);
 
             } else {
                 console.error("Failed to fetch data: " + response.message);
