@@ -124,14 +124,12 @@ function updateBookingDetails($conn, $bookingid, $booking_date, $status)
 }
 
 function viewModal($conn, $bookingId)
-{
-    // Ensure the booking ID is provided.
+    {
     if (!$bookingId) {
         jsonResponse(false, "Booking ID is required.");
         return;
     }
 
-    // SQL query to select booking details from the 'bookings' table
     $query = "SELECT
                 reference_number,
                 CONCAT(firstname, ' ', lastname) AS fullname,
@@ -160,8 +158,6 @@ function viewModal($conn, $bookingId)
 
     if ($result->num_rows > 0) {
         $bookingDetails = $result->fetch_assoc();
-
-        // Enhancing data with descriptions and formatting
         $bookingDetails['term_rate'] = get_term_description($bookingDetails['term_rate']);
         $bookingDetails['booking_date'] = format_booking_date($bookingDetails['booking_date']);
         $bookingDetails['payment_method'] = get_payment_method_description($bookingDetails['payment_method']);

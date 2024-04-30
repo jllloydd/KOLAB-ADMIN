@@ -160,47 +160,46 @@ function getBadgeClass(status) {
 }
 
 function openModal(bookingId) {
-    console.log("openModal called with bookingId:", bookingId);
-    $.ajax({
-        url: '../data/load.php',  // Adjust if necessary to point to the correct path
-        type: 'POST',
-        data: {
-            action: 'viewModal',
-            bookingId: bookingId
-        },
-        dataType: 'json',
-        beforeSend: function () {
-            // Display a loading text or spinner before the request completes
-            $('#myModal').find('.modal-body').html('<div class="loader">Loading...</div>');
-        },
-        success: function (response) {
-            if (response.success) {
-                // Populate the modal fields with the fetched data
-                var data = response.data;
-                $('#myModal').find('.guest-name').text(data.fullname);
-                $('#myModal').find('.info-style').first().text(data.number);
-                $('#myModal').find('.info-style').last().text(data.email);
-                $('#myModal').find('.modal-blue').first().text('#' + data.reference_number);
-                $('#myModal').find('.badge-pending').text(data.status);
-                $('#myModal').find('.modal-info').eq(0).text(data.term_rate);
-                $('#myModal').find('.modal-info').eq(1).text(data.pax + ' Pax');
-                $('#myModal').find('.modal-info').eq(2).text(data.booking_date);
+    console.log("openModal called with bookingId:", bookingId);  // Debug: Confirm bookingId is being passed
 
-                // Show the modal
-                $('#myModal').modal('show');
-            } else {
-                // Handle no data or errors
-                $('#myModal').find('.modal-body').html('<p class="text-warning">' + response.message + '</p>');
-            }
+    // Use jQuery to show the modal
+    $('#myModal').modal('show');
+
+    // AJAX call to fetch booking details
+    $.ajax({
+        url: '../data/load.php',  // URL to the PHP script, ensure this is the correct path
+        type: 'POST',  // Using POST method to include data in the request body
+        data: {
+            action: 'viewModal',  // Action parameter to trigger the right function on the server
+            bookingId: bookingId  // Pass the bookingId to the server
         },
-        error: function (xhr, status, error) {
-            // Handle any AJAX errors
-            $('#myModal').find('.modal-body').html('<p class="text-danger">Error loading data. Please try again.</p>');
-            console.error('AJAX Error:', status, error);
-        }
+        dataType: 'json',  // Expect JSON response from the server
+        success: function(response) {
+            console.log("Received response:", response);
+            if (response.message === "Booking details fetched successfully.") {
+                console.log("Data fetched successfully: ", response);
+                // Update modal fields with fetched data
+                $('#bookingNumber').text(response.reference_number || "No Reference Number");
+                $('#guestName').text(response.fullname || "No Name Available");
+                $('#emailAddress').text(response.email || "No Email Available");
+                $('#phoneNumber').text(response.number || "No Phone Number");
+                $('#termValue').text(response.term_rate || "No Term Rate");
+                $('#dateFrom').text(response.booking_date || "No Booking Date");
+                $('#bookingStatus').text(response.status || "No Status Available");
+                $('#paymentMethod').text(response.payment_method || "No Payment Method");
+                $('#timeFrom').text(response.start_time || "No Start Time");
+                $('#timeTo').text(response.end_time || "No End Time");
+                $('#pax').text(response.pax || "No Pax Info");
+            } else {
+                console.error("Failed to fetch data: " + response.message);
+            }
+        }                     
     });
 }
 
+// Function to close the modal
 function closeModal() {
-    $('#myModal').modal('hide');
+    console.log("closeModal called");
+    $('#myModal').modal('hide');  // Use jQuery to hide the modal
 }
+
