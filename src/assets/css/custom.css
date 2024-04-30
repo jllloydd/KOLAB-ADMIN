@@ -63,6 +63,10 @@
     border-color: #e2eef600;
 }
 
+.dropdown-head{
+    background-color:#0683D7;
+}
+
 .admin_booking_section {
     overflow: scroll!important;
     font-family: "Barlow", sans-serif !important;
