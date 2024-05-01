@@ -484,6 +484,51 @@
 
 }
 
+.admin-modal {
+    background-color: #FAFAFA;
+
+    .admin-header {
+        background-color: #E2EEF6;
+    }
+    .modal-content {
+        background-color: #FAFAFA;
+    }
+    .admin-header {
+        background-color: #E2EEF6;
+    }
+    .modal-content {
+        border-radius: 0;
+    }
+    .admin-body {
+        background-color: #FFFFFF;
+    }
+    .save-btn {
+        background-color: #0683D7;
+        border-color: #0683D7;
+        border-radius: 0;
+        color: white;
+        width: 120px;  
+    }
+    .save-btn:hover {
+        background-color: #005690;
+        border-color: #005690;
+        color: white;
+    }
+    .cancel-btn {
+        background-color: #FFFFFF;
+        border-color: #8D97B0;
+        color: #8D97B0;
+        border-radius: 0;
+        width: 120px;  
+    }
+    .cancel-btn:hover {
+        background-color: #D8DDE4;
+    }
+    .image-overlay:hover {
+        background-color: #0000005a;
+    }
+}
+
 /* Login Page*/
 body, html {
     margin: 0;

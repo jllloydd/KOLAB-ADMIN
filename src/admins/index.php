@@ -14,65 +14,59 @@
             <div class="container-fluid">
 
                 <!-- Modal -->
-                <div class="modal fade" id="addAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
-                    <div class="modal-dialog">
+                <div class="modal fade admin-modal" id="addAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
+                    <div class="modal-dialog modal-dialog-center">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalgridLabel">Grid Modals</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="javascript:void(0);">
-                                    <div class="row g-3">
-                                        <div class="col-xxl-6">
-                                            <div>
-                                                <label for="firstName" class="form-label">First Name</label>
-                                                <input type="text" class="form-control" id="firstName" placeholder="Enter firstname">
-                                            </div>
-                                        </div><!--end col-->
-                                        <div class="col-xxl-6">
+                            <div class="modal-body p-5">
+                                <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
+
+                                    <div class="flex-shrink-0 admin-image">
+                                        <img src="../assets/img/admin/temp-avatar.avif" width="85px" height="85px" class="image-overlay rounded-circle">
+                                    </div>
+
+                                    <div class="form-check form-switch toggle-position pt-3">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        <label class="role-style margin-remove ps-2" for="flexSwitchCheckDefault">Deactivate</label>
+                                    </div>
+
+                                    
+
+                                </div>
+
+                                <div class="admin-body">
+                                    <form action="javascript:void(0);">
+                                        <div class="row g-3 d-flex flex-column">
+                                            <div class="col w-100 px-4 pt-3">
+                                                <div>
+                                                    <label for="firstName" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="Betty">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col w-100 px-4">
                                             <div>
                                                 <label for="lastName" class="form-label">Last Name</label>
-                                                <input type="text" class="form-control" id="lastName" placeholder="Enter lastname">
+                                                <input type="text" class="form-control" id="lastName" placeholder="Shares">
                                             </div>
-                                        </div><!--end col-->
-                                        <div class="col-lg-12">
-                                            <label for="genderInput" class="form-label">Gender</label>
-                                            <div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                                            </div><!--end col-->
+                                            <div class="col w-100 px-4">
+                                                <div>
+                                                    <label for="emailInput" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="emailInput" placeholder="bettyshares@gmail.com">
                                                 </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                            </div><!--end col-->
+
+                                            <div class="col-lg-12 mb-4 mt-4">
+                                                <div class="hstack gap-4 justify-content-center">
+                                                    <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn save-btn">Save</button>
                                                 </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                                    <label class="form-check-label" for="inlineRadio3">Others</label>
-                                                </div>
-                                            </div>
-                                        </div><!--end col-->
-                                        <div class="col-xxl-6">
-                                            <div>
-                                                <label for="emailInput" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
-                                            </div>
-                                        </div><!--end col-->
-                                        <div class="col-xxl-6">
-                                            <div>
-                                                <label for="passwordInput" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="passwordInput" value="451326546">
-                                            </div>
-                                        </div><!--end col-->
-                                        <div class="col-lg-12">
-                                            <div class="hstack gap-2 justify-content-end">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </div>
-                                        </div><!--end col-->
-                                    </div><!--end row-->
-                                </form>
+                                            </div><!--end col-->
+                                        </div> 
+                                    </form>
+
+                                
+
+                                </div>      
                             </div>
                         </div>
                     </div>
