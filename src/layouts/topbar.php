@@ -270,8 +270,99 @@
                                 class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle" data-key=t-logout><?=$lang['t-logout']?></span></a>
                     </div>
+                    
+                    <div>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <img src="../assets/img/topbar/eyeglass.svg" width="30px">
+                        </button>
+
+                        <!-- right offcanvas -->
+                        <div class="offcanvas offcanvas-end righty-barty " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header ms-3 mt-3 mb-2">
+                                <h5 class="offcanvas-title fw-medium" id="offcanvasRightLabel">Activity Log</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                            </div>     
+                            <div class="offcanvas-header ms-3">
+                                <div class="rightbar-container">
+                                    <div>
+                                        <div><img src="../assets/img/topbar/image.svg" width="40px"> <span class="right-name">Terek Trinidad</span></div>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li class="list-item">
+                                                <div class="booking-confirmation">
+                                                    <div class=" card-body">
+                                                        <div>Confirmed booking</div>
+                                                    </div>
+                                                    <div> <p>05/30/24  <span class="ms-3"> 10:32AM</span> </p></div>
+                                                </div>
+                                            </li>
+                                            <li class="list-item">
+                                                <div class="booking-confirmation">
+                                                    <div class=" card-body">
+                                                        <div>Confirmed booking</div>
+                                                    </div>
+                                                    <div> <p>05/29/24 <span class="ms-3">8:14AM</span> </p></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div><img src="../assets/img/topbar/image.svg" width="40px"> <span class="right-name">Denver Guitiw</span></div>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li class="list-item">
+                                                <div class="booking-confirmation">
+                                                    <div class=" card-body">
+                                                        <div>New Booking</div>
+                                                    </div>
+                                                    <div> <p>05/27/24  <span class="ms-3"> 6:12AM </span> </p></div>
+                                                </div>
+                                            </li>
+                                            <li class="list-item">
+                                                <div class="booking-confirmation">
+                                                    <div class=" card-body">
+                                                        <div>Confirmed booking</div>
+                                                    </div>
+                                                    <div> <p>05/27/24 <span class="ms-3">4:18PM</span> </p></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div><img src="../assets/img/topbar/image.svg" width="40px"> <span class="right-name">Julie Yan</span></div>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li class="list-item">
+                                                <div class="booking-confirmation">
+                                                    <div class=" card-body">
+                                                        <div>Confirmed booking</div>
+                                                    </div>
+                                                    <div> <p>05/27/24 <span class="ms-3"> 1:43PM</span> </p></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>                                  
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+
+    <?php include '../layouts/vendor-scripts.php'; ?>
+
+    <script src="../assets/libs/prismjs/prism.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/app.js"></script>
