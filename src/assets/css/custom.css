@@ -211,11 +211,14 @@
         background-color: #0683D7;
         border-color: #0683D7;
         border-radius: 0;
-        
+        height: 65px; 
     }
     .btn-success:hover {
         background-color: #005690;
         border-color: #005690;
+    }
+    .remove-padding {
+        padding: 0;
     }
     
     .btn-icons {
@@ -424,6 +427,13 @@
 .admins_section {
     .margin-remove {
         margin-top: 0px;
+    }
+    .remove-scrollbar {
+        overflow: hidden!important;
+        overflow-y: hidden;
+    }
+    .page-padding {
+        height: 100vh;
     }
     .margin-remove {
         margin-top: 0px;

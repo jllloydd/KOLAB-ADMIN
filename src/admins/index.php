@@ -9,9 +9,9 @@
    
 
 <div class="admins_section">
-    <div class="main-content">
-        <div class="page-content page-padding">
-            <div class="container-fluid">
+    <div class="main-content remove-scrollbar">
+        <div class="page-content page-padding remove-scrollbar">
+            <div class="container-fluid remove-scrollbar">
 
                 <!-- Modal -->
                 <div class="modal fade admin-modal" id="addAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
@@ -92,12 +92,11 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <div id="customerList">
-                            <div class="row g-4">
-
-                                <div class="col-sm">
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col col-sm">
+                        <div class="card margin-remove">
+                            <div class="card-body">
+                                <div id="customerList">
                                     <div class="d-flex justify-content-sm-start">
                                         <div class="input-group search-box ms-2">
                                             <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
@@ -106,18 +105,16 @@
                                                 <i class="ri-filter-3-line search-icon"></i>
                                             </span>
                                         </div>
-                                    </div>
+                                    </div>       
                                 </div>
-
-                                <div class="col-sm-3">
-                                    <div>
-                                        <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" data-bs-target="#addAdminModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
-                                    </div>
-                                </div>
-                        
-                            </div>     
+                            </div><!-- end card -->
                         </div>
-                    </div><!-- end card -->
+                    </div>
+                    <div class="col-sm-3 remove-padding">
+                        <div>
+                            <button type="button" class="w-100 btn btn-success add-btn " data-bs-toggle="modal" data-bs-target="#addAdminModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row">
