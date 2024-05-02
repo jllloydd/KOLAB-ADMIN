@@ -85,36 +85,23 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
     jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords, 'totalPages' => $totalPages]);
 }
 
-function searchBookings($conn, $keyword)
-{
-    $keyword = "%" . $keyword . "%";
-    $query = "SELECT 
-                    reference_number,
-                    CONCAT(firstname, ' ', lastname) AS fullname,
-                    email,
-                    term_rate,
-                    booking_date,
-                    status,
-                    payment_method,
-                    bookingid
-                FROM bookings
-                WHERE CONCAT(firstname, ' ', lastname) LIKE ? OR email LIKE ?
-                ORDER BY booking_date DESC";
+function fetchLatestApprovedBookings($conn) {
+    $query = "SELECT reference_number, CONCAT(firstname, ' ', lastname) AS fullname, term_rate, pax
+              FROM bookings
+              WHERE status = 'approved'
+              ORDER BY booking_date DESC
+              LIMIT 10";  // Fetch only the 10 latest approved bookings
 
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("ss", $keyword, $keyword);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
+    $result = $conn->query($query);
     $bookings = [];
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $row['payment_method'] = get_payment_method_description($row['payment_method']);
+            $row['term_rate'] = get_term_description($row['term_rate']);  // Convert term rate to descriptive text
             $bookings[] = $row;
         }
-        jsonResponse(true, "Search results fetched successfully.", ['bookings' => $bookings]);
+        jsonResponse(true, "Latest approved bookings fetched successfully.", ['bookings' => $bookings]);
     } else {
-        jsonResponse(false, "No bookings found for your search criteria.");
+        jsonResponse(false, "No approved bookings found.");
     }
 }
 
@@ -188,9 +175,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $direction = $_POST['direction'] ?? 'asc';
             fetchAllBookings($conn, $page, $criteria, $direction);
             break;
-        case 'searchBookings':
-            $keyword = $_POST['query'] ?? '';
-            searchBookings($conn, $keyword);
+        case 'fetchLatestApprovedBookings':
+            fetchLatestApprovedBookings($conn);
             break;
         case 'updateBookingDetails':
             $bookingid = $_POST['bookingid'] ?? null;

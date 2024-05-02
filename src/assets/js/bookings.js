@@ -2,6 +2,7 @@ let currentBookingIdToUpdate = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     fetchAllBookings();
+    fetchAndDisplayLatestApprovedBookings();
 });
 
 function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
@@ -129,24 +130,49 @@ function setupPagination(totalPages, currentPage) {
     }
 }
 
-function searchBookings() {
-    const query = document.getElementById('searchInput').value.trim();
+function fetchAndDisplayLatestApprovedBookings() {
+    console.log("Fetching latest approved bookings...");
     fetch('../data/load.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `action=searchBookings&query=${encodeURIComponent(query)}`
+        body: `action=fetchLatestApprovedBookings`
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status) {
-                displayBookings(data.bookings);
-                updateBookingCount(data.bookings.length);
-            } else {
-                console.error('Search failed:', data.message);
-                displayNoResults();
-            }
-        })
-        .catch(error => console.error('Error searching bookings:', error));
+    .then(response => response.json())
+    .then(data => {
+        if (data.status && data.bookings.length > 0) {
+            console.log("Latest approved bookings fetched successfully.");
+            displayLatestApprovedBookings(data.bookings);
+        } else {
+            console.error('No approved bookings found');
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching latest approved bookings:', error);
+    });
+}
+
+function displayLatestApprovedBookings(bookings) {
+    const cardContainer = document.getElementById('latestCard');
+    cardContainer.innerHTML = ''; // Clear previous entries
+
+    bookings.slice(0, 10).forEach((booking, index) => {
+        const bookingHTML = `
+            <div class="row approved-item d-flex align-items-center justify-content-between">
+                <div class="col-7 d-flex flex-column">
+                    <p class="me-auto ref-num">${booking.reference_number}</p>
+                    <p class="me-auto guest-style">${booking.fullname}</p>
+                </div>
+                <div class="col-1 second-col d-flex flex-column align-items-center">
+                    <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
+                    <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
+                </div>
+                <div class="col-3 third-col d-flex flex-column justify-content-end">
+                    <p class="detail-style">${booking.term_rate}</p>
+                    <p class="detail-style">${booking.pax} Pax</p>
+                </div>
+            </div>`;
+        cardContainer.insertAdjacentHTML('beforeend', bookingHTML);
+    });
 }
 
 function getBadgeClass(status) {
@@ -159,6 +185,8 @@ function getBadgeClass(status) {
             return 'badge-cancelled';
         case 'checked out':
             return 'badge-checked-out';
+        case 'approved':
+            return 'badge-approved';
         case 'on-site':
             return 'badge-onsite';
         case 'online':

@@ -30,138 +30,29 @@
                             <div class="card ">
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
-                                    <div class="row approved-item d-flex align-items-center justify-content-between">
+                                    <div class="row approved-item d-flex align-items-center justify-content-between" id="latestCard">
                                         <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0010</p>
-                                            <p class="me-auto guest-style">Julienne Galvez</p>
+                                            <p class="me-auto ref-num" id="ab_refnum">#0010</p>
+                                            <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
                                         </div>
                                         <div class="col-1 second-col d-flex flex-column align-items-center">
                                             <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
                                             <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
                                         </div>
                                         <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Hourly</p>
-                                            <p class="detail-style">3 Pax</p>
+                                            <p class="detail-style" id="ab_term">Hourly</p>
+                                            <p class="detail-style" id="ab_pax">3 Pax</p>
                                         </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0009</p>
-                                            <p class="me-auto guest-style">Euli Perez</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Daily</p>
-                                            <p class="detail-style">1 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0008</p>
-                                            <p class="me-auto guest-style">Sofia Manongdo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Weekly</p>
-                                            <p class="detail-style">1 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0007</p>
-                                            <p class="me-auto guest-style">Jelisha Banaria</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Monthly</p>
-                                            <p class="detail-style">1 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0006</p>
-                                            <p class="me-auto guest-style">Breiana Cirilo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Event</p>
-                                            <p class="detail-style">30 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0005</p>
-                                            <p class="me-auto guest-style">Breiana Cirilo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Event</p>
-                                            <p class="detail-style">30 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0004</p>
-                                            <p class="me-auto guest-style">Breiana Cirilo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Event</p>
-                                            <p class="detail-style">30 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0003</p>
-                                            <p class="me-auto guest-style">Breiana Cirilo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Event</p>
-                                            <p class="detail-style">30 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col-7 d-flex flex-column">
-                                            <p class="me-auto ref-num">#0002</p>
-                                            <p class="me-auto guest-style">Breiana Cirilo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Event</p>
-                                            <p class="detail-style">30 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div id="external-events">
                                     </div>
                                 </div>
                             </div>
-                        </div> <!-- end col-->
-                    </div><!--end row-->
+                        </div>
+                        <div id="external-events">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div><!--end row-->
                     <div style='clear:both'></div>
                     <!-- Add New Event MODAL -->
                     <div class="modal fade" id="event-modal" tabindex="-1">
