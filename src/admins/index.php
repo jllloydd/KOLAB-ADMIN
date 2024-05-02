@@ -20,8 +20,15 @@
                             <div class="modal-body p-5">
                                 <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
 
-                                    <div class="flex-shrink-0 admin-image">
-                                        <img src="../assets/img/admin/temp-avatar.avif" width="85px" height="85px" class="image-overlay rounded-circle">
+                                    <div class="flex-shrink-0 admin-image hover12 rounded-circle">
+                                        <figure><img src="../assets/img/admin/temp-avatar.avif" width="85px" height="85px" class="rounded-circle image-overlay"></figure>
+                                    </div>
+
+                                    <div class="hover12">
+                                        <div>
+                                            <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+                                            <span>Hover</span>
+                                        </div>
                                     </div>
 
                                     <div class="form-check form-switch toggle-position pt-3">
