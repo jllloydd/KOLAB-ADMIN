@@ -719,9 +719,12 @@ body, html {
     flex-direction: row;
 }
 
+
+
 .total-revenue {
     display: flex;
     flex-direction: row;
+    right: 100px;
 }
 
 .total {
@@ -731,7 +734,126 @@ body, html {
     align-items: end;
 }
 
+.text-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.revenue-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .checkin {
     color: #5BB752;
     background-color: #EFF8EE;
+    width: 100px;
+    text-align: center;
+}
+
+.reserved {
+    color: #717998;
+    background-color: #F1F2F5;
+    width: 100px;
+    text-align: center;
+}
+
+.checkout {
+    color: #0683D7;
+    background-color: #E7F3FB;
+    width: 100px;
+    text-align: center;
+}
+
+.running-late {
+    color: #F9701D;
+    background-color: #FFF1E9;
+    width: 100px;
+    text-align: center;
+}
+
+.cancelled {
+    color: #FE0600;
+    background-color: #FAE2E1;
+    width: 100px;
+    text-align: center;
+}
+
+.guestlist-container {
+    overflow-y: auto;
+    height: 380px;
+    background-color: #FFFFFF;
+}
+
+.guestlist-container::-webkit-scrollbar {
+    width: 0;
+}
+
+/*Calendar*/
+.calendar-container {
+    display: flex;
+}
+
+.week {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+} 
+
+#calendar td {
+    padding: 10px;
+    color: #717998;
+}
+
+#calendar th {
+    font-weight: lighter;
+    color: #717998;
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    height: 380px;
+}
+
+.latest {
+    height: 380px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.second-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.latest-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.more {
+    border: none;
+    background-color: transparent;
+    color: #0683D7;
+    align-items: end;
+    font-size: 12px;
+}
+
+.more-container {
+    display: flex;
+    justify-content: flex-end;
 }
