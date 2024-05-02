@@ -11,13 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             if (data.status) {
                 // Redirect to homepage or dashboard upon successful login
-                window.location.href = 'index.php';
+                window.location.href = 'bookings/index.php';
             } else {
                 // Display an error message if login fails
                 document.getElementById('loginMessage').textContent = 'Invalid username or password. Please try again.';
-                setTimeout(function() {
-        window.location.reload();
-                }, 3000);
             }
         })
         .catch(error => {
