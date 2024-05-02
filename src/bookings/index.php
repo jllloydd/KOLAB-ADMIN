@@ -322,7 +322,7 @@
                                                 <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
                                                 <span class="input-group-text btn-icons position-relative" id="basic-addon2">
                                                     <i class="ri-search-line filter-icon"></i>
-                                                    <i class="ri-filter-3-line search-icon" id="searchIcon"></i>
+                                                    <i class="ri-filter-3-line search-icon"></i>
                                                 </span>
                                             </div>
                                         </div>

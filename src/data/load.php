@@ -85,6 +85,39 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
     jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords, 'totalPages' => $totalPages]);
 }
 
+function searchBookings($conn, $keyword)
+{
+    $keyword = "%" . $keyword . "%";
+    $query = "SELECT 
+                    reference_number,
+                    CONCAT(firstname, ' ', lastname) AS fullname,
+                    email,
+                    term_rate,
+                    booking_date,
+                    status,
+                    payment_method,
+                    bookingid
+                FROM bookings
+                WHERE CONCAT(firstname, ' ', lastname) LIKE ? OR email LIKE ?
+                ORDER BY booking_date DESC";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ss", $keyword, $keyword);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $bookings = [];
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $row['payment_method'] = get_payment_method_description($row['payment_method']);
+            $bookings[] = $row;
+        }
+        jsonResponse(true, "Search results fetched successfully.", ['bookings' => $bookings]);
+    } else {
+        jsonResponse(false, "No bookings found for your search criteria.");
+    }
+}
+
 function updateBookingDetails($conn, $bookingid, $booking_date, $status)
 {
     $stmt = $conn->prepare("UPDATE bookings SET booking_date = ?, status = ? WHERE bookingid = ?");
@@ -154,6 +187,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $criteria = $_POST['criteria'] ?? 'fullname';
             $direction = $_POST['direction'] ?? 'asc';
             fetchAllBookings($conn, $page, $criteria, $direction);
+            break;
+        case 'searchBookings':
+            $keyword = $_POST['query'] ?? '';
+            searchBookings($conn, $keyword);
             break;
         case 'updateBookingDetails':
             $bookingid = $_POST['bookingid'] ?? null;
