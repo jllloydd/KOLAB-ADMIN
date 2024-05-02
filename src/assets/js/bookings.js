@@ -1,69 +1,43 @@
 let currentBookingIdToUpdate = null;
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetchAllBookings();  // Initial data fetch
-    setupSearchListeners();
+    fetchAllBookings();
 });
 
-function setupSearchListeners() {
-    const searchInput = document.getElementById('searchInput');
-    const searchIcon = document.getElementById('searchIcon');
-
-    // Function to trigger the search
-    function triggerSearch() {
-        const searchTerm = searchInput.value.trim();
-        if (window.bookingListInstance) {
-            window.bookingListInstance.search(searchTerm);
-            console.log("Search performed for:", searchTerm);
-            if (window.bookingListInstance.visibleItems.length === 0) {
-                displayNoResults("Your input did not match any bookings.");
-            }
-        }
-    }
-
-    // Event listener for search icon click
-    searchIcon.addEventListener('click', function() {
-        triggerSearch();
-    });
-
-    // Optional: Event listener for enter key in the search input
-    searchInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            triggerSearch();
-        }
-    });
-}
-
-function displayNoResults(message) {
-    const bookingListElement = document.getElementById('bookingList');
-    bookingListElement.innerHTML = `<tr><td colspan="8" class="text-center">${message}</td></tr>`;
+function sortBookings() {
+    const criteria = document.getElementById('sortCriteria').value;
+    const direction = document.getElementById('sortDirection').value;
+    fetchAllBookings(criteria, direction);
 }
 
 function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
+    console.log("Fetching bookings..."); // Debug: log fetching process start
     fetch('../data/load.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `action=fetchAllBookings&page=${page}&criteria=${encodeURIComponent(criteria)}&direction=${encodeURIComponent(direction)}`
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status) {
-            displayBookings(data.bookings);
-            if (data.bookings.length === 0) {
-                displayNoResults("No bookings available.");
+        .then(response => response.json())
+        .then(data => {
+            if (data.status) {
+                console.log("Fetch successful, displaying bookings."); // Debug: log successful fetch
+                displayBookings(data.bookings);
+                const cumulativeCount = (page - 1) * 10 + data.bookings.length;
+                updateBookingCount(cumulativeCount, data.totalRecords);
+                setupPagination(data.totalPages, page);
+            } else {
+                console.error('Failed to fetch bookings');
+                displayNoResults();
             }
-        } else {
-            console.error('Failed to fetch bookings:', data.message);
-            displayNoResults("Failed to load bookings.");
-        }
-    })
-    .catch(error => {
-        console.error('Error fetching bookings:', error);
-        displayNoResults("Error loading bookings.");
-    });
+        })
+        .catch(error => {
+            console.error('Error fetching bookings:', error);
+            displayNoResults();
+        });
 }
 
 function displayBookings(bookings) {
+    console.log("Displaying bookings, count:", bookings.length); // Debug: log number of bookings to display
     const bookingListElement = document.getElementById('bookingList');
     bookingListElement.innerHTML = '';  // Clear existing entries
 
@@ -86,24 +60,22 @@ function displayBookings(bookings) {
         bookingListElement.insertAdjacentHTML('beforeend', row);
     });
 
-    // Reinitialize List.js after updating the table
-    if (!window.bookingListInstance) {
-        initializeListJs();
-    } else {
-        window.bookingListInstance.reIndex();  // Re-index if already initialized
-    }
+    console.log("Booking elements added to DOM, reinitializing List.js");
+    initializeListJs();
 }
 
 function initializeListJs() {
     const options = {
         valueNames: ['reference_num', 'customer_name', 'email', 'term', 'date', 'booking_status', 'payment_method'],
-        listClass: 'list',
-        searchClass: 'search'
+        listClass: 'list'  // This refers to a class inside the container identified by the ID
     };
 
+    // Since your tbody has the ID 'bookingList', let's ensure we are initializing with the correct container
     if (document.getElementById('bookingManagementData')) {
         try {
-            window.bookingListInstance = new List('bookingManagementData', options);
+            // Initialize List.js on the table container 'bookingManagementData', not on the 'bookingList'
+            const bookingList = new List('bookingManagementData', options);
+            window.bookingListInstance = bookingList;
             console.log("List.js initialized successfully on bookingManagementData.");
         } catch (error) {
             console.error("Failed to initialize List.js:", error);
