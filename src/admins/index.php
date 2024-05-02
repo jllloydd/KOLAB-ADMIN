@@ -139,7 +139,7 @@
                     </div><!-- end col -->
 
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                        <div class="card card-design card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -170,7 +170,7 @@
                     <!-- end col -->
 
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                        <div class="card card-design card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -194,7 +194,7 @@
                     </div><!-- end col -->
 
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                        <div class="card card-design card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -220,7 +220,7 @@
 
                 <div class="row">
                     <div class="col-xl-3 col-md-6 ">
-                            <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                            <div class="card card-design card-animate">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
                                         <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -244,7 +244,7 @@
                         </div><!-- end col -->
 
                         <div class="col-xl-3 col-md-6 ">
-                            <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                            <div class="card card-design card-animate">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
                                         <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -268,7 +268,7 @@
                         </div><!-- end col -->
 
                         <div class="col-xl-3 col-md-6 ">
-                            <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                            <div class="card card-design card-animate">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
                                         <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -291,7 +291,7 @@
                             </div>
                         </div><!-- end col -->
 
-                        <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                        <div class="col-xl-3 col-md-6 ">
                             <div class="card card-design card-animate">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
@@ -317,7 +317,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                    <div class="col-xl-3 col-md-6 ">
                         <div class="card card-design card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -341,7 +341,7 @@
                         </div>
                     </div><!-- end col -->
 
-                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                    <div class="col-xl-3 col-md-6 ">
                         <div class="card card-design-red card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -365,7 +365,7 @@
                         </div>
                     </div><!-- end col -->
 
-                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                    <div class="col-xl-3 col-md-6 ">
                         <div class="card card-design-red card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -389,7 +389,7 @@
                         </div>
                     </div><!-- end col -->
 
-                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
+                    <div class="col-xl-3 col-md-6 ">
                         <div class="card card-design-red card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -414,7 +414,7 @@
                     </div><!-- end col -->
                 </div>
 
-                 <!-- Modal -->
+                 <!-- View Admin Modal -->
                  <div class="modal fade admin-view-modal" id="viewAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
                     <div class="modal-dialog modal-dialog-center modal-lg">
                         <div class="modal-content">
