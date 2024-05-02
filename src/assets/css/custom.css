@@ -205,6 +205,8 @@
     
     .add-btn {
         font-weight: bold;
+        font-size: 16px;
+        font-family: "Barlow", sans-serif !important;
     }
     
     .btn-success {
@@ -258,8 +260,8 @@
     }
     
     .badge-pending {
-        color: #F9701D;
-        background-color: #FFF1E9;
+        color: #FCD116;
+        background-color: #FFFAE9;
         line-height: unset;
         padding-left: 1em;
         padding-right: 1em;
@@ -282,8 +284,8 @@
     }
     
     .badge-checked-out {
-        color: #0683D7;
-        background-color: #E2EEF6;
+        color: #F9701D;
+        background-color: #FFF1E9;
         line-height: unset;
         padding-left: 1em;
         padding-right: 1em;
@@ -308,6 +310,18 @@
     .badge-online {
         color: #5BB752;
         background-color: #EFF8EE;
+        line-height: unset;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: unset;
+        font-weight: unset;
+        width: 100px;
+        border-radius: 0;
+    }
+
+    .badge-approved {
+        color: #0683D7;
+        background-color: #E2EEF6;
         line-height: unset;
         padding-left: 1em;
         padding-right: 1em;
@@ -432,12 +446,15 @@
         overflow: hidden!important;
         overflow-y: hidden;
     }
-    .page-padding {
+    /* .page-padding {
         height: 100vh;
-    }
+    } */
     .margin-remove {
         margin-top: 0px;
         margin-bottom: 0px;
+    }
+    .add-icon {
+        font-weight: lighter;
     }
     .card-design {
         border-radius: 0px;
@@ -466,9 +483,20 @@
     .wordbreak {
         overflow-wrap: break-word;
     }
+    .admin-style {
+        font-family: "Barlow", sans-serif !important;
+        word-wrap: break-word;
+        color: #292929;
+    }
     .role-style {
         color: #717998;
-
+        font-family: "Barlow", sans-serif !important;
+        font-size: 14px;
+    }
+    .toggle-label {
+        font-size: 14px;
+        font-weight: normal;
+        color: #717998;
     }
     .toggle-position {
         right: 0;
@@ -479,7 +507,7 @@
     .form-check-input {
         background-color: #D8DDE4;
         border: 0px;
-        height: 17px;    
+        height: 15px;    
     }
     .form-check-input:checked {
         background-color: #FE0600;
@@ -487,7 +515,7 @@
     }
     .form-switch .form-check-input {
         --vz-form-switch-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255'/%3e%3c/svg%3e);
-        width: 35px;
+        width: 27px;
     }
     
 
@@ -621,6 +649,57 @@ body, html {
     width: 170px;
 }
 
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1399px) {
+    /* Login Page*/
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img {
+        width: 100%;
+        height: 100px;
+    }
+
+    .img2 {
+        width: 200px;
+    }
+
+    .container-two {
+        padding-top: 100px;
+    }
+
+    .sub-container {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+@media screen and (max-width: 290px) {
+
+}
 
 .topbar-user {
     background-color: white;
