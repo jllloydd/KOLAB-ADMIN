@@ -63,6 +63,7 @@
                                             </form>
                                         </div>
                                     </div>
+                                   
 
                                     <div class="col h-100">
                                         <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
@@ -119,7 +120,7 @@
 
                 <div class="row">
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate">
+                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                             <div class="card-body d-flex align-items-center">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -132,14 +133,13 @@
                                             <p class="margin-remove role-style">Master Admin</p>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
                     </div><!-- end col -->
 
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate">
+                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -160,10 +160,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- end col -->
+                    </div>
+                    <style>
+                        .modal.fade .modal-dialog {
+                            transform: none;
+                            transition: none;
+                        }
+                    </style>
+                    <!-- end col -->
 
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate">
+                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -187,7 +194,7 @@
                     </div><!-- end col -->
 
                     <div class="col-xl-3 col-md-6 ">
-                        <div class="card card-design card-animate">
+                        <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
                                     <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -213,7 +220,7 @@
 
                 <div class="row">
                     <div class="col-xl-3 col-md-6 ">
-                            <div class="card card-design card-animate">
+                            <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
                                         <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -237,7 +244,7 @@
                         </div><!-- end col -->
 
                         <div class="col-xl-3 col-md-6 ">
-                            <div class="card card-design card-animate">
+                            <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
                                         <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -261,7 +268,7 @@
                         </div><!-- end col -->
 
                         <div class="col-xl-3 col-md-6 ">
-                            <div class="card card-design card-animate">
+                            <div class="card card-design card-animate" data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
                                         <div class="col-2 avatar-sm flex-shrink-0 ms-2">
@@ -284,7 +291,7 @@
                             </div>
                         </div><!-- end col -->
 
-                        <div class="col-xl-3 col-md-6 ">
+                        <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                             <div class="card card-design card-animate">
                                 <div class="card-body d-flex align-items-center position-relative">
                                     <div class="row d-flex align-items-center justify-content-start">
@@ -310,7 +317,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 ">
+                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                         <div class="card card-design card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -334,7 +341,7 @@
                         </div>
                     </div><!-- end col -->
 
-                    <div class="col-xl-3 col-md-6 ">
+                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                         <div class="card card-design-red card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -358,7 +365,7 @@
                         </div>
                     </div><!-- end col -->
 
-                    <div class="col-xl-3 col-md-6 ">
+                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                         <div class="card card-design-red card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -382,7 +389,7 @@
                         </div>
                     </div><!-- end col -->
 
-                    <div class="col-xl-3 col-md-6 ">
+                    <div class="col-xl-3 col-md-6 " data-bs-toggle="modal" data-bs-target="#viewAdminModal">
                         <div class="card card-design-red card-animate">
                             <div class="card-body d-flex align-items-center position-relative">
                                 <div class="row d-flex align-items-center justify-content-start">
@@ -406,10 +413,79 @@
                         </div>
                     </div><!-- end col -->
                 </div>
-                
-            </div>
-        </div>
 
+                 <!-- Modal -->
+                 <div class="modal fade admin-view-modal" id="viewAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
+                    <div class="modal-dialog modal-dialog-center modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body p-5">
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="flex-shrink-0 admin-image admin-hover rounded-circle">
+                                                <figure class="margin-remove"><img src="../assets/img/admin/temp-avatar.avif" width="100px" height="100px" class="rounded-circle"></figure>
+                                            </div>
+
+                                            <div>
+                                                <p class="status-label">Active</p>
+                                            </div>
+                                        </div>
+                                        <div class="admin-body">
+                                            <form action="javascript:void(0);">
+                                                <div class="row g-3 d-flex flex-column">
+                                                    <div class="col w-100 px-4 pt-3">
+                                                        <div>
+                                                            <label for="firstName" class="form-label">First Name</label>
+                                                            <input type="text" class="form-control" id="firstName" placeholder="Betty">
+                                                        </div>
+                                                    </div><!--end col-->
+                                                    <div class="col w-100 px-4">
+                                                    <div>
+                                                        <label for="lastName" class="form-label">Last Name</label>
+                                                        <input type="text" class="form-control" id="lastName" placeholder="Shares">
+                                                    </div>
+                                                    </div><!--end col-->
+                                                    <div class="col w-100 px-4">
+                                                        <div>
+                                                            <label for="emailInput" class="form-label">Email</label>
+                                                            <input type="email" class="form-control" id="emailInput" placeholder="bettyshares@gmail.com">
+                                                        </div>
+                                                    </div><!--end col-->
+                                                </div> 
+                                            </form>
+                                        </div>
+                                    </div>
+                                   
+
+                                    <div class="col h-100">
+                                        <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
+                                            <p class="log-heading">Activity Log</p>
+                                            <ul class="record-style w-100">
+                                                <div class="d-flex flex-row justify-content-between">
+                                                    <li>Confirmed booking</li>
+                                                    <p class="margin-remove">05/29/24 10:32AM</p>
+                                                </div>
+                                                <div class="d-flex flex-row justify-content-between mt-2">
+                                                    <li>Confirmed booking</li>
+                                                    <p class="margin-remove">05/29/24 10:32AM</p>
+                                                </div>
+                                                <div class="d-flex flex-row justify-content-between mt-2">
+                                                    <li>Confirmed booking</li>
+                                                    <p class="margin-remove">05/29/24 10:32AM</p>
+                                                </div>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
     </div>
 </div>
 
