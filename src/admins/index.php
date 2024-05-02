@@ -15,65 +15,78 @@
 
                 <!-- Modal -->
                 <div class="modal fade admin-modal" id="addAdminModal" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
-                    <div class="modal-dialog modal-dialog-center">
+                    <div class="modal-dialog modal-dialog-center modal-lg">
                         <div class="modal-content">
                             <div class="modal-body p-5">
-                                <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
 
-                                    <div class="flex-shrink-0 admin-image hover12 rounded-circle">
-                                        <figure><img src="../assets/img/admin/temp-avatar.avif" width="85px" height="85px" class="rounded-circle image-overlay"></figure>
-                                    </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="flex-shrink-0 admin-image admin-hover rounded-circle">
+                                                <figure class="margin-remove"><img src="../assets/img/admin/temp-avatar.avif" width="100px" height="100px" class="rounded-circle"></figure>
+                                            </div>
 
-                                    <div class="hover12">
-                                        <div>
-                                            <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
-                                            <span>Hover</span>
+                                            <div class="form-check form-switch toggle-position pt-3">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                <label class="role-style margin-remove ps-2" for="flexSwitchCheckDefault">Deactivate</label>
+                                            </div>
+                                        </div>
+                                        <div class="admin-body">
+                                            <form action="javascript:void(0);">
+                                                <div class="row g-3 d-flex flex-column">
+                                                    <div class="col w-100 px-4 pt-3">
+                                                        <div>
+                                                            <label for="firstName" class="form-label">First Name</label>
+                                                            <input type="text" class="form-control" id="firstName" placeholder="Betty">
+                                                        </div>
+                                                    </div><!--end col-->
+                                                    <div class="col w-100 px-4">
+                                                    <div>
+                                                        <label for="lastName" class="form-label">Last Name</label>
+                                                        <input type="text" class="form-control" id="lastName" placeholder="Shares">
+                                                    </div>
+                                                    </div><!--end col-->
+                                                    <div class="col w-100 px-4">
+                                                        <div>
+                                                            <label for="emailInput" class="form-label">Email</label>
+                                                            <input type="email" class="form-control" id="emailInput" placeholder="bettyshares@gmail.com">
+                                                        </div>
+                                                    </div><!--end col-->
+
+                                                    <div class="col-lg-12 mb-4 mt-4">
+                                                        <div class="hstack gap-4 justify-content-center">
+                                                            <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn save-btn">Save</button>
+                                                        </div>
+                                                    </div><!--end col-->
+                                                </div> 
+                                            </form>
                                         </div>
                                     </div>
 
-                                    <div class="form-check form-switch toggle-position pt-3">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                        <label class="role-style margin-remove ps-2" for="flexSwitchCheckDefault">Deactivate</label>
+                                    <div class="col h-100">
+                                        <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
+                                            <p class="log-heading">Activity Log</p>
+                                            <ul class="record-style w-100">
+                                                <div class="d-flex flex-row justify-content-between">
+                                                    <li>Confirmed booking</li>
+                                                    <p class="margin-remove">05/29/24 10:32AM</p>
+                                                </div>
+                                                <div class="d-flex flex-row justify-content-between mt-2">
+                                                    <li>Confirmed booking</li>
+                                                    <p class="margin-remove">05/29/24 10:32AM</p>
+                                                </div>
+                                                <div class="d-flex flex-row justify-content-between mt-2">
+                                                    <li>Confirmed booking</li>
+                                                    <p class="margin-remove">05/29/24 10:32AM</p>
+                                                </div>
+
+                                            </ul>
+                                        </div>
                                     </div>
-
-                                    
-
                                 </div>
 
-                                <div class="admin-body">
-                                    <form action="javascript:void(0);">
-                                        <div class="row g-3 d-flex flex-column">
-                                            <div class="col w-100 px-4 pt-3">
-                                                <div>
-                                                    <label for="firstName" class="form-label">First Name</label>
-                                                    <input type="text" class="form-control" id="firstName" placeholder="Betty">
-                                                </div>
-                                            </div><!--end col-->
-                                            <div class="col w-100 px-4">
-                                            <div>
-                                                <label for="lastName" class="form-label">Last Name</label>
-                                                <input type="text" class="form-control" id="lastName" placeholder="Shares">
-                                            </div>
-                                            </div><!--end col-->
-                                            <div class="col w-100 px-4">
-                                                <div>
-                                                    <label for="emailInput" class="form-label">Email</label>
-                                                    <input type="email" class="form-control" id="emailInput" placeholder="bettyshares@gmail.com">
-                                                </div>
-                                            </div><!--end col-->
-
-                                            <div class="col-lg-12 mb-4 mt-4">
-                                                <div class="hstack gap-4 justify-content-center">
-                                                    <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                                                    <button type="submit" class="btn save-btn">Save</button>
-                                                </div>
-                                            </div><!--end col-->
-                                        </div> 
-                                    </form>
-
-                                
-
-                                </div>      
+                                      
                             </div>
                         </div>
                     </div>
