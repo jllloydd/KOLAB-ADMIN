@@ -4,12 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchAllBookings();
 });
 
-function sortBookings() {
-    const criteria = document.getElementById('sortCriteria').value;
-    const direction = document.getElementById('sortDirection').value;
-    fetchAllBookings(criteria, direction);
-}
-
 function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
     console.log("Fetching bookings..."); // Debug: log fetching process start
     fetch('../data/load.php', {
@@ -96,6 +90,7 @@ function initializeListJs() {
         console.log("Element with ID 'bookingManagementData' not found.");
     }
 }
+
 
 function updateBookingCount(displayCount, totalCount) {
     const countElement = document.getElementById('bookingCount');
