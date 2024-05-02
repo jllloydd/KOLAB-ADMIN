@@ -157,7 +157,7 @@ function displayLatestApprovedBookings(bookings) {
 
     bookings.slice(0, 10).forEach((booking, index) => {
         const bookingHTML = `
-            <div class="row approved-item d-flex align-items-center justify-content-between">
+            <div class="row approved-item d-flex align-items-center justify-content-between" style="margin-bottom: 20px;">
                 <div class="col-7 d-flex flex-column">
                     <p class="me-auto ref-num">${booking.reference_number}</p>
                     <p class="me-auto guest-style">${booking.fullname}</p>
