@@ -869,7 +869,7 @@ body, html {
 
 .guestlist-container {
     overflow-y: auto;
-    height: 380px;
+    height: 367px;
     background-color: #FFFFFF;
 }
 
@@ -903,11 +903,11 @@ body, html {
 .last {
     display: flex;
     flex-direction: row;
-    height: 380px;
+    height: 367px;
 }
 
 .latest {
-    height: 380px;
+    height: 367px;
 }
 
 .main-container {
@@ -937,7 +937,6 @@ body, html {
     background-color: transparent;
     color: #0683D7;
     align-items: end;
-    font-size: 12px;
 }
 
 .more-container {
@@ -972,3 +971,85 @@ body, html {
     color: #717998;
 }
 
+.list {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: -20px;
+}
+
+.guest {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+}
+
+.one {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1399px) {
+    /* Login Page*/
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img {
+        width: 100%;
+        height: 100px;
+    }
+
+    .img2 {
+        width: 200px;
+    }
+
+    .container-two {
+        padding-top: 100px;
+    }
+
+    .sub-container {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+@media screen and (max-width: 290px) {
+
+}

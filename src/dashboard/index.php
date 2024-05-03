@@ -17,7 +17,7 @@
                                         <h2 class="fw-bold">872</h2>
                                     </div>
                                 </div>
-                                <div class=" align-content-center justify-content-center pe-3">
+                                <div class=" align-content-center justify-content-center  me-3">
                                     <img src="../assets/img/dashboard/total-booking.svg" width="50px" >
                                 </div>
                             </div>
@@ -71,9 +71,9 @@
                             <div class="col revenue-container">
                                     <div class="text-container card bg-white mb-4">
                                         <div class="total-revenue ps-5 pt-5 pb-5">
-                                            <div class="align-items-center pe-3">
-                                                <div><h5 class="fw-light pb-3">Total Revenue</h5></div>
-                                                <div><h2 class="fw-bolder"><span>&#8369;</span> 87,561 </h2></div>
+                                            <div class="align-items-center">
+                                                <div><h6 class="fw-light pb-3">Total Revenue</h6></div>
+                                                <div><h3 class="fw-bolder"><span>&#8369;</span> 87,561 </h3></div>
                                             </div>
                                         </div>
                                         <div class="total card-body align-content-end justify-content-center pe-4">
@@ -85,9 +85,9 @@
 
                                     <div class="text-container bg-white card mb-4">
                                         <div class="total-revenue ps-5 pt-5 pb-5">
-                                            <div class="align-items-center pe-3">
-                                                <div><h5 class="fw-light pb-3">Revenue Today</h5></div>
-                                                <div><h2 class="fw-bolder"><span>&#8369;</span> 1,340</h2></div>
+                                            <div class="align-items-center">
+                                                <div><h6 class="fw-light pb-3">Revenue Today</h6></div>
+                                                <div><h3 class="fw-bolder"><span>&#8369;</span> 1,340</h3></div>
                                             </div>
                                         </div>
                                         <div class="total card-body align-content-end justify-content-center pe-4">
@@ -104,53 +104,64 @@
                                     <div class="guestlist-container card">
                                             <div class="card-body ms-2 mt-3">
                                                 <p class="heading">Guest List Today</p>
-                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
-                                                    <div class="col d-flex flex-column">
-                                                        <p class="me-auto ref-num">#0001</p>
-                                                        <p class="me-auto guest-style">Julienne Galvez</p>
-                                                    </div>
-                                                    <div class="col second-col d-flex flex-column align-items-center">
-                                                        <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+
+                                                <div class="row mb-3">
+                                                    <div class="guest" >
+                                                        <div class="col d-flex flex-column">
+                                                            <p class="me-auto ref-num">#0001</p>
+                                                            <p class="me-auto guest-style">Julienne Galvez</p>
+                                                        </div>
+                                                        <div class="align-content-center justify-content-center">
+                                                            <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
+                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
-                                                    <div class="col d-flex flex-column">
-                                                        <p class="me-auto ref-num">#0002</p>
-                                                        <p class="me-auto guest-style">Euli Perez</p>
-                                                    </div>
-                                                    <div class="col second-col d-flex flex-column align-items-center">
-                                                        <p class="reserved ps-2 pe-2 pt-1 pb-1">Reserved</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
-                                                    <div class="col d-flex flex-column">
-                                                        <p class="me-auto ref-num">#0003</p>
-                                                        <p class="me-auto guest-style">Sofia Manongdo</p>
-                                                    </div>
-                                                    <div class="col second-col d-flex flex-column align-items-center">
-                                                        <p class="checkout ps-2 pe-2 pt-1 pb-1">Checked out</p>
+                                                <div class="row mb-3">
+                                                    <div class="guest" >
+                                                        <div class="col d-flex flex-column">
+                                                            <p class="me-auto ref-num">#0002</p>
+                                                            <p class="me-auto guest-style">Euli Perez</p>
+                                                        </div>
+                                                        <div class="align-content-center justify-content-center">
+                                                            <p class="reserved ps-2 pe-2 pt-1 pb-1">Reserved</p>
+                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
-                                                    <div class="col d-flex flex-column">
-                                                        <p class="me-auto ref-num">#0004</p>
-                                                        <p class="me-auto guest-style">Jelisha Banaria</p>
-                                                    </div>
-                                                    <div class="col second-col d-flex flex-column align-items-center">
-                                                        <p class="running-late ps-2 pe-2 pt-1 pb-1">Running late</p>
+                                                <div class="row mb-3">
+                                                    <div class="guest" >
+                                                        <div class="col d-flex flex-column">
+                                                            <p class="me-auto ref-num">#0003</p>
+                                                            <p class="me-auto guest-style">Sofia Manongdo</p>
+                                                        </div>
+                                                        <div class="align-content-center justify-content-center">
+                                                            <p class="checkout ps-2 pe-2 pt-1 pb-1">Checked out</p>
+                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="row approved-item d-flex align-items-center justify-content-between mb-3">
-                                                    <div class="col d-flex flex-column">
-                                                        <p class="me-auto ref-num">#0005</p>
-                                                        <p class="me-auto guest-style">Breiana Cirilo</p>
+                                                <div class="row mb-3">
+                                                    <div class="guest" >
+                                                        <div class="col d-flex flex-column">
+                                                            <p class="me-auto ref-num">#0004</p>
+                                                            <p class="me-auto guest-style">Jelisha Banaria</p>
+                                                        </div>
+                                                        <div class="align-content-center justify-content-center">
+                                                            <p class="running-late ps-2 pe-2 pt-1 pb-1">Running late</p>
+                                                        </div>
                                                     </div>
-                                                    <div class="col second-col d-flex flex-column align-items-center">
-                                                        <p class="cancelled ps-2 pe-2 pt-1 pb-1">Cancelled</p>
+                                                </div>
+                                                
+                                                <div class="row mb-3">
+                                                    <div class="guest" >
+                                                        <div class="col flex-column">
+                                                            <p class="me-auto ref-num">#0005</p>
+                                                            <p class="me-auto guest-style">Breiana Cirilo</p>
+                                                        </div>
+                                                        <div class="align-content-center justify-content-center">
+                                                            <p class="cancelled ps-2 pe-2 pt-1 pb-1">Cancelled</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             <div id="external-events">
@@ -222,85 +233,121 @@
 
                         <div class="col">
                             <div class="latest card col">
-                                <div class="ms-4 me-4 pt-4 pb-4">
+                                <div class="ms-4 pt-4 pb-4">
                                     <div class="latest-title">
                                         <div class="">
                                             <div><p class="heading">Latest Approved Booking</p></div>
                                         </div>
                                         <div class="more-container card-body p-0">
-                                            <div class="p-0"><button class="more">More &gt;</button></div>
+                                            <div class="p-0"><button class="more">More <span class="me-3">&gt;</span></button></div>
                                         </div>
                                     </div>
-                                    <div class="row approved-item d-flex align-items-center justify-content-between">
-                                        <div class="col d-flex flex-column">
-                                            <p class="me-auto ref-num">#0010</p>
-                                            <p class="me-auto guest-style">Julienne Galvez</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Hourly</p>
-                                            <p class="detail-style">3 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col d-flex flex-column">
-                                            <p class="me-auto ref-num">#0009</p>
-                                            <p class="me-auto guest-style">Euli Perez</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Daily</p>
-                                            <p class="detail-style">1 Pax</p>
+
+                                    <div class="row mb-3">
+                                        <div class="list" >
+                                            <div class="col flex-column">
+                                                <p class="me-auto ref-num">#0010</p>
+                                                <p class="me-auto guest-style">Julienne Galvez</p>
+                                            </div>
+                                            <div class="row align-content-center justify-content-center">
+                                                <div class="col m-0 p-0 align-items-center">
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" width="15" height="15" class="icon-position"></div>
+                                                        <div><p>Hourly</p></div>
+                                                    </div>
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" width="17" height="17" class="icon-position"></div>
+                                                        <div><p>3 Pax</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col d-flex flex-column">
-                                            <p class="me-auto ref-num">#0008</p>
-                                            <p class="me-auto guest-style">Sofia Manongdo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Weekly</p>
-                                            <p class="detail-style">1 Pax</p>
-                                        </div>
-                                    </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col d-flex flex-column">
-                                            <p class="me-auto ref-num">#0007</p>
-                                            <p class="me-auto guest-style">Jelisha Banaria</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Monthly</p>
-                                            <p class="detail-style">1 Pax</p>
+
+                                    <div class="row mb-3">
+                                        <div class="list" >
+                                            <div class="col flex-column">
+                                                <p class="me-auto ref-num">#0009</p>
+                                                <p class="me-auto guest-style">Euli Perez</p>
+                                            </div>
+                                            <div class="row align-content-center justify-content-center">
+                                                <div class="col m-0 p-0 align-items-center">
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
+                                                        <div><p>Daily</p></div>
+                                                    </div>
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
+                                                        <div><p>1 Pax</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row approved-item d-flex align-items-center mt-3 justify-content-between">
-                                        <div class="col d-flex flex-column">
-                                            <p class="me-auto ref-num">#0006</p>
-                                            <p class="me-auto guest-style">Breiana Cirilo</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style">Event</p>
-                                            <p class="detail-style">30 Pax</p>
+
+                                    <div class="row mb-3">
+                                        <div class="list" >
+                                            <div class="col flex-column">
+                                                <p class="me-auto ref-num">#0008</p>
+                                                <p class="me-auto guest-style">Sofia Manongdo</p>
+                                            </div>
+                                            <div class="row align-content-center justify-content-center">
+                                                <div class="col m-0 p-0 align-items-center">
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
+                                                        <div><p>Weekly</p></div>
+                                                    </div>
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
+                                                        <div><p>1 Pax</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <div class="row mb-3">
+                                        <div class="list" >
+                                            <div class="col flex-column">
+                                                <p class="me-auto ref-num">#0007</p>
+                                                <p class="me-auto guest-style">Jelisha Banaria</p>
+                                            </div>
+                                            <div class="row align-content-center justify-content-center">
+                                                <div class="col m-0 p-0 align-items-center">
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
+                                                        <div><p>Monthly</p></div>
+                                                    </div>
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
+                                                        <div><p>1 Pax</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="list" >
+                                            <div class="col flex-column">
+                                                <p class="me-auto ref-num">#0006</p>
+                                                <p class="me-auto guest-style">Breiana Cirilo</p>
+                                            </div>
+                                            <div class="row align-content-center justify-content-center">
+                                                <div class="col m-0 p-0 align-items-center" width="200px">
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
+                                                        <div><p>Event</p></div>
+                                                    </div>
+                                                    <div class="one">
+                                                        <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
+                                                        <div><p>30 Pax</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
