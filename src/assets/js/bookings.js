@@ -16,8 +16,8 @@ function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
         .then(data => {
             if (data.status) {
                 console.log("Fetch successful, displaying bookings."); // Debug: log successful fetch
-                displayBookings(data.bookings);
                 const cumulativeCount = (page - 1) * 10 + data.bookings.length;
+                displayBookings(data.bookings);
                 updateBookingCount(cumulativeCount, data.totalRecords);
                 setupPagination(data.totalPages, page);
             } else {
