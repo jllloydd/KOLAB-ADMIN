@@ -970,6 +970,23 @@ body, html {
     justify-content: flex-end;
 }
 
+.approved-booking {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: -20px;
+}
+
+.guest-list {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+}
+
+.latest-booking {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -15px;
+}
+
 /*Topbar right*/
 .righty-barty {
     display: flex;
@@ -997,22 +1014,7 @@ body, html {
     color: #717998;
 }
 
-.list {
-    display: grid;
-    grid-template-columns: 1fr 80px;
-    gap: -20px;
-}
 
-.guest {
-    display: grid;
-    grid-template-columns: 1fr 100px;
-}
-
-.one {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: -15px;
-}
 
 
 

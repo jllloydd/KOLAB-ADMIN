@@ -8,7 +8,7 @@
         <div class="page-content">
             <div class="container-fluid">
                 <div class="main-container">
-                    <div class="col row">
+                    <div class="col row login-container">
                         <div class="col">
                             <div class="total-booking card">
                                 <div class="total-container card-body ms-4 mt-3 mb-3" >
@@ -66,7 +66,7 @@
                         </div><!-- end col -->
                     </div> 
 
-                    <div class="col row">
+                    <div class="col row login-container">
                         <div class="col">
                             <div class="col revenue-container">
                                     <div class="text-container card bg-white mb-4">
@@ -106,7 +106,7 @@
                                                 <p class="heading">Guest List Today</p>
 
                                                 <div class="row mb-3">
-                                                    <div class="guest" >
+                                                    <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
                                                             <p class="me-auto ref-num">#0001</p>
                                                             <p class="me-auto guest-style">Julienne Galvez</p>
@@ -118,7 +118,7 @@
                                                 </div>
 
                                                 <div class="row mb-3">
-                                                    <div class="guest" >
+                                                    <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
                                                             <p class="me-auto ref-num">#0002</p>
                                                             <p class="me-auto guest-style">Euli Perez</p>
@@ -130,7 +130,7 @@
                                                 </div>
 
                                                 <div class="row mb-3">
-                                                    <div class="guest" >
+                                                    <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
                                                             <p class="me-auto ref-num">#0003</p>
                                                             <p class="me-auto guest-style">Sofia Manongdo</p>
@@ -142,7 +142,7 @@
                                                 </div>
 
                                                 <div class="row mb-3">
-                                                    <div class="guest" >
+                                                    <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
                                                             <p class="me-auto ref-num">#0004</p>
                                                             <p class="me-auto guest-style">Jelisha Banaria</p>
@@ -154,7 +154,7 @@
                                                 </div>
                                                 
                                                 <div class="row mb-3">
-                                                    <div class="guest" >
+                                                    <div class="guest-list" >
                                                         <div class="col flex-column">
                                                             <p class="me-auto ref-num">#0005</p>
                                                             <p class="me-auto guest-style">Breiana Cirilo</p>
@@ -239,23 +239,23 @@
                                             <div><p class="heading">Latest Approved Booking</p></div>
                                         </div>
                                         <div class="more-container card-body p-0">
-                                            <div class="p-0"><button class="more">More <span class="me-3">&gt;</span></button></div>
+                                            <div class="p-0"><button class="more">More <span class="me-3">&gt;</span> </button></div>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <div class="list" >
+                                        <div class="approved-booking" >
                                             <div class="col flex-column">
                                                 <p class="me-auto ref-num">#0010</p>
                                                 <p class="me-auto guest-style">Julienne Galvez</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" width="15" height="15" class="icon-position"></div>
                                                         <div><p>Hourly</p></div>
                                                     </div>
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" width="17" height="17" class="icon-position"></div>
                                                         <div><p>3 Pax</p></div>
                                                     </div>
@@ -265,18 +265,18 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <div class="list" >
+                                        <div class="approved-booking" >
                                             <div class="col flex-column">
                                                 <p class="me-auto ref-num">#0009</p>
                                                 <p class="me-auto guest-style">Euli Perez</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
                                                         <div><p>Daily</p></div>
                                                     </div>
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
                                                         <div><p>1 Pax</p></div>
                                                     </div>
@@ -286,18 +286,18 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <div class="list" >
+                                        <div class="approved-booking" >
                                             <div class="col flex-column">
                                                 <p class="me-auto ref-num">#0008</p>
                                                 <p class="me-auto guest-style">Sofia Manongdo</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
                                                         <div><p>Weekly</p></div>
                                                     </div>
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
                                                         <div><p>1 Pax</p></div>
                                                     </div>
@@ -307,18 +307,18 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <div class="list" >
+                                        <div class="approved-booking" >
                                             <div class="col flex-column">
                                                 <p class="me-auto ref-num">#0007</p>
                                                 <p class="me-auto guest-style">Jelisha Banaria</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
                                                         <div><p>Monthly</p></div>
                                                     </div>
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
                                                         <div><p>1 Pax</p></div>
                                                     </div>
@@ -328,18 +328,18 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <div class="list" >
+                                        <div class="approved-booking" >
                                             <div class="col flex-column">
                                                 <p class="me-auto ref-num">#0006</p>
                                                 <p class="me-auto guest-style">Breiana Cirilo</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center" width="200px">
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position"></div>
                                                         <div><p>Event</p></div>
                                                     </div>
-                                                    <div class="one">
+                                                    <div class="latest-booking">
                                                         <div class="me-3 mb-0 pb-0"><img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position"></div>
                                                         <div><p>30 Pax</p></div>
                                                     </div>

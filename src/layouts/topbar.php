@@ -44,7 +44,7 @@
 
                         <div class="dropdown-head rounded-top">
                             <div class="p-3">
-                                <div class="row align-items-center">
+                                <div class=" align-items-center">
                                     <div class="col">
                                         <h6 class="m-0 fs-16 fw-semibold text-white"> Notifications </h6>
                                     </div>
