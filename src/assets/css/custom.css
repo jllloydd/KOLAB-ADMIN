@@ -170,9 +170,16 @@
         margin-left: 22px
     }
 
+    .first-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
     .third-col {
         padding-left: 0px;
-        padding-right: 16px;  
+        padding-right: 16px;
+        width: fit-content;  
     }
 
     .guest-style {
@@ -667,34 +674,61 @@ body, html {
 
 @media screen and (max-width: 1399px) {
     /* Login Page*/
-    .row {
-        display: flex;
-        flex-direction: column;
+    .login_page {
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .img {
+            width: 100%;
+            height: 100px;
+        }
+    
+        .img2 {
+            width: 200px;
+        }
+    
+        .container-two {
+            padding-top: 100px;
+        }
+    
+        .sub-container {
+            margin: 20px;
+        }
     }
-
-    .img {
-        width: 100%;
-        height: 100px;
-    }
-
-    .img2 {
-        width: 200px;
-    }
-
-    .container-two {
-        padding-top: 100px;
-    }
-
-    .sub-container {
-        margin: 20px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
     
 }
 
+@media screen and (max-width: 1300px) {
+    .admin_booking_section {
+        .second-col {
+            margin-left: 0;
+        }
+        .second-col {
+            margin-left: 0;
+        }
+        .guest-col {
+            width: 50%;
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
+    /* .admin_booking_section {
+        .first-row {
+            display: flex;
+        }
+        .first-row {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    } */
 }
 
 @media screen and (max-width: 992px) {

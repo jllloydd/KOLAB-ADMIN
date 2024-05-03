@@ -18,7 +18,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="row">
+                    <div class="row first-row">
                         <div class="col-xl-9">
                             <div class="card calendar-height">
                                 <div class="card-body">
@@ -30,8 +30,8 @@
                             <div class="card ">
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
-                                    <div class="row approved-item d-flex align-items-center justify-content-between" id="latestCard">
-                                        <div class="col-7 d-flex flex-column">
+                                    <div class="row approved-item d-flex flex-row flex-nowrap align-items-center" id="latestCard">
+                                        <div class="col-xl-7 d-flex flex-column guest-col me-auto">
                                             <p class="me-auto ref-num" id="ab_refnum">#0010</p>
                                             <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
                                         </div>
@@ -201,6 +201,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
+
                     <div class="row d-flex flex-row flex-nowrap align-items-center mb-4">
                         <div class="col">
                             <div class="card margin-remove card-remove">
@@ -226,7 +227,6 @@
                                 </button>
                             </div>
                         </div>
-                    
                     </div><!-- end card -->
                     
                     <!-- end col -->
