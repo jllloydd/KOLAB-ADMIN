@@ -304,10 +304,13 @@ function openModal(bookingId) {
     });
 }
 
-
 // Function to close the modal
 function closeModal() {
     console.log("closeModal called");
     $('#myModal').modal('hide');  // Use jQuery to hide the modal
 }
 
+// Example of usage
+function triggerModal() {
+    openSuccessModal("Success!", "Your operation was successful.");
+}
