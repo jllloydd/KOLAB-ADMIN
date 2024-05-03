@@ -47,7 +47,7 @@ function displayBookings(bookings) {
                 <td class="payment_method"><span class="badge ${getBadgeClass(booking.payment_method)}">${booking.payment_method}</span></td>
                 <td>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-sm btn-success edit-item-btn" onclick="openModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
+                        <button class="btn btn-sm btn-view edit-item-btn" onclick="openModal('${booking.bookingid}', '${booking.booking_date}')">View</button>
                     </div>
                 </td>
             </tr>`;
