@@ -153,6 +153,18 @@
         border-top: unset; 
     }
 
+    .bg-primary-subtle {
+        background-color: #E2EEF6!important;
+        color: #0683D7!important;
+    }
+    .fc-daygrid-event {
+        font-weight: normal;
+        font-family: "Barlow", sans-serif !important;
+    }
+    .remove-events-scrollbar {
+        overflow-x: hidden;
+    }
+
     .ref-num {
         color: #0683D7;
         margin-bottom: 0px;

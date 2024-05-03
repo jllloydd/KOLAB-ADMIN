@@ -20,7 +20,7 @@
                             <div class="modal-body p-5">
 
                                 <div class="row modal-container d-flex flex-row flex-nowrap">
-                                    <div class="col-5 col-md-12 col-sm-12 adding-container">
+                                    <div class="col-lg-5 col-md-12 col-sm-12 adding-container">
                                         <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
                                             <div class="flex-shrink-0 admin-image admin-hover rounded-circle">
                                                 <figure class="margin-remove"><img src="../assets/img/admin/temp-avatar.avif" width="100px" height="100px" class="rounded-circle"></figure>
@@ -65,7 +65,7 @@
                                     </div>
                                    
 
-                                    <div class="col-7 col-md-12 col-sm-12 h-100 log-container">
+                                    <div class="col-lg-7 col-md-12 col-sm-12 h-100 log-container">
                                         <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
                                             <p class="log-heading">Activity Log</p>
                                             <ul class="record-style w-100">
