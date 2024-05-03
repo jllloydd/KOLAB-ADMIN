@@ -30,7 +30,7 @@
                             <div class="card ">
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
-                                    <div class="row approved-item d-flex flex-row flex-nowrap align-items-center" id="latestCard">
+                                    <div class="row approved-item d-flex flex-column flex-nowrap align-items-center" id="latestCard">
                                         <div class="col-xl-7 d-flex flex-column guest-col me-auto">
                                             <p class="me-auto ref-num" id="ab_refnum">#0010</p>
                                             <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
@@ -208,7 +208,7 @@
                                                 <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
                                                 <span class="input-group-text btn-icons position-relative" id="basic-addon2">
                                                     <i class="ri-search-line filter-icon"></i>
-                                                    <i class="ri-filter-3-line search-icon"></i>
+                                                    <i class="ri-filter-3-line search-icon" id="searchIcon"></i>
                                                 </span>
                                             </div>
                                         </div>       
