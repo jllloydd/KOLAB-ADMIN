@@ -16,8 +16,8 @@ function fetchAllBookings(page = 1, criteria = 'fullname', direction = 'asc') {
         .then(data => {
             if (data.status) {
                 console.log("Fetch successful, displaying bookings."); // Debug: log successful fetch
-                const cumulativeCount = (page - 1) * 10 + data.bookings.length;
                 displayBookings(data.bookings);
+                const cumulativeCount = (page - 1) * 10 + data.bookings.length;
                 updateBookingCount(cumulativeCount, data.totalRecords);
                 setupPagination(data.totalPages, page);
             } else {
@@ -311,6 +311,11 @@ function closeModal() {
 }
 
 // Example of usage
-function triggerModal() {
-    openSuccessModal("Success!", "Your operation was successful.");
+function handleConfirmBooking() {
+    // Any specific logic before opening the modal
+    console.log("Additional logic before opening the modal.");
+
+    // Then open the modal using the global function from modal-manager.js
+    openSuccessModal('Booking Confirmation', 'Your booking has been confirmed!');
 }
+

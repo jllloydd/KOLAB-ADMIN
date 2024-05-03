@@ -18,10 +18,8 @@ function openSuccessModal(title, message) {
         </div>
     `;
 
-    modalContainer.innerHTML = modal; // Inject the modal HTML into the modal container
-
+    modalContainer.innerHTML = modal;
     const bootstrapModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
-    bootstrapModal.show(); // Show the modal
-
+    bootstrapModal.show();
     console.log(`Modal opened with title: ${title} and message: ${message}`);
 }
