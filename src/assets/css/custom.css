@@ -629,14 +629,13 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
     background-color: white;
     font-family: "Barlow", sans-serif !important;
 }
 
 .login_page {
     overflow: hidden;
+    background-color: white;
 }
 
 .img {
@@ -674,34 +673,27 @@ body, html {
 
 @media screen and (max-width: 1399px) {
     /* Login Page*/
-    .login_page {
-        .row {
-            display: flex;
-            flex-direction: column;
-        }
-        .row {
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .img {
-            width: 100%;
-            height: 100px;
-        }
-    
-        .img2 {
-            width: 200px;
-        }
-    
-        .container-two {
-            padding-top: 100px;
-        }
-    
-        .sub-container {
-            margin: 20px;
-        }
+    .row {
+        display: flex;
+        flex-direction: column;
     }
-    
+
+    .img {
+        width: 100%;
+        height: 100px;
+    }
+
+    .img2 {
+        width: 200px;
+    }
+
+    .container-two {
+        padding-top: 100px;
+    }
+
+    .sub-container {
+        margin: 20px;
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -1034,56 +1026,3 @@ body, html {
 
 
 
-
-
-
-
-
-@media screen and (max-width: 1400px) {
-
-}
-
-@media screen and (max-width: 1399px) {
-    /* Login Page*/
-    .row {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .img {
-        width: 100%;
-        height: 100px;
-    }
-
-    .img2 {
-        width: 200px;
-    }
-
-    .container-two {
-        padding-top: 100px;
-    }
-
-    .sub-container {
-        margin: 20px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-
-}
-
-@media screen and (max-width: 992px) {
-
-}
-
-@media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 576px) {
-    
-}
-
-@media screen and (max-width: 290px) {
-
-}
