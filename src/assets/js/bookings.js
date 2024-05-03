@@ -311,6 +311,11 @@ function closeModal() {
 }
 
 // Example of usage
-function triggerModal() {
-    openSuccessModal("Success!", "Your operation was successful.");
+function handleConfirmBooking() {
+    // Any specific logic before opening the modal
+    console.log("Additional logic before opening the modal.");
+
+    // Then open the modal using the global function from modal-manager.js
+    openSuccessModal('Booking Confirmation', 'Your booking has been confirmed!');
 }
+
