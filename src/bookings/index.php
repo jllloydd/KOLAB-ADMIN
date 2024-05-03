@@ -373,7 +373,7 @@
                                 </div>
                             </div>
                             <div class="row d-flex flex-row align-items-center justify-content-between mt-3" id="dateRow">
-                                <div class="col d-flex flex-row justify-content-start align-items-center" id="dateColumn">
+                                <!-- <div class="col d-flex flex-row justify-content-start align-items-center" id="dateColumn">
                                     <div class="row d-flex flex-column">
                                         <div class="col">
                                             <div class="row d-flex flex-row align-items-center">
@@ -390,7 +390,7 @@
                                             <div class="modal-info heading-align" id="dateFrom">April 29, 2024</div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col d-flex flex-row justify-content-end align-items-center" id="timeColumn">
                                     <div class="row d-flex flex-column">
                                         <div class="col remove-padding">
@@ -403,7 +403,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col d-flex flex-column align-items-start">
+                                        <div class="col d-flex flex-row align-items-start">
                                             <p class="from-style heading-align mt-2">From</p>
                                             <div class="modal-info heading-align" id="timeFrom">1:00 PM</div>
                                             <p class="to-style heading-align mt-2">To</p>

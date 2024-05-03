@@ -273,6 +273,7 @@
     .btn-view:hover {
         background-color: #005690;
         border-color: #005690;
+        color: white;
     }
     .remove-padding {
         padding: 0;
@@ -312,6 +313,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
     
     .badge-pending {
@@ -324,6 +326,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
     
     .badge-cancelled {
@@ -336,6 +339,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
     
     .badge-checked-out {
@@ -348,6 +352,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
     
     .badge-onsite {
@@ -360,6 +365,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
     
     .badge-online {
@@ -372,6 +378,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
 
     .badge-approved {
@@ -384,6 +391,7 @@
         font-weight: unset;
         width: 100px;
         border-radius: 0;
+        text-align: center;
     }
     
     .edit-item-btn {
