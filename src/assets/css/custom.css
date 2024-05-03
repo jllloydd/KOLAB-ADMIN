@@ -83,7 +83,13 @@
     .page-padding {
         padding-bottom: 0;
     }
-
+    #calendar td {
+        padding: 0!important;
+    }
+    .fc-h-event {
+        border: 0!important;
+        height: 100%;
+    }
     .table-padding {
         padding-top: 0;
         padding-bottom: 10px;
@@ -133,13 +139,11 @@
     
     .fc-theme-bootstrap a:not([href]) {
         color: #717998;
-        font-weight: normal;
     }
 
     .fc .fc-col-header-cell {
         background-color: white;
     }
-
     .fc-scrollgrid-sync-table {
         height: 430px!important;
     }
@@ -152,10 +156,32 @@
         border-left: unset;
         border-top: unset; 
     }
-
+    .fc .fc-daygrid-day.fc-day-today {
+        background-color: white!important;
+    }
     .bg-primary-subtle {
         background-color: #E2EEF6!important;
+    }
+    .bg-danger-subtle {
+        background-color: #FAE2E1!important;
+    }
+    .bg-dark-subtle {
+        background-color: #0683D7!important;
+    }
+    .fc-daygrid-event-harness .fc-daygrid-event.bg-primary-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-primary-subtle .fc-event-title {
         color: #0683D7!important;
+        font-weight: normal!important;
+        font-family: "Barlow", sans-serif !important;
+    }
+    .fc-daygrid-event-harness .fc-daygrid-event.bg-danger-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-danger-subtle .fc-event-title {
+        color: #FE0600!important;
+        font-weight: normal!important;
+        font-family: "Barlow", sans-serif !important;
+    }
+    .fc-daygrid-event-harness .fc-daygrid-event.bg-dark-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-dark-subtle .fc-event-title {
+        color: #FFFFFF!important;
+        font-weight: normal!important;
+        font-family: "Barlow", sans-serif !important;
     }
     .fc-daygrid-event {
         font-weight: normal;

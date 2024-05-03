@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
         allDay: !0
     }, {
         id: 153,
-        title: "All Day Event",
+        title: "Bookings",
         start: new Date(e,n,1),
         className: "bg-primary-subtle",
         location: "San Francisco, US",
@@ -220,56 +220,9 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         description: "An all-day event is an event that lasts an entire day or longer"
     }, {
-        id: 136,
-        title: "Visit Online Course",
-        start: new Date(e,n,t - 5),
-        end: new Date(e,n,t - 2),
-        allDay: !0,
-        className: "bg-warning-subtle",
-        extendedProps: {
-            department: "Long Event"
-        },
-        description: "Long Term Event means an incident that last longer than 12 hours."
-    }, {
-        id: 999,
-        title: "Client Meeting with Alexis",
-        start: new Date(e,n,t + 22,20,0),
-        end: new Date(e,n,t + 24,16,0),
-        allDay: !0,
-        className: "bg-danger-subtle",
-        location: "California, US",
-        extendedProps: {
-            department: "Meeting with Alexis"
-        },
-        description: "A meeting is a gathering of two or more people that has been convened for the purpose of achieving a common goal through verbal interaction, such as sharing information or reaching agreement."
-    }, {
-        id: 991,
-        title: "Repeating Event",
-        start: new Date(e,n,t + 4,16,0),
-        end: new Date(e,n,t + 9,16,0),
-        allDay: !0,
-        className: "bg-primary-subtle",
-        location: "Las Vegas, US",
-        extendedProps: {
-            department: "Repeating Event"
-        },
-        description: "A recurring or repeating event is simply any event that you will occur more than once on your calendar. "
-    }, {
-        id: 112,
-        title: "Meeting With Designer",
-        start: new Date(e,n,t,12,30),
-        allDay: !0,
-        className: "bg-success-subtle",
-        location: "Head Office, US",
-        extendedProps: {
-            department: "Meeting"
-        },
-        description: "Tell how to boost website traffic"
-    }, {
         id: 113,
-        title: "Weekly Strategy Planning",
-        start: new Date(e,n,t + 9),
-        end: new Date(e,n,t + 11),
+        title: "Fully Booked",
+        start: new Date(e,n, 9),
         allDay: !0,
         className: "bg-danger-subtle",
         location: "Head Office, US",
@@ -278,36 +231,13 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         description: "Strategies for Creating Your Weekly Schedule"
     }, {
-        id: 875,
-        title: "Birthday Party",
-        start: new Date(e,n,t + 1,19,0),
-        allDay: !0,
-        className: "bg-success-subtle",
-        location: "Los Angeles, US",
-        extendedProps: {
-            department: "Birthday Party"
-        },
-        description: "Family slumber party – Bring out the blankets and pillows and have a family slumber party! Play silly party games, share special snacks and wind down the fun with a special movie."
-    }, {
         id: 783,
-        title: "Click for Google",
+        title: "Bookings",
         start: new Date(e,n,28),
         end: new Date(e,n,29),
         allDay: !0,
         url: "http://google.com/",
         className: "bg-dark-subtle"
-    }, {
-        id: 456,
-        title: "Velzon Project Discussion with Team",
-        start: new Date(e,n,t + 23,20,0),
-        end: new Date(e,n,t + 24,16,0),
-        allDay: !0,
-        className: "bg-info-subtle",
-        location: "Head Office, US",
-        extendedProps: {
-            department: "Discussion"
-        },
-        description: "Tell how to boost website traffic"
     }]
       , e = (new a(d,{
         itemSelector: ".external-event",
