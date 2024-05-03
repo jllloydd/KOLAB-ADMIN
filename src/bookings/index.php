@@ -467,8 +467,7 @@
                     </div>
                     
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btn-confirm" onclick="handleConfirmBooking()" id="confirmBooking">Confirm Booking</button>
-                        <div id="modal"></div>
+                        <button type="button" class="btn btn-confirm" data-bs-dismiss="modal" onclick="triggerModal">Confirm Booking</button>
                     </div>
                 </div>
             </div>
@@ -494,7 +493,6 @@
 
 <!-- App js -->
 <script src="../assets/js/app.js"></script>
-<script src="../assets/js/global.js"></script>
 <script src="../assets/js/bookings.js"></script>
 <script src="../assets/js/pages/modal.init.js"></script>
 
