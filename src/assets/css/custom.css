@@ -441,6 +441,7 @@
     .modal-info {
         font-size: 1rem;
         color: #292929;
+        text-wrap: nowrap;
     }
     .modal-blue {
         color: #0683D7;
@@ -464,12 +465,13 @@
         padding-right: 30px;
     }
     .remove-margin {
-        margin-left: 2px;
+        margin-left: -20px;
     }
     .from-style {
         font-size: 14px;
         color: #717998;
         margin-bottom: 0px;
+        width: 100%;
     }
     .to-style {
         font-size: 14px;

@@ -30,7 +30,7 @@
                             <div class="card ">
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
-                                    <div class="row approved-item d-flex flex-column flex-nowrap align-items-center" id="latestCard">
+                                    <div class="row approved-item d-flex flex-row flex-nowrap align-items-center" id="latestCard">
                                         <div class="col-xl-7 d-flex flex-column guest-col me-auto">
                                             <p class="me-auto ref-num" id="ab_refnum">#0010</p>
                                             <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
@@ -372,10 +372,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row d-flex flex-row align-items-center justify-content-between mt-3" id="dateRow">
-                                <!-- <div class="col d-flex flex-row justify-content-start align-items-center" id="dateColumn">
-                                    <div class="row d-flex flex-column">
-                                        <div class="col">
+                            <div class="row d-flex flex-row align-items-center justify-content-between mt-3 mb-3" id="dateRow">
+                                <div class="col d-flex flex-row justify-content-start align-items-center">
+                                    <div class="row d-flex flex-column w-100">
+                                        <div class="col" id="dateColumn">
                                             <div class="row d-flex flex-row align-items-center">
                                                 <div class="col-2 subheading-icon">
                                                     <img src="../assets/img/sidebar/admin-calendar.svg" alt="" height="22" width="22">
@@ -385,15 +385,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col d-flex flex-column align-items-start">
-                                            <p class="from-style heading-align mt-2">From</p>
-                                            <div class="modal-info heading-align" id="dateFrom">April 29, 2024</div>
+                                        <div class="d-flex flex-row justify-content-between">
+                                            <div class="col d-flex flex-column align-items-start">
+                                                <p class="from-style heading-align mt-2">From</p>
+                                                <div class="modal-info heading-align" id="dateFrom">April 29, 2024</div>
+                                            </div>
+                                            <div class="col-3 d-flex flex-column align-items-start">
+                                                <p class="to-style heading-align mt-2">To</p>
+                                                <div class="modal-info heading-align" id="dateTo">-</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div> -->
-                                <div class="col d-flex flex-row justify-content-end align-items-center" id="timeColumn">
-                                    <div class="row d-flex flex-column">
-                                        <div class="col remove-padding">
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row align-items-center justify-content-between" id="timeColumn">
+                                <div class="col d-flex flex-row justify-content-start align-items-center" >
+                                    <div class="row d-flex flex-column w-100">
+                                        <div class="col">
                                             <div class="row d-flex flex-row align-items-center">
                                                 <div class="col-2 subheading-icon">
                                                     <img src="../assets/img/booking/clock-icon.svg" alt="" height="22" width="22">
@@ -403,17 +411,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col d-flex flex-row align-items-start">
-                                            <p class="from-style heading-align mt-2">From</p>
-                                            <div class="modal-info heading-align" id="timeFrom">1:00 PM</div>
-                                            <p class="to-style heading-align mt-2">To</p>
-                                            <div class="modal-info heading-align" id="timeTo">5:00 PM</div>
+                                        <div class="d-flex flex-row justify-content-between">
+                                            <div class="col d-flex flex-column align-items-start">
+                                                <p class="from-style heading-align mt-2">From</p>
+                                                <div class="modal-info heading-align" id="timeFrom">1:00 PM</div>
+                                            </div>
+                                            <div class="col-3 d-flex flex-column align-items-start">
+                                                <p class="to-style heading-align mt-2">To</p>
+                                                <div class="modal-info heading-align" id="timeTo">5:00 PM</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                
 
                     <!-- Third Column -->
                     <div class="col card" id="paymentDetails">
