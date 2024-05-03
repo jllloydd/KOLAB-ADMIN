@@ -233,8 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, {
         id: 783,
         title: "Bookings",
-        start: new Date(e,n,28),
-        end: new Date(e,n,29),
+        start: new Date(e,n,3),
         allDay: !0,
         url: "http://google.com/",
         className: "bg-dark-subtle"
@@ -266,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("edit-event-btn").setAttribute("hidden", !0)
     }
     function r() {
-        return 768 <= window.innerWidth && window.innerWidth < 1200 ? "timeGridWeek" : window.innerWidth <= 768 ? "listMonth" : "dayGridMonth"
+        return "dayGridMonth";
     }
     var c = new Choices("#event-category",{
         searchEnabled: !1

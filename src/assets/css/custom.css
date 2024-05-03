@@ -211,7 +211,6 @@
     .first-row {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
     }
 
     .third-col {
@@ -817,6 +816,9 @@ body, html {
         .log-container {
             width: 100%;
         }  
+        .calendar-height {
+            height: 600px;
+        }
         
     }
 }
