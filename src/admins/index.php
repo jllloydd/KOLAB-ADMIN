@@ -19,8 +19,8 @@
                         <div class="modal-content">
                             <div class="modal-body p-5">
 
-                                <div class="row">
-                                    <div class="col-5">
+                                <div class="row modal-container d-flex flex-row flex-nowrap">
+                                    <div class="col-5 col-md-12 col-sm-12 adding-container">
                                         <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
                                             <div class="flex-shrink-0 admin-image admin-hover rounded-circle">
                                                 <figure class="margin-remove"><img src="../assets/img/admin/temp-avatar.avif" width="100px" height="100px" class="rounded-circle"></figure>
@@ -28,7 +28,7 @@
 
                                             <div class="form-check form-switch toggle-position pt-3">
                                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                                <label class="role-style margin-remove ps-2" for="flexSwitchCheckDefault">Deactivate</label>
+                                                <label class="toggle-label margin-remove ps-2" for="flexSwitchCheckDefault">Deactivate</label>
                                             </div>
                                         </div>
                                         <div class="admin-body">
@@ -65,7 +65,7 @@
                                     </div>
                                    
 
-                                    <div class="col h-100">
+                                    <div class="col-7 col-md-12 col-sm-12 h-100 log-container">
                                         <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
                                             <p class="log-heading">Activity Log</p>
                                             <ul class="record-style w-100">
@@ -93,13 +93,13 @@
                     </div>
                 </div>
 
-                <div class="row d-flex flex-row align-items-center mb-4">
+                <div class="row d-flex flex-row flex-nowrap align-items-center mb-4">
                     <div class="col">
-                        <div class="card margin-remove">
-                            <div class="card-body">
+                        <div class="card margin-remove card-remove">
+                            <div class="card-body card-padding-remove">
                                 <div id="customerList">
                                     <div class="d-flex justify-content-sm-start">
-                                        <div class="input-group search-box ms-2">
+                                        <div class="input-group search-box">
                                             <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
                                             <span class="input-group-text btn-icons position-relative" id="basic-addon2">
                                                 <i class="ri-search-line filter-icon"></i>
@@ -111,9 +111,11 @@
                             </div><!-- end card -->
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div>
-                            <button type="button" class="w-100 btn btn-success add-btn " data-bs-toggle="modal" data-bs-target="#addAdminModal"><i class="ri-add-circle-line add-icon align-bottom me-1" style="width: 30px; height:30px;"></i>Add Admin</button>
+                    <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
+                        <div class="w-100">
+                            <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+                                <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
+                            </button>
                         </div>
                     </div>
                 </div>

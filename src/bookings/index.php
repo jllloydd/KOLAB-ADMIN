@@ -18,7 +18,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="row">
+                    <div class="row first-row">
                         <div class="col-xl-9">
                             <div class="card calendar-height">
                                 <div class="card-body">
@@ -30,8 +30,8 @@
                             <div class="card ">
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
-                                    <div class="row approved-item d-flex align-items-center justify-content-between" id="latestCard">
-                                        <div class="col-7 d-flex flex-column">
+                                    <div class="row approved-item d-flex flex-row flex-nowrap align-items-center" id="latestCard">
+                                        <div class="col-xl-7 d-flex flex-column guest-col me-auto">
                                             <p class="me-auto ref-num" id="ab_refnum">#0010</p>
                                             <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
                                         </div>
@@ -201,33 +201,34 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
 
-                        <div class="card-body">
-                            <div id="customerList">
-                                <div class="row g-4">
-
-                                    <div class="col-sm">
+                    <div class="row d-flex flex-row flex-nowrap align-items-center mb-4">
+                        <div class="col">
+                            <div class="card margin-remove card-remove">
+                                <div class="card-body card-padding-remove">
+                                    <div id="customerList">
                                         <div class="d-flex justify-content-sm-start">
-                                            <div class="input-group search-box ms-2">
-                                            <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
+                                            <div class="input-group search-box">
+                                                <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
                                                 <span class="input-group-text btn-icons position-relative" id="basic-addon2">
                                                     <i class="ri-search-line filter-icon"></i>
-                                                    <i class="ri-filter-3-line search-icon" id="searchIcon"></i>
+                                                    <i class="ri-filter-3-line search-icon"></i>
                                                 </span>
                                             </div>
-                                        </div>
+                                        </div>       
                                     </div>
-                                    <div class="col-sm-3">
-                                        <div>
-                                            <button type="button" class="w-100 btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i>New Booking</button>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                </div><!-- end card -->
                             </div>
-                        </div><!-- end card -->
-                    </div>
+                        </div>
+                        <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
+                            <div class="w-100">
+                                <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+                                    <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- end card -->
+                    
                     <!-- end col -->
                 </div>
                 <div class="col-lg-12">

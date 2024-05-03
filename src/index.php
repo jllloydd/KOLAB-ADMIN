@@ -9,7 +9,7 @@
 
     <?php include 'layouts/body.php'; ?>
         <div class="login_page p-0 g-0 ">
-            <div class="row">
+            <div class="row login-container">
                 <div class="col container-one">
                     <div class="">
                         <div class="main-container">
