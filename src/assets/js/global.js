@@ -1,7 +1,14 @@
 function openSuccessModal(title, message) {
-    const modalContainer = document.getElementById("modal");
+    // Close any existing modals
+    const existingModal = document.querySelector('.modal.fade.show');
+    if (existingModal) {
+        const bootstrapModal = bootstrap.Modal.getInstance(existingModal);
+        bootstrapModal.hide();
+    }
+
+    const modalContainer = document.getElementById("confirmModal");
     const modal = `
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -11,17 +18,19 @@ function openSuccessModal(title, message) {
                         ${message}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="successModalButton" data-bs-dismiss="modal">Okay</button>
+                        <button type="button" class="btn btn-cancel" id="cancelModalButton" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-confirm" id="confirmModalButton">Confirm</button>
                     </div>
                 </div>
             </div>
         </div>
     `;
 
-    modalContainer.innerHTML = modal; // Inject the modal HTML into the modal container
+    modalContainer.innerHTML = modal;
 
     const bootstrapModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
-    bootstrapModal.show(); // Show the modal
+    bootstrapModal.show(); 
 
-    console.log(`Modal opened with title: ${title} and message: ${message}`);
+    const successModalButton = document.getElementById('successModalButton');
+    successModalButton.addEventListener('click', callback);
 }
