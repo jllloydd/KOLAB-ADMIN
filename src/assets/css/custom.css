@@ -1156,14 +1156,17 @@ body, html {
     border-style: solid;
     width: 100px;
     font-size: 20px;
+    width: 150px;
 }
 
 .hold-billing {
     border-color: #F9701D;
+    color: #F9701D;
 }
 
-.hold-billing {
-    border-color: #F9701D;
+.cancel-billing {
+    border-color: #FE0600;
+    color: #FE0600;
 }
 
 /* Style for the confirm modal */
