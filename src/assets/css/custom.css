@@ -636,6 +636,7 @@
 }
 /* End of View Admin Modal*/
 
+/*Login Page*/
 
 body, html {
     margin: 0;
@@ -899,7 +900,6 @@ body, html {
     width: 0;
 }
 
-/*Calendar*/
 .calendar-container {
     display: flex;
 }
@@ -983,7 +983,7 @@ body, html {
     margin-bottom: -15px;
 }
 
-/*Topbar right*/
+/*Topbar Modal*/
 .righty-barty {
     display: flex;
     flex-direction: column;
@@ -1010,8 +1010,106 @@ body, html {
     color: #717998;
 }
 
+/*User Modal*/
 
+.main-user-container {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
 
+.first-user-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.users-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center; /* horizontally center items */
+    align-items: center; /* vertically center items */
+}
+
+.title-user {
+    width: 300px;
+    text-align: center; /* centers the text horizontally */
+    padding: 40px 50px;
+    background-color: #FCD116;
+}
+
+.user-name {
+    color: #292929;
+    margin: 0;
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 20px;
+}
+
+.address-container {
+    width: 200px;
+}
+
+.second-user-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.list-inclusions {
+    width: 300px;
+    gap: 5px;
+    color: #717998    ;
+}
+
+.inclusion-title {
+    color: #292929    ;
+}
+
+.third-user-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.billing {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.billing-history {
+    text-decoration: underline;
+    color: #0683D7;
+}
+
+.billing-list {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+}
+
+.billing-payment {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.button-billing {
+    display: flex;
+    flex-direction: row;
+}
+
+.hold-billing {
+    
+    background-color: transparent;
+    columns: #F9701D;
+    border-radius: 2px;
+    border-color: #F9701D;
+}
 
 
 
