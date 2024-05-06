@@ -36,26 +36,26 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link menu-link d-flex flex-column" href="../dashboard/">
-                                <div class="image-hover"></div>
-                                <span><?=$lang['t-dashboard']?></span>
+                                <div class="image-dashboard"></div>
+                                <span class="dashboard-text"><?=$lang['t-dashboard']?></span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link d-flex flex-column" href="../bookings/">
-                                <img class="" src="../assets/img/sidebar/admin-calendar.svg" alt="Calendar Icon">
-                                <span><?=$lang['t-bookings']?></span>
+                                <div class="image-booking"></div>
+                                <span class="booking-text"><?=$lang['t-bookings']?></span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link d-flex flex-column" href="../admins/">
-                                <img class="" src="../assets/img/sidebar/key.svg" alt="Admins Icon">
-                                <span><?=$lang['t-admins']?></span>
+                                <div class="image-admin"></div>
+                                <span class="admin-text"><?=$lang['t-admins']?></span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link d-flex flex-column" href="../users/">
-                                <img class="" src="../assets/img/sidebar/person-admin.svg" alt="Users Icon">
-                                <span><?=$lang['t-users']?></span>
+                                <div class="image-user"></div>
+                                <span class="user-text"><?=$lang['t-users']?></span>
                             </a>
                         </li>
 
@@ -69,6 +69,8 @@
         <div class="sidebar-background"></div>
     </div>
 </div>
+<script src="../assets/js/sidebar.js"></script>
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
+

@@ -13,7 +13,7 @@
 <!-- Calendar -->
 <!-- ============================================================== -->
 
-<div class="main-content">
+<div class="main-content bg-booking">
     <div class="page-content page-padding">
         <div class="container-fluid">
             <div class="row">
@@ -36,8 +36,8 @@
                                             <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
                                         </div>
                                         <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
+                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="20" height="20" class="term-icon">
+                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="24" height="24" >
                                         </div>
                                         <div class="col-3 third-col d-flex flex-column justify-content-end">
                                             <p class="detail-style" id="ab_term">Hourly</p>
@@ -231,7 +231,7 @@
                     <div class="card">
                         <div class="card-body card-margin">
                             <div id="bookingManagementData" class="table-responsive table-card">
-                                <table class="table align-middle table-nowrap">
+                                <table class="table align-middle table-nowrap table-margin">
                                     <thead class="table-light">
                                         <tr>
                                             <th class="sort" data-sort="reference_num">Reference No.</th>
@@ -244,7 +244,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="bookingList" class="list">
+                                    <tbody id="bookingList" class="list list-style">
                                         <!-- Dynamic content will be loaded here -->
                                     </tbody>
                                 </table>

@@ -163,8 +163,8 @@ function displayLatestApprovedBookings(bookings) {
                     <p class="me-auto guest-style">${booking.fullname}</p>
                 </div>
                 <div class="col-1 second-col d-flex flex-column align-items-center">
-                    <img src="../assets/img/booking/term-icon.svg" alt="" width="15" height="15" class="icon-position">
-                    <img src="../assets/img/booking/pax-icon.svg" alt="" width="17" height="17" class="icon-position">
+                    <img src="../assets/img/booking/term-icon.svg" alt="" width="20" height="20" class="term-icon">
+                    <img src="../assets/img/booking/pax-icon.svg" alt="" width="24" height="24">
                 </div>
                 <div class="col-3 third-col d-flex flex-column justify-content-end">
                     <p class="detail-style">${booking.term_rate}</p>
