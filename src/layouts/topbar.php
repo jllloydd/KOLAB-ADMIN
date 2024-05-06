@@ -282,7 +282,7 @@
                     </div>
                     
                     <div>
-                        <button class="btn btn-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button class="btn btn-offcanvas btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <img src="../assets/img/topbar/eyeglass.svg" width="30px">
                         </button>
 
