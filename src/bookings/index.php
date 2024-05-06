@@ -261,6 +261,9 @@
                     </div>
                 </div>
             </div>
+            <div id="noResultsMessage" class="text-center" style="display: none;">
+                No matching bookings found.
+            </div>
             <div class="col-lg-12">
                 <div class="d-flex justify-content-between align-items-center">
                     <p id="bookingCount">Showing 0 from 0 data</p>

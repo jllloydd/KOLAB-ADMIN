@@ -72,40 +72,51 @@ function initializeListJs() {
     const options = {
         valueNames: ['reference_num', 'customer_name', 'email', 'term', 'date', 'booking_status', 'payment_method'],
         page: itemsPerPage,
-        pagination: true
+        pagination: {
+            innerWindow: 1, // Adjust based on the number of visible pagination links
+            outerWindow: 1,
+            left: 0,
+            right: 0,
+            paginationClass: 'pagination',
+            onClick: function (event, page) {
+                event.preventDefault();
+                window.bookingListInstance.show((page - 1) * itemsPerPage + 1, itemsPerPage);
+            }
+        }
     };
 
-    if (document.getElementById('bookingManagementData')) {
+    // Ensure `#bookingManagementData` and `#bookingList` exist
+    const bookingListElement = document.getElementById('bookingList');
+    const noResultsMessage = document.getElementById('noResultsMessage');
+
+    if (document.getElementById('bookingManagementData') && bookingListElement && noResultsMessage) {
         try {
             // Initialize List.js with pagination
             window.bookingListInstance = new List('bookingManagementData', options);
             console.log("List.js initialized successfully on bookingManagementData.");
 
-            // Add an event listener to update booking count whenever the list is updated
+            // Listen to List.js updates to toggle visibility of the "No Results" message
             window.bookingListInstance.on('updated', function (list) {
-                // Calculate displayCount based on the current page and items per page
-                const currentPageIndex = Math.ceil(list.i / itemsPerPage);
                 const itemsOnCurrentPage = list.visibleItems.length;
+                noResultsMessage.style.display = itemsOnCurrentPage === 0 ? '' : 'none';
 
-                // Calculate the cumulative count accurately
+                // Calculate displayCount and update booking count
+                const currentPageIndex = Math.ceil(list.i / itemsPerPage);
                 const previousPagesCount = (currentPageIndex - 1) * itemsPerPage;
                 const displayCount = previousPagesCount + itemsOnCurrentPage;
 
-                // Retrieve the total record count, assuming `totalBookingRecords` is properly updated
                 const totalCount = window.totalBookingRecords || 0;
-
-                // Update the booking count display
                 updateBookingCount(displayCount, totalCount);
             });
 
-            // Trigger the first update immediately
+            // Trigger the first update to reflect the initial state
             window.bookingListInstance.update();
 
         } catch (error) {
             console.error("Failed to initialize List.js:", error);
         }
     } else {
-        console.log("Element with ID 'bookingManagementData' not found.");
+        console.log("Required elements not found.");
     }
 }
 
