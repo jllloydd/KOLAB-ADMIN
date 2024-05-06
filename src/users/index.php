@@ -107,10 +107,10 @@
                 <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">View</button>
                 
                 <div class="modal fade bs-example-modal-xl mt-5" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
+                    <div class="modal-dialog modal-xl container-fluid">
                         <div class="modal-content main-user-container container">
                             <!--Profile Page-->
-                            <div class="first-user-container bg-white me-3">
+                            <div class="container first-user-container bg-white me-3">
 
                                 <div class="title-user">
                                     <h5 class="user-name fw-meduim pb-2">Julienne Galvez</h5>

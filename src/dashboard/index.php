@@ -13,7 +13,7 @@
                             <div class="total-booking card">
                                 <div class="total-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <h6>Total Booking</h6>
+                                        <p>Total Booking</p>
                                         <h2 class="fw-bold">872</h2>
                                     </div>
                                 </div>
@@ -27,7 +27,7 @@
                             <div class="current-booking card">
                                 <div class="current-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <h6>Current Booking</h6>
+                                        <p>Current Booking</p>
                                         <h2 class="fw-bold">872</h2>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                             <div class="pending-booking card">
                                 <div class="pending-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <h6>Pending Booking</h6>
+                                        <p>Pending Booking</p>
                                         <h2 class="fw-bold">872</h2>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                             <div class="cancelled-booking card">
                                 <div class="cancelled-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <h6>Cancelled Booking</h6>
+                                        <p>Cancelled Booking</p>
                                         <h2 class="fw-bold">872</h2>
                                     </div>
                                 </div>
@@ -92,8 +92,8 @@
                                         </div>
                                         <div class="total card-body align-content-end justify-content-center pe-4">
                                             <div class="pb-2"><img src="../assets/img/dashboard/down-arrow.svg"></div>
-                                            <div><h6 class="fw-light text-end"><span>&#8369;</span>2,485</h6></div>
                                             <div><h6 class="fw-light text-end">Yesterday</h6></div>
+                                            <div><h6 class="fw-light text-end"><span>&#8369;</span>2,485</h6></div>
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                                             <button onclick="prevMonth()" style="border: none; background-color: white;">&lt;</button>
                                         </div>
                                         <div>
-                                            <h4 id="monthYear" class="fw-light"></h4>
+                                            <p id="monthYear" class="heading"></p>
                                         </div>
                                         <div class="ms-3">
                                             <button onclick="nextMonth()" style="border: none; background-color: white;">&gt;</button>
