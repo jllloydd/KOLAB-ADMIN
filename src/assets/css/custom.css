@@ -1230,21 +1230,24 @@ body, html {
 }
 
 .modal-body {
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
+
 }
 
 .modal-title {
     color: #0683D7;
-    margin: 0; 
 }
 
 .modal-footer {
     background-color: #FFFFFF;
+    margin-bottom: 5px;
     border-top: 1px solid #ccc;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 10px 100px 50px;
-    text-align: center;
+    padding: 20px 0px; /* Adjust padding as needed */
+    display: flex; /* Add Flexbox */
+    justify-content: center; /* Center align buttons */
 }
 
 /* Style for the cancel button */
@@ -1254,6 +1257,7 @@ body, html {
     color: #98A2B3;
     padding: 8px 20px;
     cursor: pointer;
+    width: 100px;
 }
 
 .btn-cancel:hover {
@@ -1268,8 +1272,24 @@ body, html {
     border: none;
     padding: 8px 20px;
     cursor: pointer;
+    width: 100px;
 }
 
 .btn-confirm:hover {
     background-color: #0683D7;
 }
+
+/* Style for the Okay button */
+#okayModal .btn-primary {
+    background-color: #0683D7;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#okayModal .btn-primary:hover {
+    background-color: #0683D7;
+}
+
