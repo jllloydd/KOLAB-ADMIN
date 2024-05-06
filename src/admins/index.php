@@ -19,7 +19,7 @@
                         <div class="modal-content">
                             <div class="modal-body p-5">
 
-                                <div class="row modal-container d-flex flex-row flex-nowrap">
+                                <div class="row modal-container d-flex flex-row justify-content-between">
                                     <div class="col-lg-5 col-md-12 col-sm-12 adding-container">
                                         <div class="admin-header p-4 d-flex flex-column justify-content-center align-items-center">
                                             <div class="flex-shrink-0 admin-image admin-hover rounded-circle">
@@ -65,24 +65,26 @@
                                     </div>
                                    
 
-                                    <div class="col-lg-7 col-md-12 col-sm-12 h-100 log-container">
-                                        <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
-                                            <p class="log-heading">Activity Log</p>
-                                            <ul class="record-style w-100">
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <li>Confirmed booking</li>
-                                                    <p class="margin-remove">05/29/24 10:32AM</p>
-                                                </div>
-                                                <div class="d-flex flex-row justify-content-between mt-2">
-                                                    <li>Confirmed booking</li>
-                                                    <p class="margin-remove">05/29/24 10:32AM</p>
-                                                </div>
-                                                <div class="d-flex flex-row justify-content-between mt-2">
-                                                    <li>Confirmed booking</li>
-                                                    <p class="margin-remove">05/29/24 10:32AM</p>
-                                                </div>
+                                    <div class="col-lg-7 col-md-12 col-sm-12 h-100">
+                                        <div class="log-container">
+                                            <div class="admin-body log-body p-4 d-flex flex-column justify-content-start align-items-start">
+                                                <p class="log-heading">Activity Log</p>
+                                                <ul class="record-style w-100">
+                                                    <div class="d-flex flex-row justify-content-between">
+                                                        <li>Confirmed booking</li>
+                                                        <p class="margin-remove">05/29/24 10:32AM</p>
+                                                    </div>
+                                                    <div class="d-flex flex-row justify-content-between mt-2">
+                                                        <li>Confirmed booking</li>
+                                                        <p class="margin-remove">05/29/24 10:32AM</p>
+                                                    </div>
+                                                    <div class="d-flex flex-row justify-content-between mt-2">
+                                                        <li>Confirmed booking</li>
+                                                        <p class="margin-remove">05/29/24 10:32AM</p>
+                                                    </div>
 
-                                            </ul>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

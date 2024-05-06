@@ -294,10 +294,10 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content p-3">
             <div class="modal-body">
-                <div class="row d-flex flex-row gap-3">
+                <div class="row d-flex flex-wrap gap-3 change-modal-flex">
                     <!-- First Column -->
                     <div class="col card card-padding" id="guestInfo">
-                        <div class="card-body card-padding">
+                        <div class="approved-body card-padding">
                             <div class="membership-card p-5 d-flex flex-column justify-content-center align-items-center" id="guestCard">
                                 <p class="guest-name" id="guestName">Julienne Galvez</p>
                                 <div class="d-flex flex-row justify-content-center align-items-center" id="guestMembership">
@@ -315,7 +315,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-row justify-content-center align-items-end mt-2" id="guestContactEmail">
+                            <div class="d-flex flex-row justify-content-center align-items-end mt-2 pb-4" id="guestContactEmail">
                                 <div class="row w-100">
                                     <div class="col-2 icon-col" id="emailIconCol">
                                         <img src="../assets/img/booking/email.svg" alt="" height="22" width="22" class="me-3">
@@ -469,7 +469,7 @@
                                     <p class="subheading">Voucher</p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="modal-info" id="voucher">1</div>
+                                    <div class="modal-info" id="voucher">-</div>
                                 </div>
                             </div>
                             <div class="d-flex flex-row justify-content-between align-items-center mt-4">
