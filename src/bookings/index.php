@@ -30,14 +30,14 @@
                             <div class="card ">
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
-                                    <div class="row approved-item d-flex flex-row flex-nowrap align-items-center" id="latestCard">
+                                    <div class="row approved-item d-flex flex-column flex-nowrap align-items-center" id="latestCard">
                                         <div class="col-xl-7 d-flex flex-column guest-col me-auto">
                                             <p class="me-auto ref-num" id="ab_refnum">#0010</p>
                                             <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
                                         </div>
                                         <div class="col-1 second-col d-flex flex-column align-items-center">
                                             <img src="../assets/img/booking/term-icon.svg" alt="" width="20" height="20" class="term-icon">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="24" height="24" >
+                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="24" height="24">
                                         </div>
                                         <div class="col-3 third-col d-flex flex-column justify-content-end">
                                             <p class="detail-style" id="ab_term">Hourly</p>
@@ -54,7 +54,7 @@
             </div> <!-- end col-->
         </div><!--end row-->
         <div style='clear:both'></div>
-        
+
         <!-- Add New Event MODAL -->
         <div class="modal fade" id="event-modal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
@@ -184,53 +184,52 @@
         </div> <!-- end modal-->
         <!-- end modal-->
     </div>
-</div> 
-        
+</div>
+
 
 <!-- ============================================================== -->
 <!-- Table -->
 <!-- ============================================================== -->
 <div class="main-content main-bg">
+    <div id="bookingManagementData" class="table-responsive table-card">
+        <div class="page-content table-padding">
+            <div class="container-fluid">
 
-    <div class="page-content table-padding">
-        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
 
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <div class="row d-flex flex-row flex-nowrap align-items-center mb-4">
-                        <div class="col">
-                            <div class="card margin-remove card-remove">
-                                <div class="card-body card-padding-remove">
-                                    <div id="customerList">
-                                        <div class="d-flex justify-content-sm-start">
-                                            <div class="input-group search-box">
-                                                <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
-                                                <span class="input-group-text btn-icons position-relative" id="basic-addon2">
-                                                    <i class="ri-search-line filter-icon"></i>
-                                                    <i class="ri-filter-3-line search-icon" id="searchIcon"></i>
-                                                </span>
+                        <div class="row d-flex flex-row flex-nowrap align-items-center mb-4">
+                            <div class="col">
+                                <div class="card margin-remove card-remove">
+                                    <div class="card-body card-padding-remove">
+                                        <div id="customerList">
+                                            <div class="d-flex justify-content-sm-start">
+                                                <div class="input-group search-box">
+                                                    <input type="text" class="form-control search" id="searchInput" placeholder="Search for reference number, guest, email, package, date, and status">
+                                                    <span class="input-group-text btn-icons position-relative" id="basic-addon2">
+                                                        <i class="ri-search-line filter-icon"></i>
+                                                        <i class="ri-filter-3-line search-icon" id="searchIcon"></i>
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>       
-                                    </div>
-                                </div><!-- end card -->
+                                        </div>
+                                    </div><!-- end card -->
+                                </div>
                             </div>
-                        </div>
-                        <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
-                            <div class="w-100">
-                                <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
-                                    <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
-                                </button>
+                            <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
+                                <div class="w-100">
+                                    <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+                                        <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </div><!-- end card -->
-                    
-                    <!-- end col -->
-                </div>
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body card-margin">
-                            <div id="bookingManagementData" class="table-responsive table-card">
+                        </div><!-- end card -->
+
+                        <!-- end col -->
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body card-margin">
                                 <table class="table align-middle table-nowrap table-margin">
                                     <thead class="table-light">
                                         <tr>
@@ -399,7 +398,7 @@
                                 </div>
                             </div>
                             <div class="row d-flex flex-row align-items-center justify-content-between" id="timeColumn">
-                                <div class="col d-flex flex-row justify-content-start align-items-center" >
+                                <div class="col d-flex flex-row justify-content-start align-items-center">
                                     <div class="row d-flex flex-column w-100">
                                         <div class="col">
                                             <div class="row d-flex flex-row align-items-center">
@@ -426,7 +425,7 @@
                             </div>
                         </div>
                     </div>
-                
+
 
                     <!-- Third Column -->
                     <div class="col card" id="paymentDetails">
@@ -478,7 +477,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="modal-footer d-flex justify-content-center">
                         <button type="button" class="btn btn-confirm" data-bs-dismiss="modal" onclick="triggerModal">Confirm Booking</button>
                     </div>
