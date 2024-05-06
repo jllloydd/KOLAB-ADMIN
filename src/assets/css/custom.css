@@ -726,7 +726,17 @@ body, html {
     display: flex;
     flex-direction: column;
 }
-/* End of Booking Section*/             
+/* End of Booking Section*/   
+
+/*User-Modal*/
+    .modal-dialog {
+        max-width: 100%; 
+    }
+
+    .modal-content {
+        overflow-x: auto;
+    }
+/*End User Modal*/
 }
 
 @media screen and (max-width: 992px) {
@@ -913,13 +923,13 @@ body, html {
 } 
 
 #calendar td, #calendar th {
-    padding: 8px 5px; /* 10px top/bottom, 5px left/right */
+    padding: 8px 5px;
     color: #717998;
     text-align: center;
-    vertical-align: top; /* Ensures content is aligned to the top */
-    margin: 0; /* Reset any margin to ensure padding is effective */
-    border: 1px solid transparent; /* Optional: Ensure consistent border box model */
-    box-sizing: border-box; /* Optional: Ensure consistent border box model */
+    vertical-align: top; 
+    margin: 0; 
+    border: 1px solid transparent;
+    box-sizing: border-box;
     font-weight: normal;
 }
 
@@ -1029,13 +1039,13 @@ body, html {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center; /* horizontally center items */
-    align-items: center; /* vertically center items */
+    justify-content: center;
+    align-items: center;
 }
 
 .title-user {
     width: 300px;
-    text-align: center; /* centers the text horizontally */
+    text-align: center
     padding: 40px 50px;
     background-color: #FCD116;
 }
@@ -1102,14 +1112,54 @@ body, html {
 .button-billing {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 50px;
+    height: 100%;
+}
+
+.hold-billing,
+.cancel-billing {
+    background-color: transparent;
+    color: #F9701D;
+    color: #FE0600;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px 15px;
+    width: 150px;
 }
 
 .hold-billing {
-    
-    background-color: transparent;
-    columns: #F9701D;
-    border-radius: 2px;
     border-color: #F9701D;
+}
+
+.cancel-billing {
+    border-color: #FE0600;
+}
+
+.pending {
+    color: #F9701D;
+    background-color: #FFF1E9;
+    text-align: center;
+    width: 100px;
+}
+
+.custom-margin {
+    margin-bottom: 20px !important;
+}
+
+.online {
+    color: #0683D7;
+}
+
+.maharlika {
+    color: #FCD116;
+}
+
+.next-payment {
+    color: #292929;
 }
 
 

@@ -154,7 +154,7 @@
                             <!--Inclusions-->
                             <div class="container second-user-container bg-white pt-5 ps-4 me-3">
                                 <div class="">
-                                    <h5 class="fw-light mb-4 inclusion-title">Inclusions</h5>
+                                    <h6 class="fw-light mb-4 inclusion-title">Inclusions</h6>
                                 </div>
                                 <div class="">
                                     <ul class="list-inclusions">
@@ -177,46 +177,46 @@
                             <!--Billings-->
                             <div class="container third-user-container bg-white pt-5 ps-4">
 
-                                <div class="row mb-5">
+                                <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column">
-                                            <h5 class="fw-normal me-auto guest-style">Billing and Payment</h5>
+                                            <h6 class="fw-normal me-auto guest-style">Billing and Payment</h6>
                                         </div>
                                         <div class="align-content-center justify-content-center">
                                             <a href="#" class="billing-history">View billing history</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-4">
+                                <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column">
-                                            <h5 class="me-auto guest-style">Online</h5>
+                                            <h6 class="online fw-normal mt-1 mb-1">Online</h6>
                                         </div>
-                                        <div class="align-content-center justify-content-center">
-                                            <p class="running-late ps-2 pe-2 pt-1 pb-1">Pending</p>
+                                        <div class="">
+                                            <p class="pending mt-1 mb-1">Pending</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-5">
+                                <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column">
                                             <div class="billing-payment">
-                                                <div><img src="../assets/img/users/diamond.svg" class="user-name me-0"></div>
-                                                <div><h5 class="user-name fw-normal">Maharlika</h5></div>
+                                                <div><img src="../assets/img/users/yellow-diamond.svg" class="user-name me-0"></div>
+                                                <div><h6 class="maharlika user-name fw-normal">Maharlika</h6></div>
                                             </div>
                                         </div>
                                         <div class="align-content-center justify-content-center">
-                                            <h5 class="fw-normal">₱86,000/year</h5>
+                                            <h6 class="fw-normal">₱86,000/year</h6>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-5">
+                                <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column">
-                                            <h5 class="fw-normal me-auto guest-style">Next payment due on</h5>
+                                            <h6 class="next-payment fw-normal me-auto">Next payment due on</h6>
                                         </div>
                                         <div class="align-content-center justify-content-center">
-                                            <h5 class="fw-normal">April 1, 2025</h5>
+                                            <h6 class="next-payment fw-normal">April 1, 2025</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -225,9 +225,6 @@
                                     <div><button class="hold-billing">HOLD</button></div>
                                     <div><button class="cancel-billing">CANCEL</button></div>
                                 </div>
-
-                                    
-                                
                             </div>
                         </div>
                     </div>
