@@ -81,7 +81,7 @@ function initializeListJs() {
             window.bookingListInstance = new List('bookingManagementData', options);
             console.log("List.js initialized successfully on bookingManagementData.");
 
-            // Update booking count dynamically whenever the list is updated
+            // Add an event listener to update booking count whenever the list is updated
             window.bookingListInstance.on('updated', function (list) {
                 // Calculate displayCount based on the current page and items per page
                 const currentPageIndex = Math.ceil(list.i / itemsPerPage);
@@ -98,6 +98,9 @@ function initializeListJs() {
                 updateBookingCount(displayCount, totalCount);
             });
 
+            // Trigger the first update immediately
+            window.bookingListInstance.update();
+
         } catch (error) {
             console.error("Failed to initialize List.js:", error);
         }
@@ -105,9 +108,6 @@ function initializeListJs() {
         console.log("Element with ID 'bookingManagementData' not found.");
     }
 }
-
-
-
 
 function updateBookingCount(displayCount, totalCount) {
     const countElement = document.getElementById('bookingCount');
