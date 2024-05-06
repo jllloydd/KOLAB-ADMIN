@@ -51,11 +51,23 @@ function get_payment_method_description($methodId)
     }
 }
 
-function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction = 'asc', $limit = 10)
-{
-    $offset = ($page - 1) * $limit;
+function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc') {
+    // Whitelist allowed sorting fields to prevent SQL injection
+    $allowedFields = ['reference_number', 'fullname', 'email', 'term_rate', 'booking_date', 'status', 'payment_method'];
+    $allowedDirections = ['asc', 'desc'];
+
+    // Validate criteria and direction
+    if (!in_array($criteria, $allowedFields)) {
+        $criteria = 'fullname';
+    }
+    if (!in_array($direction, $allowedDirections)) {
+        $direction = 'asc';
+    }
+
+    // Build the ORDER BY clause safely using the validated input
     $orderByClause = $criteria . ' ' . $direction;
 
+    // Prepare the query (use parameters where necessary)
     $query = "SELECT 
                     reference_number,
                     CONCAT(firstname, ' ', lastname) AS fullname,
@@ -66,12 +78,12 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
                     payment_method,
                     bookingid
                 FROM bookings
-                ORDER BY $orderByClause
-                LIMIT $limit OFFSET $offset";
+                ORDER BY $orderByClause";
 
+    // Execute the query and handle the results
     $result = $conn->query($query);
     $bookings = [];
-    if ($result->num_rows > 0) {
+    if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $row['term_rate'] = get_term_description($row['term_rate']);
             $row['booking_date'] = format_booking_date($row['booking_date']);
@@ -79,11 +91,15 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
             $bookings[] = $row;
         }
     }
-    $totalRecords = $conn->query("SELECT COUNT(*) as total FROM bookings")->fetch_assoc()['total'];
-    $totalPages = ceil($totalRecords / $limit);
 
-    jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords, 'totalPages' => $totalPages]);
+    // Retrieve the total record count for display purposes
+    $totalRecords = $conn->query("SELECT COUNT(*) as total FROM bookings")->fetch_assoc()['total'];
+
+    // Return the data as JSON
+    jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords]);
 }
+
+
 
 function fetchLatestApprovedBookings($conn)
 {
@@ -174,7 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $page = $_POST['page'] ?? 1;
             $criteria = $_POST['criteria'] ?? 'fullname';
             $direction = $_POST['direction'] ?? 'asc';
-            fetchAllBookings($conn, $page, $criteria, $direction);
+            fetchAllBookings($conn, $page, $criteria);
             break;
         case 'fetchLatestApprovedBookings':
             fetchLatestApprovedBookings($conn);
