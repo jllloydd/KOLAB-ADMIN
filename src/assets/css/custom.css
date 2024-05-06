@@ -116,14 +116,37 @@
     color: unset;
     border-color: #e2eef600;
 }
-
+.navbar-header {
+    box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.05);
+}
 .dropdown-head{
     background-color:#0683D7;
 }
 .topbar-heading {
     font-family: "Barlow", sans-serif !important;
     color: #292929;
+    margin-bottom: 0;
 }
+.collapse-bg {
+    background-color: #00000000;
+}
+.topbar-collapse-bg {
+    background-color: white;
+}
+.navbar-style {
+    --vz-navbar-toggler-border-color: unset;
+}
+.btn-offcanvas {
+    color: white;
+    background-color: #0683D7;
+    border-radius: 0;
+}
+.btn-offcanvas:hover {
+    color: white;
+    background-color: #005690;
+    border-radius: 0;
+}
+
 
 /* Admin Booking Section */
 .admin_booking_section {
@@ -556,6 +579,9 @@
 .term-icon {
     margin-top: 4px;
 }
+.hide-collapse {
+    display: none;
+}
 /* End of Booking Modal */
 
 
@@ -648,9 +674,6 @@
 }
 .admin-header {
     background-color: #2c92d6;
-}
-.modal-content {
-    background-color: #FAFAFA;
 }
 .admin-header {
     background-color: #E2EEF6;
@@ -831,6 +854,9 @@ body, html {
 }
 
 @media screen and (max-width: 768px) {
+    .hide-collapse {
+        display: block;
+    }
 
 }
 
@@ -871,6 +897,16 @@ body, html {
     height: 600px;
 }
 /* End of Admin Section*/
+}
+
+@media screen and (max-width: 425px) {
+    .topbar-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .change-gap {
+        gap: 2rem!important;
+    }
 }
 
 @media screen and (max-width: 290px) {
@@ -1219,10 +1255,6 @@ body, html {
 }
 
 /* Style for the confirm modal */
-.modal-content {
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
 
 .modal-header {
     background-color: #FFFFFF;
@@ -1239,16 +1271,16 @@ body, html {
     color: #0683D7;
 }
 
-.modal-footer {
+/* .modal-footer {
     background-color: #FFFFFF;
     margin-bottom: 5px;
     border-top: 1px solid #ccc;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 20px 0px; /* Adjust padding as needed */
-    display: flex; /* Add Flexbox */
-    justify-content: center; /* Center align buttons */
-}
+    padding: 20px 0px; 
+    display: flex; 
+    justify-content: center; 
+} */
 
 /* Style for the cancel button */
 .btn-cancel {
@@ -1263,20 +1295,6 @@ body, html {
 .btn-cancel:hover {
     background-color: #FFFFFF;
     border-color: #d0d5dd;
-}
-
-/* Style for the confirm button */
-.btn-confirm {
-    background-color: #0683D7;
-    color: #fff;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    width: 100px;
-}
-
-.btn-confirm:hover {
-    background-color: #0683D7;
 }
 
 /* Style for the Okay button */

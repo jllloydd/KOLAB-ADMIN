@@ -24,3 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".topbar-heading").textContent = "Users";
     }
 });
+
+function toggleCollapse() {
+    var content = document.getElementById('navbar-collapse');
+    if (content.classList.contains('show')) {
+      content.classList.remove('show');
+    } else {
+      content.classList.add('show');
+    }
+  }
+  
+  
+  

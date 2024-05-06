@@ -1,7 +1,15 @@
 <header id="page-topbar">
+    
     <div class="layout-width">
         <div class="navbar-header">
-            <div class="d-flex">
+            <div class="d-flex align-items-center">
+                <nav class="navbar navbar-style navbar-light collapse-bg hide-collapse">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleCollapse()">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
                 <!-- LOGO -->
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="index.php" class="logo logo-dark">
@@ -23,7 +31,9 @@
                     </a>
                 </div>
 
-                <h5 class="mb-sm-0 ms-3 fw-bold topbar-heading"></h5>
+                <div class="d-flex align-items-center">
+                    <h5 class="ms-3 fw-bold topbar-heading"></h5>
+                </div>
 
                 
             </div>
@@ -272,7 +282,7 @@
                     </div>
                     
                     <div>
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button class="btn btn-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <img src="../assets/img/topbar/eyeglass.svg" width="30px">
                         </button>
 
@@ -356,14 +366,49 @@
                 </div>
             </div>
         </div>
+       
     </div>
+    <div class="collapse p-2" id="navbar-collapse">
+        <div class="topbar-collapse-bg">
+            <div class="container-fluid">
+                <ul class="navbar-nav d-flex flex-row justify-content-center gap-5 change-gap" id="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link menu-link d-flex flex-column align-items-center" href="../dashboard/">
+                            <div class="image-dashboard topbar-icon"></div>
+                            <span class="dashboard-text"><?=$lang['t-dashboard']?></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-link d-flex flex-column align-items-center" href="../bookings/">
+                            <div class="image-booking topbar-icon"></div>
+                            <span class="booking-text"><?=$lang['t-bookings']?></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-link d-flex flex-column align-items-center" href="../admins/">
+                            <div class="image-admin topbar-icon"></div>
+                            <span class="admin-text"><?=$lang['t-admins']?></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-link d-flex flex-column align-items-center" href="../users/">
+                            <div class="image-user topbar-icon"></div>
+                            <span class="user-text"><?=$lang['t-users']?></span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 </header>
 
 
-    <?php include '../layouts/vendor-scripts.php'; ?>
+<?php include '../layouts/vendor-scripts.php'; ?>
 
-    <script src="../assets/libs/prismjs/prism.js"></script>
+<script src="../assets/libs/prismjs/prism.js"></script>
 
-    <!-- App js -->
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/topbar.js"></script>
+<!-- App js -->
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/topbar.js"></script>

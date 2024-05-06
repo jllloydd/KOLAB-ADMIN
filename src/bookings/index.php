@@ -31,17 +31,19 @@
                                 <div class="card-body">
                                     <p class="heading">Latest Approved Booking</p>
                                     <div class="row approved-item d-flex flex-column flex-nowrap align-items-center" id="latestCard">
-                                        <div class="col-xl-7 d-flex flex-column guest-col me-auto">
-                                            <p class="me-auto ref-num" id="ab_refnum">#0010</p>
-                                            <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
-                                        </div>
-                                        <div class="col-1 second-col d-flex flex-column align-items-center">
-                                            <img src="../assets/img/booking/term-icon.svg" alt="" width="20" height="20" class="term-icon">
-                                            <img src="../assets/img/booking/pax-icon.svg" alt="" width="24" height="24">
-                                        </div>
-                                        <div class="col-3 third-col d-flex flex-column justify-content-end">
-                                            <p class="detail-style" id="ab_term">Hourly</p>
-                                            <p class="detail-style" id="ab_pax">3 Pax</p>
+                                        <div class="d-flex flex-row flex-nowrap align-items-center">
+                                            <div class="col-xl-7 d-flex flex-column guest-col me-auto">
+                                                <p class="me-auto ref-num" id="ab_refnum">#0010</p>
+                                                <p class="me-auto guest-style" id="ab_name">Julienne Galvez</p>
+                                            </div>
+                                            <div class="col-1 second-col d-flex flex-column align-items-center">
+                                                <img src="../assets/img/booking/term-icon.svg" alt="" width="20" height="20" class="term-icon">
+                                                <img src="../assets/img/booking/pax-icon.svg" alt="" width="24" height="24">
+                                            </div>
+                                            <div class="col-3 third-col d-flex flex-column justify-content-end">
+                                                <p class="detail-style" id="ab_term">Hourly</p>
+                                                <p class="detail-style" id="ab_pax">3 Pax</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +193,7 @@
 <!-- Table -->
 <!-- ============================================================== -->
 <div class="main-content main-bg">
-    <div id="bookingManagementData" class="table-responsive table-card">
+    <div id="bookingManagementData" class="table-responsive">
         <div class="page-content table-padding">
             <div class="container-fluid">
 
@@ -482,7 +484,7 @@
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btnconfirm" data-bs-target="confirmModal">Confirm Booking</button>
+                        <button type="button" class="btn btn-confirm" data-bs-target="confirmModal" data-bs-dismiss="modal" onclick="triggerModal">Confirm Booking</button>
                     </div>
                 </div>
             </div>
