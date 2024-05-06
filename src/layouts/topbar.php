@@ -23,7 +23,7 @@
                     </a>
                 </div>
 
-                <!-- <h5 class="mb-sm-0 ms-3 fw-bold">Bookings</h5> -->
+                <h5 class="mb-sm-0 ms-3 fw-bold topbar-heading"></h5>
 
                 
             </div>
@@ -366,3 +366,4 @@
 
     <!-- App js -->
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/topbar.js"></script>

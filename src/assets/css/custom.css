@@ -120,6 +120,10 @@
 .dropdown-head{
     background-color:#0683D7;
 }
+.topbar-heading {
+    font-family: "Barlow", sans-serif !important;
+    color: #292929;
+}
 
 /* Admin Booking Section */
 .admin_booking_section {
