@@ -289,7 +289,14 @@ function closeModal() {
     $('#myModal').modal('hide');  // Use jQuery to hide the modal
 }
 
-// Example of usage
-function triggerModal() {
-    openSuccessModal("Success!", "Your operation was successful.");
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const btnconfirm = document.querySelector(".btnconfirm");
+    btnconfirm.addEventListener('click', () => {
+        openSuccessModal("Confirm Booking", "Are you sure you want to confirm this booking?");
+    });
+});
+
+const callback = () => {
+    const btnconfirm = document.querySelector(".btnconfirm");
+	btnconfirm.click();
+};

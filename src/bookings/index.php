@@ -479,13 +479,15 @@
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btn-confirm" data-bs-dismiss="modal" onclick="triggerModal">Confirm Booking</button>
+                        <button type="button" class="btn btnconfirm" data-bs-target="confirmModal">Confirm Booking</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div><!-- /.modal -->
+
+<div id="confirmModal"></div>
 
 <!-- Sweet Alerts js -->
 <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
@@ -505,6 +507,7 @@
 
 <!-- App js -->
 <script src="../assets/js/app.js"></script>
+<script src="../assets/js/global.js"></script>
 <script src="../assets/js/bookings.js"></script>
 <script src="../assets/js/pages/modal.init.js"></script>
 
