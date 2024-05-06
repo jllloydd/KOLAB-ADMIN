@@ -40,17 +40,20 @@ function fetchAllBookings() {
                     bookingListElement.insertAdjacentHTML('beforeend', row);
                 });
 
-                updateBookingCount(data.bookings.length, data.totalRecords);
+                // Properly set the global count to match the total records returned
+                window.totalBookingRecords = data.totalRecords;
+
+                // Initialize List.js now that all data is populated
+                initializeListJs();
+
             } else {
                 console.error('Failed to fetch bookings');
                 bookingListElement.innerHTML = `
                 <tr>
                     <td colspan="8" class="text-center">No bookings found.</td>
                 </tr>`;
-                updateBookingCount(0);
+                updateBookingCount(0, 0);
             }
-
-            initializeListJs();
         })
         .catch(error => {
             console.error('Error fetching bookings:', error);
@@ -60,36 +63,39 @@ function fetchAllBookings() {
             <tr>
                 <td colspan="8" class="text-center">No bookings found.</td>
             </tr>`;
-            updateBookingCount(0);
+            updateBookingCount(0, 0);
         });
 }
 
 function initializeListJs() {
+    const itemsPerPage = 10; // Adjust this value as needed
     const options = {
         valueNames: ['reference_num', 'customer_name', 'email', 'term', 'date', 'booking_status', 'payment_method'],
-        page: 10, // This will handle limiting per page
+        page: itemsPerPage,
         pagination: true
     };
 
     if (document.getElementById('bookingManagementData')) {
         try {
+            // Initialize List.js with pagination
             window.bookingListInstance = new List('bookingManagementData', options);
             console.log("List.js initialized successfully on bookingManagementData.");
 
-            // Handle search input and search icon click
-            const searchInput = document.getElementById('searchInput');
-            const searchIcon = document.getElementById('searchIcon');
+            // Update booking count dynamically whenever the list is updated
+            window.bookingListInstance.on('updated', function (list) {
+                // Calculate displayCount based on the current page and items per page
+                const currentPageIndex = Math.ceil(list.i / itemsPerPage);
+                const itemsOnCurrentPage = list.visibleItems.length;
 
-            function triggerSearch() {
-                window.bookingListInstance.search(searchInput.value.trim());
-                console.log("Search performed for:", searchInput.value.trim());
-            }
+                // Calculate the cumulative count accurately
+                const previousPagesCount = (currentPageIndex - 1) * itemsPerPage;
+                const displayCount = previousPagesCount + itemsOnCurrentPage;
 
-            searchIcon.addEventListener('click', triggerSearch);
-            searchInput.addEventListener('keypress', function (event) {
-                if (event.key === 'Enter') {
-                    triggerSearch();
-                }
+                // Retrieve the total record count, assuming `totalBookingRecords` is properly updated
+                const totalCount = window.totalBookingRecords || 0;
+
+                // Update the booking count display
+                updateBookingCount(displayCount, totalCount);
             });
 
         } catch (error) {
@@ -99,6 +105,8 @@ function initializeListJs() {
         console.log("Element with ID 'bookingManagementData' not found.");
     }
 }
+
+
 
 
 function updateBookingCount(displayCount, totalCount) {
