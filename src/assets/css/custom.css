@@ -912,14 +912,15 @@ body, html {
     margin: 0 20px;
 } 
 
-#calendar td {
-    padding: 10px;
+#calendar td, #calendar th {
+    padding: 8px 5px; /* 10px top/bottom, 5px left/right */
     color: #717998;
-}
-
-#calendar th {
-    font-weight: lighter;
-    color: #717998;
+    text-align: center;
+    vertical-align: top; /* Ensures content is aligned to the top */
+    margin: 0; /* Reset any margin to ensure padding is effective */
+    border: 1px solid transparent; /* Optional: Ensure consistent border box model */
+    box-sizing: border-box; /* Optional: Ensure consistent border box model */
+    font-weight: normal;
 }
 
 .last {

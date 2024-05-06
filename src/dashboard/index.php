@@ -173,63 +173,84 @@
 
                         <div class="col">
                             <div class="card last">
-                                    <div class="col ">
-                                        <div class="calendar-container card-body mt-3 mb-2 justify-content-center">
-                                            <div class="me-3"><button onclick="prevMonth()" style="border: none; background-color: white;">&lt;</button></div>
-                                            <div><h4 id="monthYear" class="fw-light"></h4></div>
-                                            <div class="ms-3"><button onclick="nextMonth()" style="border: none; background-color: white;">&gt;</button></div>
+                                <div class="col">
+                                    <div class="calendar-container card-body mt-3 mb-2 justify-content-center">
+                                        <div class="me-3">
+                                            <button onclick="prevMonth()" style="border: none; background-color: white;">&lt;</button>
                                         </div>
-                                        <div class="week pb-3 "><table id="calendar" class="fw-light"></table></div>
-                                        <script>
-                                            let currentDate = new Date();
+                                        <div>
+                                            <h4 id="monthYear" class="fw-light"></h4>
+                                        </div>
+                                        <div class="ms-3">
+                                            <button onclick="nextMonth()" style="border: none; background-color: white;">&gt;</button>
+                                        </div>
+                                    </div>
+                                    <div class="week">
+                                        <div id="calendarWrapper">
+                                            <table id="calendar" class="fw-light"></table>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        let currentDate = new Date();
 
-                                            function displayCalendar(month, year) {
-                                                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                                                
-                                                const firstDay = new Date(year, month, 1);
-                                                const lastDay = new Date(year, month + 1, 0);
+                                        function displayCalendar(month, year) {
+                                            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-                                                document.getElementById("monthYear").innerText = months[month] + " " + year;
+                                            const firstDay = new Date(year, month, 1);
+                                            const lastDay = new Date(year, month + 1, 0);
 
-                                                const table = document.getElementById("calendar");
-                                                table.innerHTML = "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+                                            document.getElementById("monthYear").innerText = months[month] + " " + year;
 
-                                                let date = 1;
-                                                for (let i = 0; i < 6; i++) {
-                                                    let row = table.insertRow();
-                                                    for (let j = 0; j < 7; j++) {
-                                                        if (i === 0 && j < firstDay.getDay()) {
-                                                            const cell = row.insertCell();
+                                            const table = document.getElementById("calendar");
+                                            table.innerHTML = "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+
+                                            let date = 1;
+                                            for (let i = 0; i < 6; i++) {
+                                                let row = table.insertRow();
+                                                for (let j = 0; j < 7; j++) {
+                                                    if (i === 0) {
+                                                        const cell = document.createElement('th');
+                                                        row.appendChild(cell);
+                                                        if (j < firstDay.getDay()) {
                                                             cell.innerHTML = "";
-                                                        } else if (date > lastDay.getDate()) {
-                                                            break;
                                                         } else {
-                                                            const cell = row.insertCell();
                                                             cell.innerHTML = date;
                                                             if (currentDate.getFullYear() === year && currentDate.getMonth() === month && currentDate.getDate() === date) {
-                                                                cell.classList.add("today"); 
+                                                                cell.classList.add("today");
+                                                            }
+                                                            date++;
+                                                        }
+                                                    } else {
+                                                        const cell = document.createElement('th'); // Changed to th for all rows
+                                                        row.appendChild(cell);
+                                                        if (date <= lastDay.getDate()) {
+                                                            cell.innerHTML = date;
+                                                            if (currentDate.getFullYear() === year && currentDate.getMonth() === month && currentDate.getDate() === date) {
+                                                                cell.classList.add("today");
                                                             }
                                                             date++;
                                                         }
                                                     }
                                                 }
                                             }
+                                        }
 
-                                            function prevMonth() {
-                                                currentDate.setMonth(currentDate.getMonth() - 1);
-                                                displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
-                                            }
-
-                                            function nextMonth() {
-                                                currentDate.setMonth(currentDate.getMonth() + 1);
-                                                displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
-                                            }
-
+                                        function prevMonth() {
+                                            currentDate.setMonth(currentDate.getMonth() - 1);
                                             displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
-                                        </script>
-                                    </div>   
-                                </div> 
-                        </div><!-- end col -->
+                                        }
+
+                                        function nextMonth() {
+                                            currentDate.setMonth(currentDate.getMonth() + 1);
+                                            displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
+                                        }
+
+                                        displayCalendar(currentDate.getMonth(), currentDate.getFullYear());
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+<!-- end col -->
 
                         <div class="col">
                             <div class="latest card col">
