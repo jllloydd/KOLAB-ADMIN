@@ -85,7 +85,8 @@ function fetchAllBookings($conn, $page = 1, $criteria = 'fullname', $direction =
     jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords, 'totalPages' => $totalPages]);
 }
 
-function fetchLatestApprovedBookings($conn) {
+function fetchLatestApprovedBookings($conn)
+{
     $query = "SELECT reference_number, CONCAT(firstname, ' ', lastname) AS fullname, term_rate, pax
               FROM bookings
               WHERE status = 'approved'
@@ -117,7 +118,7 @@ function updateBookingDetails($conn, $bookingid, $booking_date, $status)
 }
 
 function viewModal($conn, $bookingId)
-    {
+{
     if (!$bookingId) {
         jsonResponse(false, "Booking ID is required.");
         return;
