@@ -78,7 +78,8 @@
                                             <i class="ri-calendar-event-line text-muted fs-16"></i>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="d-block fw-semibold mb-0" id="event-start-date-tag"></h6>
+                                            <!-- Display formatted event date -->
+                                            <h6 class="d-block fw-semibold mb-0" id="event_date"></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -87,15 +88,10 @@
                                         <i class="ri-time-line text-muted fs-16"></i>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <h6 class="d-block fw-semibold mb-0"><span id="event-timepicker1-tag"></span> - <span id="event-timepicker2-tag"></span></h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <div class="flex-shrink-0 me-3">
-                                        <i class="ri-map-pin-line text-muted fs-16"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="d-block fw-semibold mb-0"> <span id="event-location-tag"></span></h6>
+                                        <!-- Display formatted start time and end time -->
+                                        <h6 class="d-block fw-semibold mb-0">
+                                            <span id="event_start_time"></span> - <span id="event_end_time"></span>
+                                        </h6>
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
@@ -103,7 +99,8 @@
                                         <i class="ri-discuss-line text-muted fs-16"></i>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <p class="d-block text-muted mb-0" id="event-description-tag"></p>
+                                        <!-- Display event title -->
+                                        <p class="d-block text-muted mb-0" id="event_title"></p>
                                     </div>
                                 </div>
                             </div>

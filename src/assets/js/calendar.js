@@ -133,7 +133,6 @@ function tConvert(e) {
     return (t = (t %= 12) || 12) + ":" + (e < 10 ? "0" + e : e) + " " + n
 }
 document.addEventListener("DOMContentLoaded", function () {
-    flatPickrInit();
     var modal = new bootstrap.Modal(document.getElementById("event-modal"), {
         keyboard: false
     });
@@ -157,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         events: fetchEvents,
         eventClick: function (info) {
-            eventClicked(); // Call eventClicked to set up the modal for viewing
             editEventModal(info.event); // Load event data into the modal
         },
         dateClick: function (info) {
@@ -216,8 +214,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function editEventModal(event) {
         // Fill the modal with event details for editing
-        document.getElementById("event-title").value = event.title;
-        document.getElementById("event-start-date").value = event.start.toISOString().slice(0, 10);
+        document.getElementById("event_date").innerText = new Date(event.start).toLocaleDateString();
+        document.getElementById("event_start_time").innerText = new Date(event.start).toLocaleTimeString();
+        document.getElementById("event_end_time").innerText = new Date(event.end).toLocaleTimeString();
+        document.getElementById("event_title").innerText = event.title;
         modal.show();
     }
 
@@ -225,11 +225,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Setup the modal to add a new event
         document.getElementById("form-event").reset();
         document.getElementById("modal-title").innerText = "Add Event";
-        document.getElementById("event-start-date").value = dateStr;
+        document.getElementById("event_date").innerText = new Date(dateStr).toLocaleDateString();
         modal.show();
     }
 });
-
 
 var str_dt = function (e) {
     var e = new Date(e)
