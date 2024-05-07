@@ -1211,6 +1211,13 @@ body, html {
     color: #FCD116;
 }
 
+.pending {
+    color: #F9701D;
+    background-color: #FFF1E9;
+    width: 100px;
+    text-align: center;
+}
+
 /* Style for the confirm modal */
 .modal-content {
     background-color: #fff;

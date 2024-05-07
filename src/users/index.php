@@ -107,8 +107,8 @@
                 <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">View</button>
                 
                 <div class="modal fade bs-example-modal-xl mt-5" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl container-fluid">
-                        <div class="modal-content main-user-container container">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content main-user-container">
                             <!--Profile Page-->
                             <div class="container first-user-container bg-white me-3">
 
@@ -142,7 +142,7 @@
                                             <div class="me-2"><img src="../assets/img/users/status.svg" class="user-name me-0" width="18px"></div>
                                             <div><p class="user-name mt-1 fw-normal">Student</p></div>
                                         </div>
-                                        <div class="personal-info mt-2 ms-3 mb-4">
+                                        <div class="personal-info mt-2 ms-3">
                                             <div class="me-2"><img src="../assets/img/users/school.svg" class="user-name me-0" width="18px"></div>
                                             <div><p class="user-name mt-1 fw-normal">University of the Cordilleras</p></div>
                                         </div>
@@ -178,7 +178,7 @@
 
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
-                                        <div class="col d-flex flex-column">
+                                        <div class="col d-flex flex-column me-4">
                                             <h6 class="fw-normal me-auto guest-style">Billing and Payment</h6>
                                         </div>
                                         <div class="align-content-center justify-content-center">
@@ -188,7 +188,7 @@
                                 </div>
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
-                                        <div class="col d-flex flex-column">
+                                        <div class="col d-flex flex-column me-4">
                                             <h6 class="online fw-normal mt-1 mb-1">Online</h6>
                                         </div>
                                         <div class="">
@@ -199,7 +199,7 @@
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column">
-                                            <div class="billing-payment">
+                                            <div class="billing-payment me-4">
                                                 <div><img src="../assets/img/users/yellow-diamond.svg" class="user-name me-0"></div>
                                                 <div class="mt-1"><h6 class="maharlika user-name fw-normal">Maharlika</h6></div>
                                             </div>
@@ -211,8 +211,8 @@
                                 </div>
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
-                                        <div class="col d-flex flex-column">
-                                            <h6 class="next-payment fw-normal me-auto">Next payment due on</h6>
+                                        <div class="col d-flex flex-column me-4">
+                                            <h6 class="next-payment fw-normal me-auto ">Next payment due on</h6>
                                         </div>
                                         <div class="align-content-center justify-content-center">
                                             <h6 class="next-payment fw-normal">April 1, 2025</h6>
