@@ -1218,6 +1218,13 @@ body, html {
     text-align: center;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+    right: 0;
+    z-index: 999;
+    color: #000000;
+}
+
 /* Style for the confirm modal */
 .modal-content {
     background-color: #fff;

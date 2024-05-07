@@ -104,23 +104,31 @@
             
 
             <div>
-                <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">View</button>
+                <button type="button" class="btn btn-white bg-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Static Backdrop Modal
+                </button>       
+
                 
-                <div class="modal fade bs-example-modal-xl mt-5" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+
                         <div class="modal-content main-user-container">
+                            <div class="position-absolute top-0 me-3 pt-3 cursor-pointer">
+                                <button type="button" href="javascript:void(0);" class="btn btn-link link-success fw-medium btn-close text-reset" data-bs-dismiss="modal"></button>
+
+                            </div>
                             <!--Profile Page-->
-                            <div class="container first-user-container bg-white me-3">
+                            <div class="container first-user-container me-3 bg-white ">
 
-                                <div class="title-user">
-                                    <h5 class="user-name fw-meduim pb-2">Julienne Galvez</h5>
-                                    <div class="users-profile">
-                                        <div><img src="../assets/img/users/diamond.svg" class="user-name me-0"></div>
-                                        <div><p class="user-name fw-medium">Maharlika</p></div>
+                                <div class="">
+                                    <div class="title-user ">
+                                        <h5 class="user-name fw-meduim pb-2">Julienne Galvez</h5>
+                                        <div class="users-profile">
+                                            <div><img src="../assets/img/users/diamond.svg" class="user-name me-0"></div>
+                                            <div><p class="user-name fw-medium">Maharlika</p></div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="container">
                                     <div>
                                         <div class="personal-info mt-4 ms-3 mb-4">
                                             <div class="me-2"><img src="../assets/img/users/phone.svg" class="user-name me-0" width="18px"></div>
@@ -224,6 +232,7 @@
                                     <div><button class="hold-billing">HOLD</button></div>
                                     <div><button class="cancel-billing">CANCEL</button></div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
