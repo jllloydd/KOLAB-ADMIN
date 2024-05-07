@@ -513,6 +513,7 @@
     background-color: #0683D7;
     width: 200px;
     border-radius: 0;
+    width: 100px;
 }
 .btn-confirm:hover {
     color: white;
@@ -1227,7 +1228,7 @@ body, html {
     color: #0683D7;
 }
 
-/* .modal-footer {
+.modal-footer {
     background-color: #FFFFFF;
     margin-bottom: 5px;
     border-top: 1px solid #ccc;
@@ -1236,7 +1237,7 @@ body, html {
     padding: 20px 0px; 
     display: flex; 
     justify-content: center; 
-} */
+} 
 
 /* Style for the cancel button */
 .btn-cancel {
@@ -1257,7 +1258,7 @@ body, html {
 #okayModal .btn-primary {
     background-color: #0683D7;
     color: #fff;
-    border: none;
+    border-radius: 0;
     padding: 8px 20px;
     cursor: pointer;
     width: 100px;
