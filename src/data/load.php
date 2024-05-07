@@ -51,7 +51,8 @@ function get_payment_method_description($methodId)
     }
 }
 
-function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc') {
+function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc')
+{
     // Whitelist allowed sorting fields to prevent SQL injection
     $allowedFields = ['reference_number', 'fullname', 'email', 'term_rate', 'booking_date', 'status', 'payment_method'];
     $allowedDirections = ['asc', 'desc'];
@@ -99,7 +100,22 @@ function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc') {
     jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords]);
 }
 
-
+function fetchAllEvents($conn) {
+    $query = "SELECT event_id, event_title, event_date, start_time, end_time FROM events ORDER BY event_date ASC";
+    $result = $conn->query($query);
+    $events = [];
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $events[] = $row;
+        }
+    }
+    header('Content-Type: application/json');
+    echo json_encode([
+        'success' => true,
+        'message' => 'Events fetched successfully.',
+        'events' => $events
+    ]);
+}
 
 function fetchLatestApprovedBookings($conn)
 {
@@ -191,6 +207,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $criteria = $_POST['criteria'] ?? 'fullname';
             $direction = $_POST['direction'] ?? 'asc';
             fetchAllBookings($conn, $page, $criteria);
+            break;
+        case 'fetchAllEvents':
+            fetchAllEvents($conn);
             break;
         case 'fetchLatestApprovedBookings':
             fetchLatestApprovedBookings($conn);

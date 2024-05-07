@@ -127,7 +127,6 @@ function updateBookingCount(displayCount, totalCount) {
     }
 }
 
-
 function fetchAndDisplayLatestApprovedBookings() {
     console.log("Fetching latest approved bookings...");
     fetch('../data/load.php', {

@@ -23,6 +23,7 @@
                             <div class="card calendar-height">
                                 <div class="card-body">
                                     <div id="calendar"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -502,7 +503,7 @@
 <script src="../assets/libs/fullcalendar/main.min.js"></script>
 
 <!-- Calendar init -->
-<script src="../assets/js/pages/calendar.init.js"></script>
+<script src="../assets/js/calendar.js"></script>
 
 <!-- list.js plugin -->
 <script src="../assets/libs/list.js/list.min.js"></script>
