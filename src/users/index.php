@@ -201,7 +201,7 @@
                                         <div class="col d-flex flex-column">
                                             <div class="billing-payment">
                                                 <div><img src="../assets/img/users/yellow-diamond.svg" class="user-name me-0"></div>
-                                                <div><h6 class="maharlika user-name fw-normal">Maharlika</h6></div>
+                                                <div class="mt-1"><h6 class="maharlika user-name fw-normal">Maharlika</h6></div>
                                             </div>
                                         </div>
                                         <div class="align-content-center justify-content-center">
