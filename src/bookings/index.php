@@ -498,6 +498,7 @@
 <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
 <!-- fullcalendar js -->
+<link href="../assets/libs/fullcalendar/main.min.css" rel="stylesheet" type="text/css" />
 <script src="../assets/libs/fullcalendar/main.min.js"></script>
 
 <!-- Calendar init -->

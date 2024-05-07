@@ -308,7 +308,6 @@ function closeModal() {
     $('#myModal').modal('hide');  // Use jQuery to hide the modal
 }
 
-
 const btnconfirm = document.querySelector(".btnconfirm");
 btnconfirm.addEventListener('click', () => {
     openSuccessModal("Confirm Booking", "Are you sure you want to confirm this booking?");
