@@ -326,30 +326,73 @@
     background-color: #00000000;
     border: #00000000;
 }
-
-.bg-primary-subtle {
-    background-color: #E2EEF6!important;
-}
-.bg-danger-subtle {
-    background-color: #FAE2E1!important;
-}
-.bg-dark-subtle {
-    background-color: #0683D7!important;
-}
-.fc-daygrid-event-harness .fc-daygrid-event.bg-primary-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-primary-subtle .fc-event-title {
-    color: #0683D7!important;
-    font-weight: normal!important;
-    font-family: "Barlow", sans-serif !important;
-}
-.fc-daygrid-event-harness .fc-daygrid-event.bg-danger-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-danger-subtle .fc-event-title {
+.event-full {
+    background-color: #FAE2E1;
     color: #FE0600!important;
-    font-weight: normal!important;
-    font-family: "Barlow", sans-serif !important;
 }
-.fc-daygrid-event-harness .fc-daygrid-event.bg-dark-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-dark-subtle .fc-event-title {
-    color: #FFFFFF!important;
-    font-weight: normal!important;
-    font-family: "Barlow", sans-serif !important;
+.event-booking {
+    background-color: #E2EEF6;
+    color: #0683D7!important;
+}
+.fc-dayGridMonth-button{
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0;
+}
+.fc-dayGridMonth-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-dayGridMonth-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridWeek-button{
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0;
+}
+.fc-timeGridWeek-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridWeek-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridDay-button {
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0;
+}
+.fc-timeGridDay-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridDay-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-listMonth-button{
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0; 
+}
+.fc-listMonth-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-listMonth-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
 }
 .fc-daygrid-event {
     font-weight: normal;
@@ -417,15 +460,28 @@
     font-size: 16px;
     font-family: "Barlow", sans-serif !important;
 }
-.btn-success {
+.btn-success-style {
     background-color: #0683D7;
     border-color: #0683D7;
     border-radius: 0;
     height: 65px; 
+    color: white;
+}
+.btn-success-style:hover {
+    background-color: #005690;
+    border-color: #005690;
+    color: white;
+}
+.btn-success {
+    background-color: #0683D7;
+    border-color: #0683D7;
+    border-radius: 0;
+    color: white;
 }
 .btn-success:hover {
     background-color: #005690;
     border-color: #005690;
+    color: white;
 }
 .btn-view {
     background-color: #0683D7;

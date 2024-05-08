@@ -104,12 +104,8 @@
                                     <div class="mb-3">
                                         <label class="form-label">Type</label>
                                         <select class="form-select d-none" name="category" id="event-category" required>
-                                            <option value="bg-soft-danger">Danger</option>
-                                            <option value="bg-soft-success">Success</option>
-                                            <option value="bg-soft-primary">Primary</option>
-                                            <option value="bg-soft-info">Info</option>
-                                            <option value="bg-soft-dark">Dark</option>
-                                            <option value="bg-soft-warning">Warning</option>
+                                            <option value="event-full">Fully Booked</option>
+                                            <option value="event-booking">Bookings</option>
                                         </select>
                                         <div class="invalid-feedback">Please select a valid event category</div>
                                     </div>
@@ -205,7 +201,7 @@
                             </div>
                             <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
                                 <div class="w-100">
-                                    <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+                                    <button type="button" class="w-100 btn btn-success-style add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
                                         <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">New Booking</span>
                                     </button>
                                 </div>
