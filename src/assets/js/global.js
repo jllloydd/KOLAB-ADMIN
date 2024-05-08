@@ -10,7 +10,7 @@ function openSuccessModal(title, message) {
     const modal = `
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content content-bg">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">${title}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- Close button with "X" icon -->
@@ -28,7 +28,7 @@ function openSuccessModal(title, message) {
         <!-- Second Modal for Okay Button -->
         <div class="modal fade" id="okayModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="okayModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content content-bg">
                     <div class="modal-header">
                         <h5 class="modal-title" id="okayModalLabel">Booking Confirmed</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- Close button with "X" icon -->
