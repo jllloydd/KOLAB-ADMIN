@@ -636,17 +636,31 @@
 .btn-confirm {
     font-family: "Barlow", sans-serif !important;
     font-size: 16px;
+    background-color: #0683D7;
+    border-color: #0683D7;
+    border-radius: 0;
+    color: white;
+    width: 90px; 
+}
+.btn-confirm:hover {
+    background-color: #005690;
+    border-color: #005690;
+    color: white;
+}
+.btn-confirm-booking {
+    font-family: "Barlow", sans-serif !important;
+    font-size: 16px;
     color: white;
     background-color: #0683D7;
     width: 200px;
     border-radius: 0;
-    width: 100px;
+    width: 200px;
 }
-.btn-confirm:hover {
+.btn-confirm-booking:hover {
     color: white;
     background-color: #005690;
 }
-.modal-footer {
+.modal-bottom-btn {
     padding-bottom: 0px;
 }
 .term-icon {
@@ -1371,23 +1385,35 @@ body, html {
 .modal-body {
     padding: 10px;
     margin: 10px;
+    font-family: "Barlow", sans-serif !important;
+    font-size: 16px;
 
 }
 
 .modal-title {
     color: #0683D7;
+    font-family: "Barlow", sans-serif !important;
+    font-size: 20px;
+
 }
 
-.modal-footer {
-    background-color: #FFFFFF;
-    margin-bottom: 5px;
-    border-top: 1px solid #ccc;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 20px 0px; 
-    display: flex; 
-    justify-content: center; 
-} 
+.footer-style {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 1.5px solid #E4E7EC; */
+}
+
+.footer-style::after {
+    content: "";
+    background: #E4E7EC;
+    position: absolute;
+    top: 0;
+    width: 95%;
+    height: 1px;
+}
+
 
 /* Style for the cancel button */
 .btn-cancel {
