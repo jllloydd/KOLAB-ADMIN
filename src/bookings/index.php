@@ -206,7 +206,7 @@
                             <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
                                 <div class="w-100">
                                     <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
-                                        <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
+                                        <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">New Booking</span>
                                     </button>
                                 </div>
                             </div>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="card">
-                            <div class="card-body card-margin">
+                            <div class="card-body card-margin table-responsive">
                                 <table class="table align-middle table-nowrap table-margin">
                                     <thead class="table-light">
                                         <tr>
@@ -245,32 +245,35 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div id="noResultsMessage" class="text-center" style="display: none;">
+                            No matching bookings found.
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p id="bookingCount">Showing 0 from 0 data</p>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                        <!-- Pagination links will be dynamically inserted here -->
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div id="noResultsMessage" class="text-center" style="display: none;">
-                No matching bookings found.
-            </div>
-            <div class="col-lg-12">
-                <div class="d-flex justify-content-between align-items-center">
-                    <p id="bookingCount">Showing 0 from 0 data</p>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                            <!-- Pagination links will be dynamically inserted here -->
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            
         </div>
         <!-- end col -->
     </div>
@@ -469,7 +472,7 @@
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btnconfirm" data-bs-target="confirmModal" data-bs-dismiss="modal" id="btn-booking-confirm">Confirm Booking</button>
+                        <button type="button" class="btn btn-confirm-booking" data-bs-target="confirmModal" data-bs-dismiss="modal" id="btn-booking-confirm">Confirm Booking</button>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ function openSuccessModal(title, message) {
                     <div class="modal-body">
                         ${message}
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer footer-style p-3 position-relative">
                         <button type="button" class="btn btn-confirm" id="okayModalButton" data-bs-dismiss="modal">Confirm</button>
                     </div>
                 </div>
