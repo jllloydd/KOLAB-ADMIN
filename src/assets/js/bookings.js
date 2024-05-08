@@ -127,6 +127,8 @@ function updateBookingCount(displayCount, totalCount) {
     }
 }
 
+
+
 function fetchAndDisplayLatestApprovedBookings() {
     console.log("Fetching latest approved bookings...");
     fetch('../data/load.php', {
@@ -294,6 +296,8 @@ function openModal(bookingId) {
                 var totalAmount = calculateTotalAmount(termDescription.toLowerCase(), termAmount.replace(/[^\d.-]/g, ''), totalHoursDecimal);
                 $('#totalAmount').text(totalAmount);
 
+                document.getElementById("btn-booking-confirm").setAttribute("data-booking-id", bookingId)
+
             } else {
                 console.error("Failed to fetch data: " + response.message);
             }
@@ -309,8 +313,30 @@ function closeModal() {
 
 const btnconfirm = document.querySelector(".btn-confirm-booking");
 btnconfirm.addEventListener('click', () => {
-    openSuccessModal("Confirm Booking", "Are you sure you want to confirm this booking?");
-});
+    const bookingId = document.getElementById("btn-booking-confirm").getAttribute("data-booking-id");
+    console.log("Updating booking status...");
+    fetch('../data/load.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `action=updateBookingDetails&bookingId=${bookingId}`
+    })
+
+        .then(response => response.json())
+        .then(data => {
+            if (data.status) {
+                console.log("Status updated successfully.");
+                openSuccessModal('Success!', 'Booking Confirmed')
+                fetchAllBookings();
+
+
+            } else {
+                console.error('No bookings found');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating bookings:', error);
+        });
+})
 
 const callback = () => {
     const btnconfirm = document.querySelector(".btn-confirm-booking");

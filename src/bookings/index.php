@@ -78,8 +78,7 @@
                                             <i class="ri-calendar-event-line text-muted fs-16"></i>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <!-- Display formatted event date -->
-                                            <h6 class="d-block fw-semibold mb-0" id="event_date"></h6>
+                                            <h6 class="d-block fw-semibold mb-0" id="event-start-date-tag"></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -88,10 +87,7 @@
                                         <i class="ri-time-line text-muted fs-16"></i>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <!-- Display formatted start time and end time -->
-                                        <h6 class="d-block fw-semibold mb-0">
-                                            <span id="event_start_time"></span> - <span id="event_end_time"></span>
-                                        </h6>
+                                        <h6 class="d-block fw-semibold mb-0"><span id="event-timepicker1-tag"></span> - <span id="event-timepicker2-tag"></span></h6>
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
@@ -99,8 +95,7 @@
                                         <i class="ri-discuss-line text-muted fs-16"></i>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <!-- Display event title -->
-                                        <p class="d-block text-muted mb-0" id="event_title"></p>
+                                        <p class="d-block text-muted mb-0" id="event-description-tag"></p>
                                     </div>
                                 </div>
                             </div>
@@ -154,14 +149,6 @@
                                                     <span class="input-group-text"><i class="ri-time-line"></i></span>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label for="event-location">Location</label>
-                                        <div>
-                                            <input type="text" class="form-control d-none" name="event-location" id="event-location" placeholder="Event location">
                                         </div>
                                     </div>
                                 </div><!--end col-->
@@ -482,7 +469,7 @@
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btn-confirm-booking" data-bs-target="confirmModal" data-bs-dismiss="modal">Confirm Booking</button>
+                        <button type="button" class="btn btnconfirm" data-bs-target="confirmModal" data-bs-dismiss="modal" id="btn-booking-confirm">Confirm Booking</button>
                     </div>
                 </div>
             </div>
@@ -500,6 +487,7 @@
 <script src="../assets/libs/fullcalendar/main.min.js"></script>
 
 <!-- Calendar init -->
+<script src="../assets/js/pages/calendar.init.js"></script>
 <script src="../assets/js/calendar.js"></script>
 
 <!-- list.js plugin -->

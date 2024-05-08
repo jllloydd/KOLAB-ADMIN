@@ -100,7 +100,8 @@ function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc')
     jsonResponse(true, "Bookings fetched successfully.", ['bookings' => $bookings, 'totalRecords' => $totalRecords]);
 }
 
-function fetchAllEvents($conn) {
+function fetchAllEvents($conn)
+{
     $query = "SELECT event_id, event_title, event_date, start_time, end_time FROM events ORDER BY event_date ASC";
     $result = $conn->query($query);
     $events = [];
@@ -138,10 +139,10 @@ function fetchLatestApprovedBookings($conn)
     }
 }
 
-function updateBookingDetails($conn, $bookingid, $booking_date, $status)
+function updateBookingDetails($conn, $bookingid)
 {
-    $stmt = $conn->prepare("UPDATE bookings SET booking_date = ?, status = ? WHERE bookingid = ?");
-    $stmt->bind_param("ssi", $booking_date, $status, $bookingid);
+    $stmt = $conn->prepare("UPDATE bookings SET status = 'Approved' WHERE bookingid = ? AND status = 'Pending'");
+    $stmt->bind_param("i", $bookingid);
     if ($stmt->execute()) {
         jsonResponse(true, "Booking updated successfully.");
     } else {
@@ -215,11 +216,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             fetchLatestApprovedBookings($conn);
             break;
         case 'updateBookingDetails':
-            $bookingid = $_POST['bookingid'] ?? null;
-            $booking_date = $_POST['booking_date'] ?? null;
-            $status = $_POST['status'] ?? null;
-            if ($bookingid && $booking_date && $status) {
-                updateBookingDetails($conn, $bookingid, $booking_date, $status);
+            $bookingid = $_POST['bookingId'] ?? null;
+            if ($bookingid) {
+                updateBookingDetails($conn, $bookingid);
             } else {
                 jsonResponse(false, "Missing data for booking update.");
             }
