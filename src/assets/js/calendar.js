@@ -1,7 +1,53 @@
 // Add New Event
 function submitAddEventForm() {
-    console.log("Add event btn clicked")
+    // Get form data
+    const eventCategory = document.getElementById('event-category').value;
+    const eventTitle = document.getElementById('event-title').value;
+    const eventStartDateInput = document.getElementById('event-start-date').value;
+    const startTime = document.getElementById('timepicker1').value;
+    const endTime = document.getElementById('timepicker2').value;
+    const eventDescription = document.getElementById('event-description').value;
+
+
+    // Separate start and end dates if a range is selected
+    let eventStartDate = '';
+    let eventEndDate = '';
+    const dates = eventStartDateInput.split(" to ");
+    if (dates.length > 1) {
+        eventStartDate = dates[0].trim();
+        eventEndDate = dates[1].trim();
+    } else {
+        eventStartDate = eventStartDateInput.trim();
+        eventEndDate = eventStartDateInput.trim(); // Set end date to start date if only one date is selected
+    }
+
+    // Prepare data to send
+    const formData = new FormData();
+    formData.append('category', eventCategory);
+    formData.append('title', eventTitle);
+    formData.append('start_date', eventStartDate);
+    formData.append('end_date', eventEndDate);
+    formData.append('start_time', startTime);
+    formData.append('end_time', endTime);
+    formData.append('description', eventDescription);
+
+    formData.append('action', 'addEvent');
+
+    // Send data to submit.php
+    fetch('../data/submit.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // Handle response data here
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
+
 // Update Event
 function submitEditEventForm() {
     console.log("Edit event btn clicked")
