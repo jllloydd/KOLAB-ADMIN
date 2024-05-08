@@ -374,26 +374,26 @@
                 <ul class="navbar-nav d-flex flex-row justify-content-center gap-5 change-gap" id="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link menu-link d-flex flex-column align-items-center" href="../dashboard/">
-                            <div class="image-dashboard topbar-icon"></div>
-                            <span class="dashboard-text"><?=$lang['t-dashboard']?></span>
+                            <div class="topbar-image-dashboard topbar-icon"></div>
+                            <span class="topbar-dashboard-text"><?=$lang['t-dashboard']?></span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link menu-link d-flex flex-column align-items-center" href="../bookings/">
-                            <div class="image-booking topbar-icon"></div>
-                            <span class="booking-text"><?=$lang['t-bookings']?></span>
+                            <div class="topbar-image-booking topbar-icon"></div>
+                            <span class="topbar-booking-text"><?=$lang['t-bookings']?></span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link menu-link d-flex flex-column align-items-center" href="../admins/">
-                            <div class="image-admin topbar-icon"></div>
-                            <span class="admin-text"><?=$lang['t-admins']?></span>
+                            <div class="topbar-image-admin topbar-icon"></div>
+                            <span class="topbar-admin-text"><?=$lang['t-admins']?></span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link menu-link d-flex flex-column align-items-center" href="../users/">
-                            <div class="image-user topbar-icon"></div>
-                            <span class="user-text"><?=$lang['t-users']?></span>
+                            <div class="topbar-image-user topbar-icon"></div>
+                            <span class="topbar-user-text"><?=$lang['t-users']?></span>
                         </a>
                     </li>
 
@@ -403,6 +403,7 @@
     </div>
     
 </header>
+<script src="../assets/js/topbar.js"></script>
 
 
 <?php include '../layouts/vendor-scripts.php'; ?>
@@ -411,4 +412,4 @@
 
 <!-- App js -->
 <script src="../assets/js/app.js"></script>
-<script src="../assets/js/topbar.js"></script>
+

@@ -482,7 +482,7 @@
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btnconfirm" data-bs-target="confirmModal" data-bs-dismiss="modal">Confirm Booking</button>
+                        <button type="button" class="btn btn-confirm-booking" data-bs-target="confirmModal" data-bs-dismiss="modal">Confirm Booking</button>
                     </div>
                 </div>
             </div>

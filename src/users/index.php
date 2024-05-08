@@ -104,23 +104,31 @@
             
 
             <div>
-                <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">View</button>
+                <button type="button" class="btn btn-white bg-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Static Backdrop Modal
+                </button>       
+
                 
-                <div class="modal fade bs-example-modal-xl mt-5" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl container-fluid">
-                        <div class="modal-content main-user-container container">
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+
+                        <div class="modal-content main-user-container">
+                            <div class="position-absolute top-0 me-3 pt-3 cursor-pointer">
+                                <button type="button" href="javascript:void(0);" class="btn btn-link link-success fw-medium btn-close text-reset" data-bs-dismiss="modal"></button>
+
+                            </div>
                             <!--Profile Page-->
-                            <div class="container first-user-container bg-white me-3">
+                            <div class="container first-user-container me-3 bg-white ">
 
-                                <div class="title-user">
-                                    <h5 class="user-name fw-meduim pb-2">Julienne Galvez</h5>
-                                    <div class="users-profile">
-                                        <div><img src="../assets/img/users/diamond.svg" class="user-name me-0"></div>
-                                        <div><p class="user-name fw-medium">Maharlika</p></div>
+                                <div class="">
+                                    <div class="title-user ">
+                                        <h5 class="user-name fw-meduim pb-2">Julienne Galvez</h5>
+                                        <div class="users-profile">
+                                            <div><img src="../assets/img/users/diamond.svg" class="user-name me-0"></div>
+                                            <div><p class="user-name fw-medium">Maharlika</p></div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="container">
                                     <div>
                                         <div class="personal-info mt-4 ms-3 mb-4">
                                             <div class="me-2"><img src="../assets/img/users/phone.svg" class="user-name me-0" width="18px"></div>
@@ -142,7 +150,7 @@
                                             <div class="me-2"><img src="../assets/img/users/status.svg" class="user-name me-0" width="18px"></div>
                                             <div><p class="user-name mt-1 fw-normal">Student</p></div>
                                         </div>
-                                        <div class="personal-info mt-2 ms-3 mb-4">
+                                        <div class="personal-info mt-2 ms-3">
                                             <div class="me-2"><img src="../assets/img/users/school.svg" class="user-name me-0" width="18px"></div>
                                             <div><p class="user-name mt-1 fw-normal">University of the Cordilleras</p></div>
                                         </div>
@@ -178,7 +186,7 @@
 
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
-                                        <div class="col d-flex flex-column">
+                                        <div class="col d-flex flex-column me-4">
                                             <h6 class="fw-normal me-auto guest-style">Billing and Payment</h6>
                                         </div>
                                         <div class="align-content-center justify-content-center">
@@ -188,7 +196,7 @@
                                 </div>
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
-                                        <div class="col d-flex flex-column">
+                                        <div class="col d-flex flex-column me-4">
                                             <h6 class="online fw-normal mt-1 mb-1">Online</h6>
                                         </div>
                                         <div class="">
@@ -199,7 +207,7 @@
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column">
-                                            <div class="billing-payment">
+                                            <div class="billing-payment me-4">
                                                 <div><img src="../assets/img/users/yellow-diamond.svg" class="user-name me-0"></div>
                                                 <div class="mt-1"><h6 class="maharlika user-name fw-normal">Maharlika</h6></div>
                                             </div>
@@ -211,8 +219,8 @@
                                 </div>
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
-                                        <div class="col d-flex flex-column">
-                                            <h6 class="next-payment fw-normal me-auto">Next payment due on</h6>
+                                        <div class="col d-flex flex-column me-4">
+                                            <h6 class="next-payment fw-normal me-auto ">Next payment due on</h6>
                                         </div>
                                         <div class="align-content-center justify-content-center">
                                             <h6 class="next-payment fw-normal">April 1, 2025</h6>
@@ -224,6 +232,7 @@
                                     <div><button class="hold-billing">HOLD</button></div>
                                     <div><button class="cancel-billing">CANCEL</button></div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
