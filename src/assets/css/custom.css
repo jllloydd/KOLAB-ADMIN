@@ -3,43 +3,91 @@
 }
 
 /* Sidebar section */
-.image-hover {
-    width: 25px;
-    height: 25px;
-    background-image: url('../../assets/img/sidebar/dashboard.svg');
-    background-size: cover;
-}
-.image-hover:hover {
-    background-image: url('../../assets/img/sidebar/dashboard-active.svg'); /* Change on hover */
-} 
 .navbar-menu {
     background-color: white;
     width: 200px;
-}
-.navbar-nav:hover {
-    color: #005690;
+    border-right: unset;
 }
 .navbar-menu .navbar-nav .nav-link {
     color: #717998;
 }
 .navbar-menu .navbar-nav .nav-link:hover {
-    color: #005690;
-}
-.navbar-menu .navbar-nav .nav-link.active {
     color: #0683D7;
 }
 .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
     color: #0683D7;
 }
-.navbar-menu .navbar-nav .nav-sm .nav-link.active {
-    color: #0683D7;
-}
-.navbar-menu .navbar-nav .nav-link.active {
-    color: #0683D7;
-}
 .item-active {
     font-weight: bold;
 }
+.sidebar_section {
+    box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.1);  
+}
+.image-dashboard {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url('../../assets/img/sidebar/dashboard.svg');
+}
+.nav-link:hover .image-dashboard {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.image-dashboard.active {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.dashboard-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.image-booking {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/admin-calendar.svg');
+    background-size: cover;
+}
+.nav-link:hover .image-booking {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.image-booking.active {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.booking-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.image-admin {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/key.svg');
+    background-size: cover;
+}
+.nav-link:hover .image-admin {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.image-admin.active {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.admin-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.image-user {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/person-admin.svg');
+    background-size: cover;
+}
+.nav-link:hover .image-user {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.image-user.active {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.user-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+
 /* End of sidebar section */
 
 .ri-layout-masonry-line {
@@ -103,6 +151,73 @@
     background-color: #005690!important;
     border-radius: 0;
 }
+.hide-collapse {
+    display: none;
+}
+.topbar-image-dashboard {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url('../../assets/img/sidebar/dashboard.svg');
+}
+.nav-link:hover .topbar-image-dashboard {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.topbar-image-dashboard.active {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.topbar-dashboard-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.topbar-image-booking {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/admin-calendar.svg');
+    background-size: cover;
+}
+.nav-link:hover .topbar-image-booking {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.topbar-image-booking.active {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.topbar-booking-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.topbar-image-admin {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/key.svg');
+    background-size: cover;
+}
+.nav-link:hover .topbar-image-admin {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.topbar-image-admin.active {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.topbar-admin-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.topbar-image-user {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/person-admin.svg');
+    background-size: cover;
+}
+.nav-link:hover .topbar-image-user {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.topbar-image-user.active {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.topbar-user-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
 
 
 /* Admin Booking Section */
@@ -110,6 +225,9 @@
     overflow: scroll!important;
     font-family: "Barlow", sans-serif !important;
     overflow: auto;
+}
+.bg-booking {
+    background-color: #FAFAFA;
 }
 .main-bg {
     background-color: #FAFAFA;
@@ -219,6 +337,7 @@
 .ref-num {
     color: #0683D7;
     margin-bottom: 0px;
+    font-size: 16px;
 }
 .detail-style {
     color: #717998;
@@ -226,6 +345,7 @@
     margin-left: 0px;
     width: 100%;
     text-align: end;
+    font-size: 16px;
 }
 .second-col {
     margin-left: 22px
@@ -242,13 +362,20 @@
 .guest-style {
     color: #292929;
     margin-bottom: 0px;
+    font-size: 16px;
 }
 .card-margin {
     margin-bottom: -18px;
 }
 .heading {
     color: #292929;
-    font-size: 1rem;
+    font-size: 20px;
+}
+.list-style {
+    font-size: 14px;
+}
+.term-icon {
+    margin-top: 4px;
 }
 .search-box {
     width: 100%;
@@ -660,6 +787,10 @@
 .hover12 figure:hover img {
     opacity: .5;
 }
+.admins_section {
+    background-color: #FAFAFA;
+    height: 100vh;
+}
 /* End of Admin Add Admin Modal*/
 
 
@@ -677,6 +808,7 @@
 
 .record-style{
     color: #717998;
+    font-size: 16px;
 }
 /* End of View Admin Modal*/
 
