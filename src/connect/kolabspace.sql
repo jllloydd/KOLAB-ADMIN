@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2024 at 04:58 AM
+-- Generation Time: May 09, 2024 at 03:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -68,10 +68,13 @@ CREATE TABLE `bookings` (
 
 CREATE TABLE `events` (
   `event_id` int(11) NOT NULL,
+  `category` varchar(20) NOT NULL,
   `event_title` varchar(255) DEFAULT NULL,
-  `event_date` date DEFAULT NULL,
+  `event_start_date` date DEFAULT NULL,
+  `event_end_date` date DEFAULT NULL,
   `start_time` time DEFAULT NULL,
-  `end_time` time DEFAULT NULL
+  `end_time` time DEFAULT NULL,
+  `event_desc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
