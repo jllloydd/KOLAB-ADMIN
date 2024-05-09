@@ -102,7 +102,7 @@ function fetchAllBookings($conn, $criteria = 'fullname', $direction = 'asc')
 
 function fetchAllEvents($conn)
 {
-    $query = "SELECT event_id, event_title, event_date, start_time, end_time FROM events ORDER BY event_date ASC";
+    $query = "SELECT category, event_title, event_start_date, event_end_date, start_time, end_time, event_desc FROM events";
     $result = $conn->query($query);
     $events = [];
     if ($result->num_rows > 0) {
