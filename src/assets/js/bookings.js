@@ -296,7 +296,7 @@ function openModal(bookingId) {
                 var totalAmount = calculateTotalAmount(termDescription.toLowerCase(), termAmount.replace(/[^\d.-]/g, ''), totalHoursDecimal);
                 $('#totalAmount').text(totalAmount);
 
-                document.getElementById("btn-booking-confirm").setAttribute("data-booking-id", bookingId)
+                document.getElementById("confirmModalButton").setAttribute("data-booking-id", bookingId)
 
             } else {
                 console.error("Failed to fetch data: " + response.message);
@@ -313,7 +313,7 @@ function closeModal() {
 
 const btnconfirm = document.querySelector(".btn-confirm-booking");
 btnconfirm.addEventListener('click', () => {
-    const bookingId = document.getElementById("btn-booking-confirm").getAttribute("data-booking-id");
+    const bookingId = document.getElementById("confirmModalButton").getAttribute("data-booking-id");
     console.log("Updating booking status...");
     fetch('../data/load.php', {
         method: 'POST',
@@ -327,8 +327,7 @@ btnconfirm.addEventListener('click', () => {
                 console.log("Status updated successfully.");
                 openSuccessModal('Success!', 'Booking Confirmed')
                 fetchAllBookings();
-
-
+                console.log('fetch called')
             } else {
                 console.error('No bookings found');
             }

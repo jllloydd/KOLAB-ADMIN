@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <!-- end col -->
     </div>
@@ -468,7 +468,7 @@
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btn-confirm-booking" data-bs-target="confirmModal" data-bs-dismiss="modal" id="btn-booking-confirm">Confirm Booking</button>
+                        <button type="button" class="btn btn-confirm-booking" data-bs-target="confirmModal" data-bs-dismiss="modal" id="confirmModalButton">Confirm Booking</button>
                     </div>
                 </div>
             </div>
