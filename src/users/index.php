@@ -143,7 +143,7 @@
 
                                 <div class="">
                                     <div class="title-user ">
-                                        <h5 class="user-name fw-meduim pb-2">Julienne Galvez</h5>
+                                        <p class="user-name name-user fw-meduim pb-2">Julienne Galvez</p>
                                         <div class="users-profile">
                                             <div><img src="../assets/img/users/diamond.svg" class="user-name me-0"></div>
                                             <div><p class="user-name fw-medium">Maharlika</p></div>
@@ -181,7 +181,7 @@
                             <!--Inclusions-->
                             <div class="container second-user-container bg-white pt-5 ps-4 me-3">
                                 <div class="">
-                                    <h6 class="fw-light mb-4 inclusion-title">Inclusions</h6>
+                                    <p class="mb-4 inclusion-title">Inclusions</p>
                                 </div>
                                 <div class="">
                                     <ul class="list-inclusions">
@@ -207,7 +207,7 @@
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column me-4">
-                                            <h6 class="fw-normal me-auto guest-style">Billing and Payment</h6>
+                                            <p class=" pt-2">Billing and Payment</p>
                                         </div>
                                         <div class="align-content-center justify-content-center">
                                             <a href="#" class="billing-history">View billing history</a>
@@ -217,7 +217,7 @@
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column me-4">
-                                            <h6 class="online fw-normal mt-1 mb-1">Online</h6>
+                                            <p class="mb-4 inclusion-title mt-1 mb-1">Online</p>
                                         </div>
                                         <div class="">
                                             <p class="pending mt-1 mb-1">Pending</p>
@@ -229,21 +229,21 @@
                                         <div class="col d-flex flex-column">
                                             <div class="billing-payment me-4">
                                                 <div><img src="../assets/img/users/yellow-diamond.svg" class="user-name me-0"></div>
-                                                <div class="mt-1"><h6 class="maharlika user-name fw-normal">Maharlika</h6></div>
+                                                <div class="mt-1"><p class="mb-4 inclusion-title maharlika user-name fw-normal">Maharlika</p></div>
                                             </div>
                                         </div>
                                         <div class="align-content-center justify-content-center">
-                                            <h6 class="fw-normal">₱86,000/year</h6>
+                                            <p class="fw-normal">₱86,000/year</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row mb-4 custom-margin">
                                     <div class="billing-list" >
                                         <div class="col d-flex flex-column me-4">
-                                            <h6 class="next-payment fw-normal me-auto ">Next payment due on</h6>
+                                            <p class="next-payment fw-normal me-auto ">Next payment due on</p>
                                         </div>
                                         <div class="align-content-center justify-content-center">
-                                            <h6 class="next-payment fw-normal">April 1, 2025</h6>
+                                            <p class="next-payment fw-normal">April 1, 2025</p>
                                         </div>
                                     </div>
                                 </div>
