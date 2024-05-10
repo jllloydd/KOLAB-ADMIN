@@ -5,7 +5,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box mb-4">
                 <!-- Dark Logo-->
-                <a href="index.php" class="logo logo-dark">
+                <a href="../dashboard/" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="../assets/img/logo/kolab.avif" alt="" height="100">
                     </span>
@@ -14,7 +14,7 @@
                     </span>
                 </a>
                 <!-- Light Logo-->
-                <a href="index.php" class="logo logo-light">
+                <a href="../dashboard/" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="../assets/img/logo/kolab.avif" alt="" height="120">
                     </span>
