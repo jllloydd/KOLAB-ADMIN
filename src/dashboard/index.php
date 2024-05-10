@@ -103,13 +103,13 @@
                             <div class="col">
                                     <div class="guestlist-container card">
                                             <div class="card-body ms-2 mt-3">
-                                                <p class="heading">Guest List Today</p>
+                                                <p class="dash-heading">Guest List Today</p>
 
                                                 <div class="row mb-3">
                                                     <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
-                                                            <p class="me-auto ref-num">#0001</p>
-                                                            <p class="me-auto guest-style">Julienne Galvez</p>
+                                                            <p class="me-auto dash-num">#0001</p>
+                                                            <p class="me-auto dash-style">Julienne Galvez</p>
                                                         </div>
                                                         <div class="align-content-center justify-content-center">
                                                             <p class="checkin ps-2 pe-2 pt-1 pb-1">Checked in</p>
@@ -120,8 +120,8 @@
                                                 <div class="row mb-3">
                                                     <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
-                                                            <p class="me-auto ref-num">#0002</p>
-                                                            <p class="me-auto guest-style">Euli Perez</p>
+                                                            <p class="me-auto dash-num">#0002</p>
+                                                            <p class="me-auto dash-style">Euli Perez</p>
                                                         </div>
                                                         <div class="align-content-center justify-content-center">
                                                             <p class="reserved ps-2 pe-2 pt-1 pb-1">Reserved</p>
@@ -132,8 +132,8 @@
                                                 <div class="row mb-3">
                                                     <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
-                                                            <p class="me-auto ref-num">#0003</p>
-                                                            <p class="me-auto guest-style">Sofia Manongdo</p>
+                                                            <p class="me-auto dash-num">#0003</p>
+                                                            <p class="me-auto dash-style">Sofia Manongdo</p>
                                                         </div>
                                                         <div class="align-content-center justify-content-center">
                                                             <p class="checkout ps-2 pe-2 pt-1 pb-1">Checked out</p>
@@ -144,8 +144,8 @@
                                                 <div class="row mb-3">
                                                     <div class="guest-list" >
                                                         <div class="col d-flex flex-column">
-                                                            <p class="me-auto ref-num">#0004</p>
-                                                            <p class="me-auto guest-style">Jelisha Banaria</p>
+                                                            <p class="me-auto dash-num">#0004</p>
+                                                            <p class="me-auto dash-style">Jelisha Banaria</p>
                                                         </div>
                                                         <div class="align-content-center justify-content-center">
                                                             <p class="running-late ps-2 pe-2 pt-1 pb-1">Running late</p>
@@ -156,8 +156,8 @@
                                                 <div class="row mb-3">
                                                     <div class="guest-list" >
                                                         <div class="col flex-column">
-                                                            <p class="me-auto ref-num">#0005</p>
-                                                            <p class="me-auto guest-style">Breiana Cirilo</p>
+                                                            <p class="me-auto dash-num">#0005</p>
+                                                            <p class="me-auto dash-style">Breiana Cirilo</p>
                                                         </div>
                                                         <div class="align-content-center justify-content-center">
                                                             <p class="cancelled ps-2 pe-2 pt-1 pb-1">Cancelled</p>
@@ -179,7 +179,7 @@
                                             <button onclick="prevMonth()" style="border: none; background-color: white;">&lt;</button>
                                         </div>
                                         <div>
-                                            <p id="monthYear" class="heading"></p>
+                                            <p id="monthYear" class="dash-heading"></p>
                                         </div>
                                         <div class="ms-3">
                                             <button onclick="nextMonth()" style="border: none; background-color: white;">&gt;</button>
@@ -257,7 +257,7 @@
                                 <div class="ms-4 pt-4 pb-4">
                                     <div class="latest-title">
                                         <div class="">
-                                            <div><p class="heading">Latest Approved Booking</p></div>
+                                            <div><p class="dash-heading">Latest Approved Booking</p></div>
                                         </div>
                                         <div class="more-container card-body p-0">
                                             <div class="p-0"><button class="more">More <span class="me-3">&gt;</span> </button></div>
@@ -267,8 +267,8 @@
                                     <div class="row mb-3">
                                         <div class="approved-booking" >
                                             <div class="col flex-column">
-                                                <p class="me-auto ref-num">#0010</p>
-                                                <p class="me-auto guest-style">Julienne Galvez</p>
+                                                <p class="me-auto dash-num">#0010</p>
+                                                <p class="me-auto dash-style">Julienne Galvez</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
@@ -288,8 +288,8 @@
                                     <div class="row mb-3">
                                         <div class="approved-booking" >
                                             <div class="col flex-column">
-                                                <p class="me-auto ref-num">#0009</p>
-                                                <p class="me-auto guest-style">Euli Perez</p>
+                                                <p class="me-auto dash-num">#0009</p>
+                                                <p class="me-auto dash-style">Euli Perez</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
@@ -309,8 +309,8 @@
                                     <div class="row mb-3">
                                         <div class="approved-booking" >
                                             <div class="col flex-column">
-                                                <p class="me-auto ref-num">#0008</p>
-                                                <p class="me-auto guest-style">Sofia Manongdo</p>
+                                                <p class="me-auto dash-num">#0008</p>
+                                                <p class="me-auto dash-style">Sofia Manongdo</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
@@ -330,8 +330,8 @@
                                     <div class="row mb-3">
                                         <div class="approved-booking" >
                                             <div class="col flex-column">
-                                                <p class="me-auto ref-num">#0007</p>
-                                                <p class="me-auto guest-style">Jelisha Banaria</p>
+                                                <p class="me-auto dash-num">#0007</p>
+                                                <p class="me-auto dash-style">Jelisha Banaria</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center">
@@ -351,8 +351,8 @@
                                     <div class="row mb-3">
                                         <div class="approved-booking" >
                                             <div class="col flex-column">
-                                                <p class="me-auto ref-num">#0006</p>
-                                                <p class="me-auto guest-style">Breiana Cirilo</p>
+                                                <p class="me-auto dash-num">#0006</p>
+                                                <p class="me-auto dash-style">Breiana Cirilo</p>
                                             </div>
                                             <div class="row align-content-center justify-content-center">
                                                 <div class="col m-0 p-0 align-items-center" width="200px">

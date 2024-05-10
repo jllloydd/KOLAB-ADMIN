@@ -1321,6 +1321,21 @@ body, html {
     margin-bottom: -15px;
 }
 
+.dash-num {
+    color: #0683D7;
+    margin-bottom: 0px;
+} 
+
+.dash-style {
+    color: #292929;
+    margin-bottom: 0px;
+}
+
+.dash-heading {
+    color: #292929;
+    font-size: 1rem;
+}
+
 /*Topbar Modal*/
 .righty-barty {
     display: flex;
@@ -1537,6 +1552,30 @@ body, html {
 .btn-cancel:hover {
     background-color: #FFFFFF;
     border-color: #d0d5dd;
+}
+
+.btn-user-modal {
+    background-color: #0683D7;
+    color: white;
+    width: 100px;
+    padding: 5px;
+    border: none;
+}
+
+.status-design {
+    background-color: #F1F2F5;
+    color: #717998;
+    width: 100px;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.active-design {
+    background-color: #EFF8EE;
+    color: #5BB752;
+    width: 100px;
+    padding: 3px 10px;
+    text-align: center;
 }
 
 /* Style for the Okay button */
