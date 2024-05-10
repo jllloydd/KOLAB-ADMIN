@@ -49,20 +49,96 @@
                                             <table class="table align-middle table-nowrap">
                                                 <thead class="table-light">
                                                     <tr>
-                                                        <th class="sort" data-sort="id_num">ID No.</th>
-                                                        <th class="sort" data-sort="member">Member</th>
-                                                        <th class="sort" data-sort="email">Email</th>
-                                                        <th class="sort" data-sort="membership">Membership</th>
-                                                        <th class="sort" data-sort="date_registered">Date Registered</th>
-                                                        <th class="sort" data-sort="status">Status</th>
-                                                        <th class="sort" data-sort="payment_status">Payment Status</th>
-                                                        <th>Action</th>
+                                                        <th class="sort" data-sort="id_num">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    ID No.
+                                                                </div>
+                                                                <div class="mt-5 fw-normal">
+                                                                    #0001
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="member">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Member
+                                                                </div>
+                                                                <div class="mt-5 fw-normal">
+                                                                    Julienne Galvez
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="email">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Email
+                                                                </div>
+                                                                <div class="mt-5 fw-normal">
+                                                                    juliennegalvez@gmail.com
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="membership">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Membership
+                                                                </div>
+                                                                <div class="mt-5 fw-normal">
+                                                                    Maharlika
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="date_registered">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Date Registered
+                                                                </div>
+                                                                <div class="mt-5 fw-normal">
+                                                                    April 29, 2024
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="status">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Status
+                                                                </div>
+                                                                <div class="mt-5 fw-normal active-design">
+                                                                    Active
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="payment_status">
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Payment Status
+                                                                </div>
+                                                                <div class="mt-5 fw-normal status-design lig">
+                                                                    On-site
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="user-field">
+                                                                <div>
+                                                                    Action
+                                                                </div>
+                                                                <div class="mt-5">
+                                                                    <button type="button" class="btn-user-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                                        Next
+                                                                    </button> 
+                                                                </div>
+                                                            </div>
+                                                        </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="bookingList" class="list">
                                                     <!-- Dynamic content will be loaded here -->
                                                 </tbody>
                                             </table>
+
+
                                         </div>
                                         <div class="noresult" style="display: none">
                                             <div class="text-center">
@@ -104,9 +180,7 @@
             
 
             <div>
-                <button type="button" class="btn btn-white bg-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Static Backdrop Modal
-                </button>       
+                   
 
                 
 
