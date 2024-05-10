@@ -3,6 +3,77 @@
 }
 
 /* Sidebar section */
+.item-active {
+    font-weight: bold;
+}
+.sidebar_section {
+    box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.1);  
+}
+.image-dashboard {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url('../../assets/img/sidebar/dashboard.svg');
+}
+.nav-link:hover .image-dashboard {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.image-dashboard.active {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.dashboard-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.image-booking {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/admin-calendar.svg');
+    background-size: cover;
+}
+.nav-link:hover .image-booking {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.image-booking.active {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.booking-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.image-admin {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/key.svg');
+    background-size: cover;
+}
+.nav-link:hover .image-admin {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.image-admin.active {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.admin-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.image-user {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/person-admin.svg');
+    background-size: cover;
+}
+.nav-link:hover .image-user {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.image-user.active {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.user-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+
 .image-hover {
     width: 25px;
     height: 25px;
@@ -103,6 +174,76 @@
     background-color: #005690!important;
     border-radius: 0;
 }
+.hide-collapse {
+    display: none;
+}
+.topbar-image-dashboard {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url('../../assets/img/sidebar/dashboard.svg');
+}
+.nav-link:hover .topbar-image-dashboard {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.topbar-image-dashboard.active {
+    background-image: url('../../assets/img/sidebar/dashboard-active.svg');
+}
+.topbar-dashboard-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.topbar-image-booking {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/admin-calendar.svg');
+    background-size: cover;
+}
+.nav-link:hover .topbar-image-booking {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.topbar-image-booking.active {
+    background-image: url('../../assets/img/sidebar/calendar-active.svg');
+}
+.topbar-booking-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.topbar-image-admin {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/key.svg');
+    background-size: cover;
+}
+.nav-link:hover .topbar-image-admin {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.topbar-image-admin.active {
+    background-image: url('../../assets/img/sidebar/key-active.svg');
+}
+.topbar-admin-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.topbar-image-user {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/img/sidebar/person-admin.svg');
+    background-size: cover;
+}
+.nav-link:hover .topbar-image-user {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.topbar-image-user.active {
+    background-image: url('../../assets/img/sidebar/person-admin-active.svg');
+}
+.topbar-user-text.active{
+    font-weight: bold;
+    color: #0683D7;
+}
+.bg-booking {
+    background-color: #FAFAFA;
+}
 
 
 /* Admin Booking Section */
@@ -151,24 +292,25 @@
 .notif-color {
     background-color: #0683D7;
 }
-.fc-today-button, .fc-dayGridMonth-button,  .fc-timeGridWeek-button, .fc-timeGridDay-button, .fc-listMonth-button{
+/* .fc-today-button, .fc-dayGridMonth-button,  .fc-timeGridWeek-button, .fc-timeGridDay-button, .fc-listMonth-button{
     display: none;
-}
-.fc td, .fc th {
+} */
+
+/* .fc td, .fc th {
     border: unset;
-}
-.fc-scrollgrid-sync-inner {
+} */
+/* .fc-scrollgrid-sync-inner {
     background-color: unset;
-}
+} */
 .fc-day-other {
     background-color: #FAFAFA;
 }
 .fc-scrollgrid-sync-inner {
     background-color: white;
 }
-.fc-theme-bootstrap a:not([href]) {
+/* .fc-theme-bootstrap a:not([href]) {
     color: #717998;
-}
+} */
 .fc .fc-col-header-cell {
     background-color: white;
 }
@@ -178,9 +320,12 @@
 .fc-view-harness {
     height: 470px!important
 }
-.fc .fc-scrollgrid-section>* {
+/* .fc .fc-scrollgrid-section>* {
     border-left: unset;
     border-top: unset; 
+} */
+.fc-today-button {
+    display: none;
 }
 .fc .fc-daygrid-day.fc-day-today {
     background-color: white!important;
@@ -193,6 +338,74 @@
 }
 .bg-dark-subtle {
     background-color: #0683D7!important;
+}
+.event-full {
+    background-color: #FAE2E1;
+    color: #FE0600!important;
+}
+.event-booking {
+    background-color: #E2EEF6;
+    color: #0683D7!important;
+}
+.fc-dayGridMonth-button{
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0;
+}
+.fc-dayGridMonth-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-dayGridMonth-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridWeek-button{
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0;
+}
+.fc-timeGridWeek-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridWeek-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridDay-button {
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0;
+}
+.fc-timeGridDay-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-timeGridDay-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-listMonth-button{
+    background-color: #E2EEF6;
+    color: #0683D7;
+    border: 0; 
+}
+.fc-listMonth-button:hover{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
+}
+.fc-listMonth-button.active{
+    background-color: #0683D7;
+    color: white;
+    border: 0;
 }
 .fc-daygrid-event-harness .fc-daygrid-event.bg-primary-subtle .fc-event-main, .fc-daygrid-event-harness .fc-daygrid-event.bg-primary-subtle .fc-event-title {
     color: #0683D7!important;
@@ -219,6 +432,7 @@
 .ref-num {
     color: #0683D7;
     margin-bottom: 0px;
+    font-size: 16px;
 }
 .detail-style {
     color: #717998;
@@ -226,6 +440,7 @@
     margin-left: 0px;
     width: 100%;
     text-align: end;
+    font-size: 16px;
 }
 .second-col {
     margin-left: 22px
@@ -242,6 +457,7 @@
 .guest-style {
     color: #292929;
     margin-bottom: 0px;
+    font-size: 16px;
 }
 .card-margin {
     margin-bottom: -18px;
@@ -249,6 +465,13 @@
 .heading {
     color: #292929;
     font-size: 1rem;
+    font-size: 20px;
+}
+.list-style {
+    font-size: 14px;
+}
+.term-icon {
+    margin-top: 4px;
 }
 .search-box {
     width: 100%;
@@ -266,15 +489,28 @@
     font-size: 16px;
     font-family: "Barlow", sans-serif !important;
 }
-.btn-success {
+.btn-success-style {
     background-color: #0683D7;
     border-color: #0683D7;
     border-radius: 0;
     height: 65px; 
+    color: white;
+}
+.btn-success-style:hover {
+    background-color: #005690;
+    border-color: #005690;
+    color: white;
+}
+.btn-success {
+    background-color: #0683D7;
+    border-color: #0683D7;
+    border-radius: 0;
+    color: white;
 }
 .btn-success:hover {
     background-color: #005690;
     border-color: #005690;
+    color: white;
 }
 .btn-view {
     background-color: #0683D7;
@@ -411,7 +647,7 @@
 /* Booking Modal */
 .modal-content {
     font-family: "Barlow", sans-serif !important;
-    background-color: #FAFAFA;
+    background-color: #FAFAFA!important;
 }
 .approved-body {
     padding: 0;
@@ -509,15 +745,32 @@
 .btn-confirm {
     font-family: "Barlow", sans-serif !important;
     font-size: 16px;
+    background-color: #0683D7;
+    border-color: #0683D7;
+    border-radius: 0;
+    color: white;
+    width: 90px; 
+}
+.btn-confirm:hover {
+    background-color: #005690;
+    border-color: #005690;
+    color: white;
+}
+.btn-confirm-booking {
+    font-family: "Barlow", sans-serif !important;
+    font-size: 16px;
     color: white;
     background-color: #0683D7;
     width: 200px;
     border-radius: 0;
-    width: 100px;
+    width: 200px;
 }
-.btn-confirm:hover {
+.btn-confirm-booking:hover {
     color: white;
     background-color: #005690;
+}
+.modal-bottom-btn {
+    padding-bottom: 0px;
 }
 .modal-footer {
     padding-bottom: 0px;
@@ -529,6 +782,10 @@
 
 
 /* Admin Section */
+.admins_section {
+    background-color: #FAFAFA;
+    height: 100vh;
+}
 .remove-scrollbar {
     overflow: hidden!important;
     overflow-y: hidden;
@@ -677,6 +934,7 @@
 
 .record-style{
     color: #717998;
+    font-size: 16px;
 }
 /* End of View Admin Modal*/
 
@@ -1226,7 +1484,7 @@ body, html {
 }
 
 /* Style for the confirm modal */
-.modal-content {
+.content-bg {
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1239,23 +1497,32 @@ body, html {
 .modal-body {
     padding: 10px;
     margin: 10px;
+    font-family: "Barlow", sans-serif !important;
+    font-size: 16px;
 
 }
 
 .modal-title {
     color: #0683D7;
+    font-family: "Barlow", sans-serif !important;
+    font-size: 20px;
+}
+.footer-style {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 1.5px solid #E4E7EC; */
+}
+.footer-style::after {
+    content: "";
+    background: #E4E7EC;
+    position: absolute;
+    top: 0;
+    width: 95%;
+    height: 1px;
 }
 
-.modal-footer {
-    background-color: #FFFFFF;
-    margin-bottom: 5px;
-    border-top: 1px solid #ccc;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 20px 0px; 
-    display: flex; 
-    justify-content: center; 
-} 
 
 /* Style for the cancel button */
 .btn-cancel {
