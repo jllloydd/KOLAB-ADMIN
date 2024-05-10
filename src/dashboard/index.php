@@ -72,28 +72,28 @@
                                     <div class="text-container card bg-white mb-4">
                                         <div class="total-revenue ps-5 pt-5 pb-5">
                                             <div class="align-items-center">
-                                                <div><h6 class="fw-light pb-3">Total Revenue</h6></div>
+                                                <div><P class="fw-normal pb-1">Total Revenue</P></div>
                                                 <div><h3 class="fw-bolder"><span>&#8369;</span> 87,561 </h3></div>
                                             </div>
                                         </div>
                                         <div class="total card-body align-content-end justify-content-center pe-4">
                                             <div class="pb-2"><img src="../assets/img/dashboard/up-arrow.svg"></div>
-                                            <div><h6 class="fw-light text-end"><span>&#8369;</span>87,561</h6></div>
-                                            <div><h6 class="fw-light text-end">Last Month</h6></div>
+                                            <div><P class="fw-normal text-end"><span>&#8369;</span>87,561</P></div>
+                                            <div><P class="fw-normal text-end">Last Month</P></div>
                                         </div>
                                     </div>
 
                                     <div class="text-container bg-white card mb-4">
                                         <div class="total-revenue ps-5 pt-5 pb-5">
                                             <div class="align-items-center">
-                                                <div><h6 class="fw-light pb-3">Revenue Today</h6></div>
+                                                <div><P class="fw-normal pb-1">Revenue Today</P></div>
                                                 <div><h3 class="fw-bolder"><span>&#8369;</span> 1,340</h3></div>
                                             </div>
                                         </div>
                                         <div class="total card-body align-content-end justify-content-center pe-4">
                                             <div class="pb-2"><img src="../assets/img/dashboard/down-arrow.svg"></div>
-                                            <div><h6 class="fw-light text-end">Yesterday</h6></div>
-                                            <div><h6 class="fw-light text-end"><span>&#8369;</span>2,485</h6></div>
+                                            <div><P class="fw-normal text-end">Yesterday</P></div>
+                                            <div><P class="fw-normal text-end"><span>&#8369;</span>2,485</P></div>
                                         </div>
                                     </div>
                                 </div>
