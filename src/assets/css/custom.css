@@ -1610,22 +1610,6 @@ body, html {
     border: none;
 }
 
-.status-design {
-    background-color: #F1F2F5;
-    color: #717998;
-    width: 100px;
-    padding: 3px 10px;
-    text-align: center;
-}
-
-.active-design {
-    background-color: #EFF8EE;
-    color: #5BB752;
-    width: 100px;
-    padding: 3px 10px;
-    text-align: center;
-}
-
 /* Style for the Okay button */
 #okayModal .btn-primary {
     background-color: #0683D7;

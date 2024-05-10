@@ -33,7 +33,7 @@
                             </div>
                             <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
                                 <div class="w-100">
-                                    <button type="button" class="w-100 btn btn-success-style add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+                                    <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
                                         <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
                                     </button>
                                 </div>
@@ -50,86 +50,28 @@
                                                 <thead class="table-light">
                                                     <tr>
                                                         <th class="sort" data-sort="id_num">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    ID No.
-                                                                </div>
-                                                                <div class="mt-5 fw-normal">
-                                                                    #0001
-                                                                </div>
-                                                            </div>
+                                                            ID No.
                                                         </th>
                                                         <th class="sort" data-sort="member">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Member
-                                                                </div>
-                                                                <div class="mt-5 fw-normal">
-                                                                    Julienne Galvez
-                                                                </div>
-                                                            </div>
+                                                            Member
                                                         </th>
                                                         <th class="sort" data-sort="email">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Email
-                                                                </div>
-                                                                <div class="mt-5 fw-normal">
-                                                                    juliennegalvez@gmail.com
-                                                                </div>
-                                                            </div>
+                                                            Email
                                                         </th>
                                                         <th class="sort" data-sort="membership">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Membership
-                                                                </div>
-                                                                <div class="mt-5 fw-normal">
-                                                                    Maharlika
-                                                                </div>
-                                                            </div>
+                                                            Membership
                                                         </th>
                                                         <th class="sort" data-sort="date_registered">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Date Registered
-                                                                </div>
-                                                                <div class="mt-5 fw-normal">
-                                                                    April 29, 2024
-                                                                </div>
-                                                            </div>
+                                                            Date Registered
                                                         </th>
                                                         <th class="sort" data-sort="status">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Status
-                                                                </div>
-                                                                <div class="mt-5 fw-normal active-design">
-                                                                    Active
-                                                                </div>
-                                                            </div>
+                                                            Status
                                                         </th>
                                                         <th class="sort" data-sort="payment_status">
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Payment Status
-                                                                </div>
-                                                                <div class="mt-5 fw-normal status-design lig">
-                                                                    On-site
-                                                                </div>
-                                                            </div>
+                                                            Payment Status
                                                         </th>
                                                         <th>
-                                                            <div class="user-field">
-                                                                <div>
-                                                                    Action
-                                                                </div>
-                                                                <div class="mt-5">
-                                                                    <button type="button" class="btn-user-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                                        Next
-                                                                    </button> 
-                                                                </div>
-                                                            </div>
+                                                            Action
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -182,7 +124,11 @@
             <div>
                    
 
-                
+            <div class="mt-5">
+                <button type="button" class="btn-user-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Next
+                </button> 
+            </div>
 
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
