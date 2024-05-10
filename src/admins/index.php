@@ -115,7 +115,7 @@
                     </div>
                     <div class=".d-none .d-sm-block col col-lg-3 col-md-3 col-sm-3 change-btn-width">
                         <div class="w-100">
-                            <button type="button" class="w-100 btn btn-success add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+                            <button type="button" class="w-100 btn btn-success-style add-btn d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addAdminModal">
                                 <i class="ri-add-circle-line add-icon"></i><span class="hide-text ms-1">Add Admin</span>
                             </button>
                         </div>
