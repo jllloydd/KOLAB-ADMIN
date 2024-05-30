@@ -2,7 +2,7 @@
 <?php include 'layouts/head-main.php'; ?>
 
     <head>
-        <title>Sign In | Velzon - Admin & Dashboard Template</title>
+        <title>Kolabspace Admin</title>
         <?php include 'layouts/title-meta.php'; ?>
         <?php include 'layouts/head-css.php'; ?>
     </head>
