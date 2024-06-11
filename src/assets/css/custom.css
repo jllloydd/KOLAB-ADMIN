@@ -522,10 +522,26 @@
     border-radius: 0;
     height: 28px; 
 }
+
+.btn-delete{
+    background-color: #d70606;
+    border-color: #d70606;
+    color: white;
+    border-radius: 0;
+    height: 28px; 
+}
+
+.btn-delete:hover{
+    background-color: #900000;
+    border-color: #900000;
+    color: white;
+}
+
 .btn-view:hover {
     background-color: #005690;
     border-color: #005690;
     color: white;
+
 }
 .remove-padding {
     padding: 0;

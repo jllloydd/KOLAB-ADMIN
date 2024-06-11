@@ -1,5 +1,7 @@
 <?php
 include_once("../connect/session_check.php");
+header('Content-Type: application/json');
+
 
 function jsonResponse($status, $message, $additionalData = [])
 {
@@ -21,7 +23,7 @@ function handleLogin($conn)
     $usernameLogin = $_POST['usernameLogin'];
     $passwordLogin = $_POST['passwordLogin'];
 
-    $stmt = $conn->prepare("SELECT adminid, password FROM admin WHERE username = ?");
+    $stmt = $conn->prepare("SELECT id, password FROM admin WHERE username = ?");
     $stmt->bind_param("s", $usernameLogin);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -30,7 +32,7 @@ function handleLogin($conn)
         $admin = $result->fetch_assoc();
         // Directly compare plaintext passwords - for debugging purposes only
         if ($passwordLogin === $admin['password']) {
-            $_SESSION['adminid'] = $admin['adminid'];
+            $_SESSION['id'] = $admin['id'];
             session_regenerate_id();
             jsonResponse(true, "Login successful.", ['redirectUrl' => 'index.php']);
         } else {

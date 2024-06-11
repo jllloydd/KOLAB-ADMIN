@@ -200,6 +200,16 @@ function viewModal($conn, $bookingId)
     $stmt->close();
 }
 
+function markBookingAsDeleted($conn, $bookingId) {
+    $stmt = $conn->prepare("UPDATE bookings SET status = 'deleted' WHERE bookingid = ?");
+    $stmt->bind_param("i", $bookingId);
+    if ($stmt->execute()) {
+        jsonResponse(true, "Booking marked as deleted successfully.");
+    } else {
+        jsonResponse(false, "Failed to update booking status to deleted.");
+    }
+    $stmt->close();
+}
 // Handling POST requests
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     switch ($_POST['action']) {
@@ -229,6 +239,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 viewModal($conn, $bookingId);
             } else {
                 jsonResponse(false, "Booking ID is required.");
+            }
+            break;
+        case 'markBookingAsDeleted':
+            $bookingId = $_POST['bookingId'] ?? null;
+            if ($bookingId) {
+                markBookingAsDeleted($conn, $bookingId);
+            } else {
+                jsonResponse(false, "Booking ID is required for deletion status update.");
             }
             break;
         default:

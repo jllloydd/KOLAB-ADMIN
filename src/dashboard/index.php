@@ -1,5 +1,9 @@
 <?php include '../connect/session_check.php'; ?>
 <?php include '../layouts/head-main.php'; ?>
+<?php include '../connect/config.php'; ?>
+<?php include '../connect/connect_db.php'; ?>
+<?php include '../connect/variables.php'; ?>
+<?php include '../connect/dashboardqueries.php'; ?>
 
 <div id="layout-wrapper">
 
@@ -13,8 +17,8 @@
                             <div class="total-booking card">
                                 <div class="total-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <p>Total Booking</p>
-                                        <h2 class="fw-bold">872</h2>
+                                        <p>Total Bookings</p>
+                                        <h2 class="fw-bold"><?php echo $allcount; ?></h2>
                                     </div>
                                 </div>
                                 <div class=" align-content-center justify-content-center  me-3">
@@ -27,8 +31,8 @@
                             <div class="current-booking card">
                                 <div class="current-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <p>Current Booking</p>
-                                        <h2 class="fw-bold">872</h2>
+                                        <p>Current Bookings</p>
+                                        <h2 class="fw-bold"><?php echo $currentcount; ?></h2>
                                     </div>
                                 </div>
                                 <div class="align-content-center justify-content-center me-3">
@@ -41,8 +45,8 @@
                             <div class="pending-booking card">
                                 <div class="pending-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <p>Pending Booking</p>
-                                        <h2 class="fw-bold">872</h2>
+                                        <p>Pending Bookings</p>
+                                        <h2 class="fw-bold"><?php echo $pendingcount; ?></h2>
                                     </div>
                                 </div>
                                 <div class="align-content-center justify-content-center me-3">
@@ -55,8 +59,8 @@
                             <div class="cancelled-booking card">
                                 <div class="cancelled-container card-body ms-4 mt-3 mb-3" >
                                     <div>
-                                        <p>Cancelled Booking</p>
-                                        <h2 class="fw-bold">872</h2>
+                                        <p>Cancelled Bookings</p>
+                                        <h2 class="fw-bold"><?php echo $cancelledcount; ?></h2>
                                     </div>
                                 </div>
                                 <div class="align-content-center justify-content-center me-3">

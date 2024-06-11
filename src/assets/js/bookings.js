@@ -22,22 +22,29 @@ function fetchAllBookings() {
 
                 // Populate the table directly
                 data.bookings.forEach(booking => {
-                    const row = `
-                    <tr>
-                        <td class="reference_num">${booking.reference_number}</td>
-                        <td class="customer_name">${booking.fullname}</td>
-                        <td class="email">${booking.email}</td>
-                        <td class="term">${booking.term_rate}</td>
-                        <td class="date">${booking.booking_date}</td>
-                        <td class="booking_status"><span class="badge ${getBadgeClass(booking.status)}">${booking.status}</span></td>
-                        <td class="payment_method"><span class="badge ${getBadgeClass(booking.payment_method)}">${booking.payment_method}</span></td>
-                        <td>
+                    if (booking.status.toLowerCase() !== 'deleted') { // Ensure not to display deleted bookings
+                        const row = `
+                        <tr>
+                          <td class="reference_num">${booking.reference_number}</td>
+                          <td class="customer_name">${booking.fullname}</td>
+                          <td class="email">${booking.email}</td>
+                          <td class="term">${booking.term_rate}</td>
+                          <td class="date">${booking.booking_date}</td>
+                          <td class="booking_status"><span class="badge ${getBadgeClass(booking.status)}">${booking.status}</span></td>
+                          <td class="payment_method"><span class="badge ${getBadgeClass(booking.payment_method)}">${booking.payment_method}</span></td>
+                          <td>
                             <div class="d-flex gap-2">
+                              ${booking.status === 'Cancelled' ? `
+                                <button class="btn btn-sm btn-delete edit-item-btn" onclick="markBookingAsDeleted('${booking.bookingid}')">Delete</button>
+                              ` : `
                                 <button class="btn btn-sm btn-view edit-item-btn" onclick="openModal('${booking.bookingid}')">View</button>
-                            </div>
-                        </td>
-                    </tr>`;
-                    bookingListElement.insertAdjacentHTML('beforeend', row);
+                              `}
+                            </div>  
+                          </td>
+                        </tr>
+                      `;
+                      bookingListElement.insertAdjacentHTML('beforeend', row);
+                    }
                 });
 
                 // Properly set the global count to match the total records returned
@@ -125,7 +132,7 @@ function updateBookingCount(displayCount, totalCount) {
     if (countElement) {
         countElement.innerHTML = `Showing <strong>${displayCount}</strong> from <strong>${totalCount}</strong> data`;
     }
-}
+}   
 
 
 
@@ -341,3 +348,26 @@ const callback = () => {
     const btnconfirm = document.querySelector(".btn-confirm-booking");
     btnconfirm.click();
 };
+
+function markBookingAsDeleted(bookingId) {
+    if (confirm("Are you sure you want to delete this booking?")) {
+        console.log("Marking booking as deleted with ID:", bookingId);
+        fetch('../data/load.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `action=markBookingAsDeleted&bookingId=${bookingId}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status) {
+                console.log("Booking marked as deleted successfully.");
+                fetchAllBookings(); // Refresh the booking list to reflect the status change
+            } else {
+                console.error('Failed to mark booking as deleted:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error marking booking as deleted:', error);
+        });
+    }
+}
